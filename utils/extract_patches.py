@@ -16,10 +16,10 @@ def get_data_training(DRIVE_train_imgs_original,
     # visualize(group_images(train_imgs_original[0:20,:,:,:],5),'imgs_train')#.show()  #check original imgs train
 
     # TODO: preprocessing
-    #train_imgs = my_PreProc(train_imgs_original)
+    train_imgs = my_PreProc(train_imgs_original)
     train_masks = train_masks/255.
 
-    train_imgs = train_imgs_original[:,:,9:574,:]  #cut bottom and top so now it is 565*565
+    train_imgs = train_imgs[:,:,9:574,:]  #cut bottom and top so now it is 565*565
     train_masks = train_masks[:,:,9:574,:]  #cut bottom and top so now it is 565*565
     data_consistency_check(train_imgs,train_masks)
 
