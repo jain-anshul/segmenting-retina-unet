@@ -3,7 +3,7 @@ import random
 import ConfigParser
 
 from help_functions import load_hdf5
-
+from pre_processing import my_PreProc
 
 def get_data_training(DRIVE_train_imgs_original,
                       DRIVE_train_groudTruth,
