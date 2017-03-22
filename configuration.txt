@@ -1,0 +1,35 @@
+[data paths]
+path_local =  ./DRIVE_datasets_training_testing/
+train_imgs_original = DRIVE_dataset_imgs_train.hdf5
+train_groundTruth = DRIVE_dataset_groundTruth_train.hdf5
+test_imgs_original = DRIVE_dataset_imgs_test.hdf5
+test_groundTruth = DRIVE_dataset_groundTruth_test.hdf5
+val_imgs_original = DRIVE_dataset_imgs_validation.hdf5
+val_groundTruth = DRIVE_dataset_groundTruth_validation.hdf5
+
+
+[experiment name]
+name = test
+
+
+[data attributes]
+#Dimensions of the patches extracted from the full images
+patch_height = 27
+patch_width = 27
+
+
+[training settings]
+#number of total patches:
+N_subimgs = 190000
+#if patches are extracted only inside the field of view:
+inside_FOV = False
+#Number of training epochs
+N_epochs = 150
+batch_size = 32
+
+
+[validation settings]
+N_subimgs = 19000
+#if patches are extracted only inside the field of view:
+inside_FOV = False
+
