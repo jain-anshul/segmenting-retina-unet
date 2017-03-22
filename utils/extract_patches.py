@@ -46,7 +46,7 @@ def get_data_training(DRIVE_train_imgs_original,
 #  -- Inside OR in full image
 def extract_random(full_imgs,full_masks, patch_h,patch_w, N_patches, inside=True):
     if (N_patches%full_imgs.shape[0] != 0):
-        print "N_patches: plase enter a multiple of 20"
+        print "N_patches: plase enter a multiple of ", full_imgs.shape[0]
         exit()
     assert (len(full_imgs.shape)==4 and len(full_masks.shape)==4)  #4D arrays
     assert (full_imgs.shape[1]==1 or full_imgs.shape[1]==3)  #check the channel is 1 or 3
