@@ -84,9 +84,20 @@ checkpointer = ModelCheckpoint(filepath='./'+name_experiment+'/'+algorithm+'/'+n
 
 patches_masks_train = np_utils.to_categorical(patches_masks_train, 2)
 for i in range(N_epochs):
+    print '\n\n\n'
+    print 'Iternation number: ',(i+1)
+    print 'TRAIN DATA'
     model.fit(patches_imgs_train, patches_masks_train, nb_epoch=1, batch_size=batch_size, verbose=1, shuffle=True, validation_split=0.1, callbacks=[checkpointer])
     y_pred = model.predict(patches_imgs_train, batch_size=32, verbose=1)
     fa, fr, ta, tr = class_accuracy(y_pred[:, 1], patches_masks_train[:, 1])
-    print "FA FR TA TR", fa, fr, ta, tr
+    print '\n',"FA FR TA TR", fa, fr, ta, tr
+
+    print '\n','VALIDATION DATA'
+    score = model.evaluate(x=patches_imgs_val, y=patches_masks_val, batch_size=32, verbose=1)
+    print score[1], score[0]
+
+    y_pred = model.predict(patches_imgs_val, batch_size=32, verbose=1)
+    fa, fr, ta, tr = class_accuracy(y_pred[:, 1], patches_masks_val[:, 1])
+    print '\n',"FA FR TA TR", fa, fr, ta, tr
 
 model.save_weights('./'+name_experiment+'/'+algorithm+'/'+name_experiment +'_last_weights.h5', overwrite=True)
