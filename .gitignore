@@ -1,3 +1,5 @@
 .DS_Store
 DRIVE
 DRIVE_datasets_training_testing
+Papers
+*.pyc
