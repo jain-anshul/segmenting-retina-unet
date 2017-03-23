@@ -109,4 +109,4 @@ model.save_weights('./'+name_experiment+'/'+algorithm+'/'+name_experiment +'_las
 y_pred = model.predict(patches_imgs_val, batch_size=32, verbose=1)
 print roc_auc_score(patches_mask_val[:,1], y_pred[:,1])
 skplt.plot_roc_curve(patches_masks_val[:,1], y_pred[:,1])
-plt.show()
+plt.savefig('./'+name_experiment+'/'+algorithm+'/'+name_experiment +'_roc.png')
