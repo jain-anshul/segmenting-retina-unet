@@ -1,6 +1,3 @@
-
 import os, sys
-
-os.system('python ./src/training.py')
-
-#Prediction/testing is run with a different script
+print sys.argv[1]
+os.system('python ./src/'+sys.argv[1]+'_training.py')
