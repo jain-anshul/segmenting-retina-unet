@@ -83,6 +83,8 @@ checkpointer = ModelCheckpoint(filepath='./'+name_experiment+'/'+algorithm+'/'+n
 
 
 patches_masks_train = np_utils.to_categorical(patches_masks_train, 2)
+patches_masks_val = np_utils.to_categorical(patches_masks_val, 2)
+
 for i in range(N_epochs):
     print '\n\n\n'
     print 'Iternation number: ',(i+1)
