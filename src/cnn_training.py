@@ -106,7 +106,7 @@ for i in range(N_epochs):
 model.save_weights('./'+name_experiment+'/'+algorithm+'/'+name_experiment +'_last_weights.h5', overwrite=True)
 
 
-y_pred = model.predict(patches_imgs_val, batch_size=32, verbose=1)
-print roc_auc_score(patches_masks_val[:,1], y_pred[:,1])
-skplt.plot_roc_curve(patches_masks_val[:,1], y_pred)
+print '\n', roc_auc_score(patches_masks_val[:,1], y_pred[:,1])
+print y_pred[:,1].shape, patches_masks_val[:,1].shape
+skplt.plot_roc_curve(patches_masks_val[:,1], y_pred, curves=('each_class'))
 plt.savefig('./'+name_experiment+'/'+algorithm+'/'+name_experiment +'_roc.png')

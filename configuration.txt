@@ -24,7 +24,7 @@ N_subimgs = 180000
 #if patches are extracted only inside the field of view:
 inside_FOV = False
 #Number of training epochs
-N_epochs = 1
+N_epochs = 30
 batch_size = 32
 
 
