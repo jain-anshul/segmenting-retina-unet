@@ -20,36 +20,38 @@ from extract_patches import get_data_training
 #Define the neural network
 def get_unet(n_ch,patch_height,patch_width):
     inputs = Input((n_ch, patch_height, patch_width))
-    conv1 = Convolution2D(32, 3, 3, activation='relu', border_mode='same')(inputs)
-    conv1 = Dropout(0.2)(conv1)
-    conv1 = Convolution2D(32, 3, 3, activation='relu', border_mode='same')(conv1)
-    pool1 = MaxPooling2D(pool_size=(2, 2))(conv1)
+    #conv1 = Convolution2D(32, 3, 3, activation='relu', border_mode='same')(inputs)
+    #conv1 = Dropout(0.2)(conv1)
+    #pool1 = MaxPooling2D(pool_size=(2,2))(conv1)
+    #conv1 = Convolution2D(32, 3, 3, activation='relu', border_mode='same')(conv1)
+    #pool1 = MaxPooling2D(pool_size=(2, 2))(conv1)
     #
-    conv2 = Convolution2D(64, 3, 3, activation='relu', border_mode='same')(pool1)
-    conv2 = Dropout(0.2)(conv2)
-    conv2 = Convolution2D(64, 3, 3, activation='relu', border_mode='same')(conv2)
-    pool2 = MaxPooling2D(pool_size=(2, 2))(conv2)
+    #conv2 = Convolution2D(64, 3, 3, activation='relu', border_mode='same')(pool1)
+    #conv2 = Dropout(0.2)(conv2)
+    #conv2 = Convolution2D(64, 3, 3, activation='relu', border_mode='same')(conv2)
+    #pool2 = MaxPooling2D(pool_size=(2, 2))(conv2)
     #
-    conv3 = Convolution2D(128, 3, 3, activation='relu', border_mode='same')(pool2)
-    conv3 = Dropout(0.2)(conv3)
-    conv3 = Convolution2D(128, 3, 3, activation='relu', border_mode='same')(conv3)
+    #conv3 = Convolution2D(128, 3, 3, activation='relu', border_mode='same')(pool2)
+    #conv3 = Dropout(0.2)(conv3)
+    #conv3 = Convolution2D(128, 3, 3, activation='relu', border_mode='same')(conv3)
 
     #up1 = merge([UpSampling2D(size=(2, 2))(conv3), conv2], mode='concat', concat_axis=1)
-    conv4 = Convolution2D(64, 3, 3, activation='relu', border_mode='same')(conv3)
-    conv4 = Dropout(0.2)(conv4)
-    conv4 = Convolution2D(64, 3, 3, activation='relu', border_mode='same')(conv4)
+    #conv4 = Convolution2D(64, 3, 3, activation='relu', border_mode='same')(pool1)
+    #conv4 = Dropout(0.2)(conv4)
+    #conv4 = Convolution2D(64, 3, 3, activation='relu', border_mode='same')(conv4)
     #
     #up2 = merge([UpSampling2D(size=(2, 2))(conv4), conv1], mode='concat', concat_axis=1)
-    conv5 = Convolution2D(32, 3, 3, activation='relu', border_mode='same')(conv4)
-    conv5 = Dropout(0.2)(conv5)
-    conv5 = Convolution2D(32, 3, 3, activation='relu', border_mode='same')(conv5)
+    #conv5 = Convolution2D(32, 3, 3, activation='relu', border_mode='same')(conv4)
+    #conv5 = Dropout(0.2)(conv5)
+    #conv5 = Convolution2D(32, 3, 3, activation='relu', border_mode='same')(conv5)
     #
-    conv6 = Convolution2D(2, 1, 1, activation='relu',border_mode='same')(conv5)
+    #conv6 = Convolution2D(2, 1, 1, activation='relu',border_mode='same')(conv5)
     #conv6 = core.Reshape((2,patch_height*patch_width))(conv6)
     #conv6 = core.Permute((2,1))(conv6)
     ############
-    conv6 = Flatten()(conv6)
-    conv6 = Dense(2)(conv6)
+    dnn = Flatten()(inputs)
+    dnn1 = Dense(256)(dnn) 
+    conv6 = Dense(2)(dnn1)
 
     conv7 = core.Activation('softmax')(conv6)
 
