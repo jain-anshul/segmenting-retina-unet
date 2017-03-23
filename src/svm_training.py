@@ -12,7 +12,7 @@ from extract_patches import get_data_training
 #========= Load settings from Config file
 config = ConfigParser.RawConfigParser()
 config.read('configuration.txt')
-algorithm = 'nn'
+algorithm = 'svm'
 #patch to the datasets
 path_data = config.get('data paths', 'path_local')
 #Experiment name

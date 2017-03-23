@@ -10,9 +10,14 @@ from keras.utils.visualize_util import plot
 from keras.optimizers import SGD
 from keras.utils import np_utils
 
+import scikitplot.plotters as skplt
+from sklearn.metrics import roc_auc_score
+import matplotlib.pyplot as plt
+
 import sys
 sys.path.insert(0, './utils/')
 from help_functions import *
+np.random.seed(1337)
 
 #function to obtain data for training/testing (validation)
 from extract_patches import get_data_training
@@ -73,7 +78,7 @@ print model.output_shape
 model.summary()
 plot(model, to_file='./'+name_experiment+'/'+algorithm+'/'+name_experiment + '_model.png')   #check how the model looks like
 json_string = model.to_json()
-open('./'+name_experiment+'/nn'+'/'+name_experiment +'_architecture.json', 'w').write(json_string)
+open('./'+name_experiment+'/'+algorithm+'/'+name_experiment +'_architecture.json', 'w').write(json_string)
 
 checkpointer = ModelCheckpoint(filepath='./'+name_experiment+'/'+algorithm+'/'+name_experiment +'_best_weights.h5', verbose=1, monitor='val_loss', mode='auto', save_best_only=True) #save at each epoch if the validation decreased
 
@@ -99,3 +104,9 @@ for i in range(N_epochs):
     print '\n',"FA FR TA TR", fa, fr, ta, tr
 
 model.save_weights('./'+name_experiment+'/'+algorithm+'/'+name_experiment +'_last_weights.h5', overwrite=True)
+
+
+y_pred = model.predict(patches_imgs_val, batch_size=32, verbose=1)
+print roc_auc_score(patches_mask_val[:,1], y_pred[:,1])
+skplt.plot_roc_curve(patches_masks_val[:,1], y_pred[:,1])
+plt.show()
