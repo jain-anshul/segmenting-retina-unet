@@ -11,6 +11,10 @@ from keras.optimizers import SGD
 from keras.utils import np_utils
 np.random.seed(1337)
 
+import scikitplot.plotters as skplt
+from sklearn.metrics import roc_auc_score
+import matplotlib.pyplot as plt
+
 import sys
 sys.path.insert(0, './utils/')
 from help_functions import *
