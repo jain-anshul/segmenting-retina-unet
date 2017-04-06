@@ -135,7 +135,7 @@ while run_flag:
         count_plateau = 0
         count_neg_iter = 0
         print "Validation Loss decreased. Great work"
-    elif count_plateau > nb_count_plateau:
+    elif count_plateau < nb_count_plateau:
         count_plateau += 1
         print "Inside Plateau"
 
