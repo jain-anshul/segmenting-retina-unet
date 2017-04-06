@@ -80,31 +80,27 @@ plot(model, to_file='./'+name_experiment+'/'+algorithm+'/'+name_experiment + '_m
 json_string = model.to_json()
 open('./'+name_experiment+'/'+algorithm+'/'+name_experiment +'_architecture.json', 'w').write(json_string)
 
-checkpointer = ModelCheckpoint(filepath='./'+name_experiment+'/'+algorithm+'/'+name_experiment +'_best_weights.h5', verbose=1, monitor='val_loss', mode='auto', save_best_only=True) #save at each epoch if the validation decreased
-
+checkpointer = ModelCheckpoint(filepath='./'+name_experiment+'/'+algorithm+'/'+name_experiment +'_weights_{val_loss:.5f}.h5', verbose=1, monitor='val_loss', mode='auto', save_best_only=True) #save at each epoch if the validation decreased
+bestcheckpointer = ModelCheckpoint(filepath='./'+name_experiment+'/'+algorithm+'/'+name_experiment +'_best_weights.h5', verbose=1, monitor='val_loss', mode='auto', save_best_only=True)
 patches_masks_train = np_utils.to_categorical(patches_masks_train, 2)
 patches_masks_val = np_utils.to_categorical(patches_masks_val, 2)
 
 
 
 run_flag = True
-weights = []
-# Check if it is the first iteration
+
 first_iter = True
 
 # Setting the final accuracy to 0 just for the start
-final_acc = 0.0
+final_loss = 999999
 count_neg_iter = 0
 iter_count = 1
 nb_neg_cycles = 3
 lr = 0.01
+nb_count_plateau = 5
+count_plateau = 0
 
 while run_flag:
-
-    if first_iter:
-        first_iter = False
-    else:
-        model.set_weights(np.asarray(weights))
 
     sgd = SGD(lr=lr)
 
@@ -113,7 +109,7 @@ while run_flag:
     model.compile(optimizer=sgd, loss='binary_crossentropy', metrics=['accuracy'])
     
     print 'TRAIN DATA'
-    model.fit(patches_imgs_train, patches_masks_train, nb_epoch=1, batch_size=batch_size, verbose=1, shuffle=True, callbacks=[checkpointer])
+    model.fit(patches_imgs_train, patches_masks_train, nb_epoch=1, batch_size=batch_size, verbose=1, shuffle=True, callbacks=[checkpointer, bestcheckpointer])
     y_pred = model.predict(patches_imgs_train, batch_size=32, verbose=1)
     fa, fr, ta, tr = class_accuracy(y_pred[:, 1], patches_masks_train[:, 1])
     print '\n',"FA FR TA TR", fa, fr, ta, tr
@@ -126,21 +122,23 @@ while run_flag:
     fa, fr, ta, tr = class_accuracy(y_pred[:, 1], patches_masks_val[:, 1])
     print '\n',"FA FR TA TR", fa, fr, ta, tr
 
-    val_accuracy = score[1]
+    val_loss = score[0]
 
-    print val_accuracy, " - val accuracy"
-    print final_acc, " - final_accuracy"
-    if val_accuracy - final_acc > 0.0005:
+    print val_loss, " - val loss"
+    print final_loss, " - final_loss"
+    if final_loss > val_loss:
         iter_count += 1
-        # Update the weights if the accuracy is greater than .001
-        weights = model.get_weights()
-        print ("Updating the weights")
-        # Updating the final accuracy
-        final_acc = val_accuracy
+        final_loss = val_loss
         # Setting the count to 0 again so that the loop doesn't stop before reducing the learning rate n times
         # consecutively
-        count_neg_iter = 0
+        count_plateau = 0
+        print "Validation Loss decreased. Great work"
+    elif count_plateau > nb_count_plateau:
+        count_plateau += 1
+        print "Inside Plateau"
+
     else:
+        count_plateau = 0
         # If the difference is not greater than 0.005 reduce the learning rate
         lr /= 2.0
         print ("Reducing the learning rate by half")
@@ -149,12 +147,8 @@ while run_flag:
         # If the learning rate is reduced consecutively for nb_neg_cycles times then the loop should stop
         if count_neg_iter > nb_neg_cycles:
             run_flag = False
-            model.set_weights(np.asarray(weights))
-
-
-model.save_weights('./'+name_experiment+'/'+algorithm+'/'+name_experiment +'_last_weights.h5', overwrite=True)
-
-
+            
+model.load_weights('./'+name_experiment+'/'+algorithm+'/'+name_experiment +'_best_weights.h5')
 y_pred = model.predict(patches_imgs_val, batch_size=32, verbose=1)
 
 print '\n', roc_auc_score(patches_masks_val[:,1], y_pred[:,1])
