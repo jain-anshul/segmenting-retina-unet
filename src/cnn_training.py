@@ -84,17 +84,37 @@ plot(model, to_file='./'+name_experiment+'/'+algorithm+'/'+name_experiment + '_m
 json_string = model.to_json()
 open('./'+name_experiment+'/'+algorithm+'/'+name_experiment +'_architecture.json', 'w').write(json_string)
 
-checkpointer = ModelCheckpoint(filepath='./'+name_experiment+'/'+algorithm+'/'+name_experiment +'_best_weights.h5', verbose=1, monitor='val_loss', mode='auto', save_best_only=True) #save at each epoch if the validation decreased
-
+checkpointer = ModelCheckpoint(filepath='./'+name_experiment+'/'+algorithm+'/'+name_experiment + '-weights-{val_loss:.5f}.h5',verbose=1, monitor='val_loss', mode='auto', save_best_only=True) #save at each epoch if the validation decreased
+bestcheckpointer = ModelCheckpoint(filepath='./'+name_experiment+'/'+algorithm+'/'+name_experiment +'_best_weights.h5', verbose=1, monitor='val_loss', mode='auto', save_best_only=True)
 
 patches_masks_train = np_utils.to_categorical(patches_masks_train, 2)
 patches_masks_val = np_utils.to_categorical(patches_masks_val, 2)
 
-for i in range(N_epochs):
-    print '\n\n\n'
-    print 'Iternation number: ',(i+1)
-    print 'TRAIN DATA'
-    model.fit(patches_imgs_train, patches_masks_train, nb_epoch=1, batch_size=batch_size, verbose=1, shuffle=True, validation_split=0.1, callbacks=[checkpointer])
+
+
+run_flag = True
+
+first_iter = True
+
+# Setting the final accuracy to 0 just for the start
+final_loss = 999999
+count_neg_iter = 0
+iter_count = 1
+nb_neg_cycles = 3
+lr = 0.01
+nb_count_plateau = 5
+count_plateau = 0
+
+while run_flag:
+
+    sgd = SGD(lr=lr)
+
+    print '\n\n\n', iter_count, " iteration"
+    print lr, " learning rate"
+    model.compile(optimizer=sgd, loss='binary_crossentropy', metrics=['accuracy'])
+    
+    print '\n','TRAIN DATA'
+    model.fit(patches_imgs_train, patches_masks_train, nb_epoch=1, batch_size=batch_size, verbose=1, validation_data=(patches_imgs_val, patches_masks_val), shuffle=True, callbacks=[checkpointer, bestcheckpointer])
     y_pred = model.predict(patches_imgs_train, batch_size=32, verbose=1)
     fa, fr, ta, tr = class_accuracy(y_pred[:, 1], patches_masks_train[:, 1])
     print '\n',"FA FR TA TR", fa, fr, ta, tr
@@ -107,8 +127,35 @@ for i in range(N_epochs):
     fa, fr, ta, tr = class_accuracy(y_pred[:, 1], patches_masks_val[:, 1])
     print '\n',"FA FR TA TR", fa, fr, ta, tr
 
-model.save_weights('./'+name_experiment+'/'+algorithm+'/'+name_experiment +'_last_weights.h5', overwrite=True)
+    val_loss = score[0]
 
+    print val_loss, " - val loss"
+    print final_loss, " - final_loss"
+    if final_loss > val_loss:
+        iter_count += 1
+        final_loss = val_loss
+        # Setting the count to 0 again so that the loop doesn't stop before reducing the learning rate n times
+        # consecutively
+        count_plateau = 0
+        count_neg_iter = 0
+        print "Validation Loss decreased. Great work"
+    elif count_plateau > nb_count_plateau:
+        count_plateau += 1
+        print "Inside Plateau"
+
+    else:
+        count_plateau = 0
+        # If the difference is not greater than 0.005 reduce the learning rate
+        lr /= 2.0
+        print ("Reducing the learning rate by half")
+        count_neg_iter += 1
+
+        # If the learning rate is reduced consecutively for nb_neg_cycles times then the loop should stop
+        if count_neg_iter > nb_neg_cycles:
+            run_flag = False
+            
+model.load_weights('./'+name_experiment+'/'+algorithm+'/'+name_experiment +'_best_weights.h5')
+y_pred = model.predict(patches_imgs_val, batch_size=32, verbose=1)
 
 print '\n', roc_auc_score(patches_masks_val[:,1], y_pred[:,1])
 print y_pred[:,1].shape, patches_masks_val[:,1].shape
