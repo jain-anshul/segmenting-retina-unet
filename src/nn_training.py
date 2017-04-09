@@ -1,4 +1,5 @@
 import numpy as np
+np.random.seed(1337)
 import ConfigParser
 
 from keras.models import Model
@@ -16,8 +17,20 @@ import matplotlib.pyplot as plt
 
 import sys
 sys.path.insert(0, './utils/')
+
+class Tee(object):
+    def __init__(self, *files):
+        self.files = files
+    def write(self, obj):
+        for f in self.files:
+            f.write(obj)
+
+f = open('nn.log', 'w')
+backup = sys.stdout
+sys.stdout = Tee(sys.stdout, f)
+
+# sys.stdout = open('logfile', 'w')
 from help_functions import *
-np.random.seed(1337)
 
 #function to obtain data for training/testing (validation)
 from extract_patches import get_data_training
@@ -110,16 +123,16 @@ while run_flag:
     model.compile(optimizer=sgd, loss='binary_crossentropy', metrics=['accuracy'])
     
     print '\n','TRAIN DATA'
-    model.fit(patches_imgs_train, patches_masks_train, nb_epoch=1, batch_size=batch_size, verbose=1, validation_data=(patches_imgs_val, patches_masks_val), shuffle=True, callbacks=[checkpointer, bestcheckpointer])
-    y_pred = model.predict(patches_imgs_train, batch_size=32, verbose=1)
+    model.fit(patches_imgs_train, patches_masks_train, nb_epoch=1, batch_size=batch_size, verbose=2, validation_data=(patches_imgs_val, patches_masks_val), shuffle=True, callbacks=[checkpointer, bestcheckpointer])
+    y_pred = model.predict(patches_imgs_train, batch_size=32, verbose=2)
     fa, fr, ta, tr = class_accuracy(y_pred[:, 1], patches_masks_train[:, 1])
     print '\n',"FA FR TA TR", fa, fr, ta, tr
 
     print '\n','VALIDATION DATA'
-    score = model.evaluate(x=patches_imgs_val, y=patches_masks_val, batch_size=32, verbose=1)
+    score = model.evaluate(x=patches_imgs_val, y=patches_masks_val, batch_size=32, verbose=2)
     print score[1], score[0]
 
-    y_pred = model.predict(patches_imgs_val, batch_size=32, verbose=1)
+    y_pred = model.predict(patches_imgs_val, batch_size=32, verbose=2)
     fa, fr, ta, tr = class_accuracy(y_pred[:, 1], patches_masks_val[:, 1])
     print '\n',"FA FR TA TR", fa, fr, ta, tr
 
@@ -137,7 +150,7 @@ while run_flag:
         print "Validation Loss decreased. Great work"
     elif count_plateau < nb_count_plateau:
         count_plateau += 1
-        print "Inside Plateau"
+        print "Inside Plateau", count_plateau
 
     else:
         count_plateau = 0

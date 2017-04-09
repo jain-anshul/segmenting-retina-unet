@@ -4,3 +4,5 @@ DRIVE_datasets_training_testing
 Papers
 *.pyc
 *.h5
+*.log
+*.sh

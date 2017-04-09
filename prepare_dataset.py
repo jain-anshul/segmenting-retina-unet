@@ -1,6 +1,7 @@
 import os
 import h5py
 import numpy as np
+np.random.seed(1337)
 from PIL import Image
 
 def write_hdf5(arr,outfile):

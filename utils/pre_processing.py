@@ -1,4 +1,5 @@
 import numpy as np
+np.random.seed(1337)
 from PIL import Image
 import cv2
 

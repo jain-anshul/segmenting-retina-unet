@@ -1,5 +1,6 @@
 import h5py
 import numpy as np
+np.random.seed(1337)
 from PIL import Image
 from matplotlib import pyplot as plt
 

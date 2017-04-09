@@ -17,6 +17,7 @@ import matplotlib.pyplot as plt
 
 import sys
 sys.path.insert(0, './utils/')
+sys.stdout = open('cnn.log', 'w')
 from help_functions import *
 
 #function to obtain data for training/testing (validation)
@@ -141,7 +142,7 @@ while run_flag:
         print "Validation Loss decreased. Great work"
     elif count_plateau < nb_count_plateau:
         count_plateau += 1
-        print "Inside Plateau"
+        print "Inside Plateau ", count_plateau
 
     else:
         count_plateau = 0
