@@ -17,7 +17,18 @@ import matplotlib.pyplot as plt
 
 import sys
 sys.path.insert(0, './utils/')
-sys.stdout = open('cnn.log', 'w')
+
+class Tee(object):
+    def __init__(self, *files):
+        self.files = files
+    def write(self, obj):
+        for f in self.files:
+            f.write(obj)
+
+f = open('cnn.log', 'w')
+backup = sys.stdout
+sys.stdout = Tee(sys.stdout, f)
+
 from help_functions import *
 
 #function to obtain data for training/testing (validation)
@@ -115,16 +126,16 @@ while run_flag:
     model.compile(optimizer=sgd, loss='binary_crossentropy', metrics=['accuracy'])
     
     print '\n','TRAIN DATA'
-    model.fit(patches_imgs_train, patches_masks_train, nb_epoch=1, batch_size=batch_size, verbose=1, validation_data=(patches_imgs_val, patches_masks_val), shuffle=True, callbacks=[checkpointer, bestcheckpointer])
-    y_pred = model.predict(patches_imgs_train, batch_size=32, verbose=1)
+    model.fit(patches_imgs_train, patches_masks_train, nb_epoch=1, batch_size=batch_size, verbose=2, validation_data=(patches_imgs_val, patches_masks_val), shuffle=True, callbacks=[checkpointer, bestcheckpointer])
+    y_pred = model.predict(patches_imgs_train, batch_size=32, verbose=2)
     fa, fr, ta, tr = class_accuracy(y_pred[:, 1], patches_masks_train[:, 1])
     print '\n',"FA FR TA TR", fa, fr, ta, tr
 
     print '\n','VALIDATION DATA'
-    score = model.evaluate(x=patches_imgs_val, y=patches_masks_val, batch_size=32, verbose=1)
+    score = model.evaluate(x=patches_imgs_val, y=patches_masks_val, batch_size=32, verbose=2)
     print score[1], score[0]
 
-    y_pred = model.predict(patches_imgs_val, batch_size=32, verbose=1)
+    y_pred = model.predict(patches_imgs_val, batch_size=32, verbose=2)
     fa, fr, ta, tr = class_accuracy(y_pred[:, 1], patches_masks_val[:, 1])
     print '\n',"FA FR TA TR", fa, fr, ta, tr
 
