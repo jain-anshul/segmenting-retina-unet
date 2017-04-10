@@ -50,23 +50,23 @@ ________________________________________________________________________________
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
-Epoch 00000: val_loss improved from inf to 0.25293, saving model to ./test/cnn/test-weights-0.25293.h5
-Epoch 00000: val_loss improved from inf to 0.25293, saving model to ./test/cnn/test_best_weights.h5
-45s - loss: 0.2873 - acc: 0.9010 - val_loss: 0.2529 - val_acc: 0.9147
+Epoch 00000: val_loss improved from inf to 0.24548, saving model to ./test/cnn/test-weights-0.24548.h5
+Epoch 00000: val_loss improved from inf to 0.24548, saving model to ./test/cnn/test_best_weights.h5
+44s - loss: 0.2842 - acc: 0.9029 - val_loss: 0.2455 - val_acc: 0.9153
 (180000,) (180000,)
-161793 309
-15969 1929
+162217 175
+16143 1465
 
-FA FR TA TR 0.00190620720287 0.892222594703 0.107777405297 0.998093792797
+FA FR TA TR 0.00107763929258 0.91679918219 0.0832008178101 0.998922360707
 
 VALIDATION DATA
-0.914722222222 0.252925471942
+0.915277777778 0.245482641194
 (18000,) (18000,)
-16272 37
-1498 193
+16309 27
+1498 166
 
-FA FR TA TR 0.00226868600159 0.885866351271 0.114133648729 0.997731313998
-0.252925471942  - val loss
+FA FR TA TR 0.001652791381 0.900240384615 0.0997596153846 0.998347208619
+0.245482641194  - val loss
 999999  - final_loss
 Validation Loss decreased. Great work
 
@@ -78,24 +78,24 @@ Validation Loss decreased. Great work
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
-Epoch 00000: val_loss improved from 0.25293 to 0.21559, saving model to ./test/cnn/test-weights-0.21559.h5
-Epoch 00000: val_loss improved from 0.25293 to 0.21559, saving model to ./test/cnn/test_best_weights.h5
-44s - loss: 0.2360 - acc: 0.9141 - val_loss: 0.2156 - val_acc: 0.9243
+Epoch 00000: val_loss improved from 0.24548 to 0.21507, saving model to ./test/cnn/test-weights-0.21507.h5
+Epoch 00000: val_loss improved from 0.24548 to 0.21507, saving model to ./test/cnn/test_best_weights.h5
+44s - loss: 0.2325 - acc: 0.9157 - val_loss: 0.2151 - val_acc: 0.9223
 (180000,) (180000,)
-161002 1100
-12779 5119
+161902 490
+14278 3330
 
-FA FR TA TR 0.00678585088401 0.713990389988 0.286009610012 0.993214149116
+FA FR TA TR 0.00301739001921 0.810881417537 0.189118582463 0.996982609981
 
 VALIDATION DATA
-0.924333333333 0.215594722403
+0.922333333333 0.215068930533
 (18000,) (18000,)
-16215 94
-1268 423
+16299 37
+1361 303
 
-FA FR TA TR 0.00576368876081 0.749852158486 0.250147841514 0.994236311239
-0.215594722403  - val loss
-0.252925471942  - final_loss
+FA FR TA TR 0.00226493633692 0.817908653846 0.182091346154 0.997735063663
+0.215068930533  - val loss
+0.245482641194  - final_loss
 Validation Loss decreased. Great work
 
 
@@ -106,24 +106,24 @@ Validation Loss decreased. Great work
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
-Epoch 00000: val_loss improved from 0.21559 to 0.20285, saving model to ./test/cnn/test-weights-0.20285.h5
-Epoch 00000: val_loss improved from 0.21559 to 0.20285, saving model to ./test/cnn/test_best_weights.h5
-44s - loss: 0.2201 - acc: 0.9219 - val_loss: 0.2029 - val_acc: 0.9241
+Epoch 00000: val_loss improved from 0.21507 to 0.19358, saving model to ./test/cnn/test-weights-0.19358.h5
+Epoch 00000: val_loss improved from 0.21507 to 0.19358, saving model to ./test/cnn/test_best_weights.h5
+44s - loss: 0.2162 - acc: 0.9231 - val_loss: 0.1936 - val_acc: 0.9294
 (180000,) (180000,)
-161328 774
-13149 4749
+161418 974
+12170 5438
 
-FA FR TA TR 0.0047747714402 0.734663090848 0.265336909152 0.99522522856
+FA FR TA TR 0.00599783240554 0.691163107678 0.308836892322 0.994002167594
 
 VALIDATION DATA
-0.924055555556 0.202851747824
+0.929444444444 0.19357540971
 (18000,) (18000,)
-16247 62
-1305 386
+16234 102
+1168 496
 
-FA FR TA TR 0.00380158194862 0.771732702543 0.228267297457 0.996198418051
-0.202851747824  - val loss
-0.215594722403  - final_loss
+FA FR TA TR 0.00624387855044 0.701923076923 0.298076923077 0.99375612145
+0.19357540971  - val loss
+0.215068930533  - final_loss
 Validation Loss decreased. Great work
 
 
@@ -134,24 +134,24 @@ Validation Loss decreased. Great work
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
-Epoch 00000: val_loss improved from 0.20285 to 0.19547, saving model to ./test/cnn/test-weights-0.19547.h5
-Epoch 00000: val_loss improved from 0.20285 to 0.19547, saving model to ./test/cnn/test_best_weights.h5
-44s - loss: 0.2133 - acc: 0.9251 - val_loss: 0.1955 - val_acc: 0.9274
+Epoch 00000: val_loss improved from 0.19358 to 0.18996, saving model to ./test/cnn/test-weights-0.18996.h5
+Epoch 00000: val_loss improved from 0.19358 to 0.18996, saving model to ./test/cnn/test_best_weights.h5
+44s - loss: 0.2098 - acc: 0.9263 - val_loss: 0.1900 - val_acc: 0.9356
 (180000,) (180000,)
-161201 901
-12151 5747
+160886 1506
+10873 6735
 
-FA FR TA TR 0.00555822876954 0.678902670689 0.321097329311 0.99444177123
+FA FR TA TR 0.00927385585497 0.617503407542 0.382496592458 0.990726144145
 
 VALIDATION DATA
-0.927388888889 0.195472842713
+0.935611111111 0.189956508206
 (18000,) (18000,)
-16237 72
-1235 456
+16187 149
+1010 654
 
-FA FR TA TR 0.00441474032743 0.730337078652 0.269662921348 0.995585259673
-0.195472842713  - val loss
-0.202851747824  - final_loss
+FA FR TA TR 0.00912095984329 0.606971153846 0.393028846154 0.990879040157
+0.189956508206  - val loss
+0.19357540971  - final_loss
 Validation Loss decreased. Great work
 
 
@@ -162,52 +162,24 @@ Validation Loss decreased. Great work
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-44s - loss: 0.2095 - acc: 0.9264 - val_loss: 0.1991 - val_acc: 0.9259
+Epoch 00000: val_loss improved from 0.18996 to 0.18476, saving model to ./test/cnn/test-weights-0.18476.h5
+Epoch 00000: val_loss improved from 0.18996 to 0.18476, saving model to ./test/cnn/test_best_weights.h5
+44s - loss: 0.2059 - acc: 0.9282 - val_loss: 0.1848 - val_acc: 0.9351
 (180000,) (180000,)
-161447 655
-12887 5011
+161216 1176
+11123 6485
 
-FA FR TA TR 0.00404066575366 0.720024583752 0.279975416248 0.995959334246
+FA FR TA TR 0.00724173604611 0.631701499318 0.368298500682 0.992758263954
 
 VALIDATION DATA
-0.925944444444 0.19905591316
+0.935055555556 0.184755440487
 (18000,) (18000,)
-16261 48
-1285 406
+16218 118
+1051 613
 
-FA FR TA TR 0.00294316021828 0.759905381431 0.240094618569 0.997056839782
-0.19905591316  - val loss
-0.195472842713  - final_loss
-Inside Plateau  1
-
-
-
-5  iteration
-0.01  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss improved from 0.19547 to 0.18885, saving model to ./test/cnn/test-weights-0.18885.h5
-Epoch 00000: val_loss improved from 0.19547 to 0.18885, saving model to ./test/cnn/test_best_weights.h5
-44s - loss: 0.2070 - acc: 0.9280 - val_loss: 0.1888 - val_acc: 0.9359
-(180000,) (180000,)
-160735 1367
-10631 7267
-
-FA FR TA TR 0.00843296196222 0.593976980668 0.406023019332 0.991567038038
-
-VALIDATION DATA
-0.935944444444 0.188847021083
-(18000,) (18000,)
-16200 109
-1044 647
-
-FA FR TA TR 0.00668342632902 0.617386162034 0.382613837966 0.993316573671
-0.188847021083  - val loss
-0.195472842713  - final_loss
+FA FR TA TR 0.00722331047992 0.631610576923 0.368389423077 0.99277668952
+0.184755440487  - val loss
+0.189956508206  - final_loss
 Validation Loss decreased. Great work
 
 
@@ -218,24 +190,24 @@ Validation Loss decreased. Great work
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
-Epoch 00000: val_loss improved from 0.18885 to 0.18655, saving model to ./test/cnn/test-weights-0.18655.h5
-Epoch 00000: val_loss improved from 0.18885 to 0.18655, saving model to ./test/cnn/test_best_weights.h5
-44s - loss: 0.2052 - acc: 0.9286 - val_loss: 0.1865 - val_acc: 0.9319
+Epoch 00000: val_loss improved from 0.18476 to 0.18176, saving model to ./test/cnn/test-weights-0.18176.h5
+Epoch 00000: val_loss improved from 0.18476 to 0.18176, saving model to ./test/cnn/test_best_weights.h5
+44s - loss: 0.2032 - acc: 0.9294 - val_loss: 0.1818 - val_acc: 0.9364
 (180000,) (180000,)
-161213 889
-11829 6069
+161155 1237
+10756 6852
 
-FA FR TA TR 0.00548420130535 0.660911833724 0.339088166276 0.994515798695
+FA FR TA TR 0.00761737031381 0.610858700591 0.389141299409 0.992382629686
 
 VALIDATION DATA
-0.931888888889 0.186546939313
+0.936444444444 0.181758892377
 (18000,) (18000,)
-16236 73
-1153 538
+16228 108
+1036 628
 
-FA FR TA TR 0.00447605616531 0.681845062093 0.318154937907 0.995523943835
-0.186546939313  - val loss
-0.188847021083  - final_loss
+FA FR TA TR 0.006611165524 0.622596153846 0.377403846154 0.993388834476
+0.181758892377  - val loss
+0.184755440487  - final_loss
 Validation Loss decreased. Great work
 
 
@@ -246,24 +218,24 @@ Validation Loss decreased. Great work
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
-Epoch 00000: val_loss improved from 0.18655 to 0.18331, saving model to ./test/cnn/test-weights-0.18331.h5
-Epoch 00000: val_loss improved from 0.18655 to 0.18331, saving model to ./test/cnn/test_best_weights.h5
-44s - loss: 0.2035 - acc: 0.9295 - val_loss: 0.1833 - val_acc: 0.9348
+Epoch 00000: val_loss improved from 0.18176 to 0.18120, saving model to ./test/cnn/test-weights-0.18120.h5
+Epoch 00000: val_loss improved from 0.18176 to 0.18120, saving model to ./test/cnn/test_best_weights.h5
+44s - loss: 0.2024 - acc: 0.9295 - val_loss: 0.1812 - val_acc: 0.9340
 (180000,) (180000,)
-160954 1148
-11011 6887
+161508 884
+11616 5992
 
-FA FR TA TR 0.00708196074077 0.615208403174 0.384791596826 0.992918039259
+FA FR TA TR 0.00544361791221 0.659700136302 0.340299863698 0.994556382088
 
 VALIDATION DATA
-0.934833333333 0.183313746081
+0.934 0.181200382047
 (18000,) (18000,)
-16218 91
-1082 609
+16259 77
+1111 553
 
-FA FR TA TR 0.00557974124716 0.639858072147 0.360141927853 0.994420258753
-0.183313746081  - val loss
-0.186546939313  - final_loss
+FA FR TA TR 0.00471351616063 0.667668269231 0.332331730769 0.995286483839
+0.181200382047  - val loss
+0.181758892377  - final_loss
 Validation Loss decreased. Great work
 
 
@@ -276,22 +248,22 @@ Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-44s - loss: 0.2020 - acc: 0.9305 - val_loss: 0.1971 - val_acc: 0.9280
+44s - loss: 0.2002 - acc: 0.9305 - val_loss: 0.1921 - val_acc: 0.9421
 (180000,) (180000,)
-161502 600
-12453 5445
+159998 2394
+9149 8459
 
-FA FR TA TR 0.00370137320946 0.695776064365 0.304223935635 0.996298626791
+FA FR TA TR 0.0147421055224 0.519593366652 0.480406633348 0.985257894478
 
 VALIDATION DATA
-0.928 0.197053181933
+0.942055555556 0.192071483745
 (18000,) (18000,)
-16267 42
-1254 437
+16109 227
+816 848
 
-FA FR TA TR 0.002575265191 0.741573033708 0.258426966292 0.997424734809
-0.197053181933  - val loss
-0.183313746081  - final_loss
+FA FR TA TR 0.0138956904995 0.490384615385 0.509615384615 0.9861043095
+0.192071483745  - val loss
+0.181200382047  - final_loss
 Inside Plateau  1
 
 
@@ -304,22 +276,22 @@ Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-44s - loss: 0.2003 - acc: 0.9306 - val_loss: 0.1888 - val_acc: 0.9308
+44s - loss: 0.1987 - acc: 0.9311 - val_loss: 0.1816 - val_acc: 0.9340
 (180000,) (180000,)
-161401 701
-11981 5917
+161580 812
+11479 6129
 
-FA FR TA TR 0.00432443769972 0.669404402727 0.330595597273 0.9956755623
+FA FR TA TR 0.00500024631755 0.651919582008 0.348080417992 0.994999753682
 
 VALIDATION DATA
-0.930833333333 0.188770951529
+0.934 0.181641548498
 (18000,) (18000,)
-16260 49
-1196 495
+16269 67
+1121 543
 
-FA FR TA TR 0.00300447605617 0.707273802484 0.292726197516 0.996995523944
-0.188770951529  - val loss
-0.183313746081  - final_loss
+FA FR TA TR 0.0041013712047 0.673677884615 0.326322115385 0.995898628795
+0.181641548498  - val loss
+0.181200382047  - final_loss
 Inside Plateau  2
 
 
@@ -330,52 +302,24 @@ Inside Plateau  2
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-44s - loss: 0.1987 - acc: 0.9320 - val_loss: 0.2066 - val_acc: 0.9269
+Epoch 00000: val_loss improved from 0.18120 to 0.17818, saving model to ./test/cnn/test-weights-0.17818.h5
+Epoch 00000: val_loss improved from 0.18120 to 0.17818, saving model to ./test/cnn/test_best_weights.h5
+44s - loss: 0.1974 - acc: 0.9313 - val_loss: 0.1782 - val_acc: 0.9412
 (180000,) (180000,)
-161511 591
-12343 5555
+160558 1834
+9315 8293
 
-FA FR TA TR 0.00364585261132 0.689630126271 0.310369873729 0.996354147389
+FA FR TA TR 0.0112936597862 0.529020899591 0.470979100409 0.988706340214
 
 VALIDATION DATA
-0.926888888889 0.20661085697
+0.941222222222 0.178184453415
 (18000,) (18000,)
-16280 29
-1287 404
+16192 144
+914 750
 
-FA FR TA TR 0.00177815929855 0.761088113542 0.238911886458 0.998221840701
-0.20661085697  - val loss
-0.183313746081  - final_loss
-Inside Plateau  3
-
-
-
-8  iteration
-0.01  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss improved from 0.18331 to 0.17931, saving model to ./test/cnn/test-weights-0.17931.h5
-Epoch 00000: val_loss improved from 0.18331 to 0.17931, saving model to ./test/cnn/test_best_weights.h5
-44s - loss: 0.1973 - acc: 0.9323 - val_loss: 0.1793 - val_acc: 0.9378
-(180000,) (180000,)
-160746 1356
-10106 7792
-
-FA FR TA TR 0.00836510345338 0.564644094312 0.435355905688 0.991634896547
-
-VALIDATION DATA
-0.937833333333 0.179312187685
-(18000,) (18000,)
-16208 101
-1018 673
-
-FA FR TA TR 0.00619289962597 0.602010644589 0.397989355411 0.993807100374
-0.179312187685  - val loss
-0.183313746081  - final_loss
+FA FR TA TR 0.00881488736533 0.549278846154 0.450721153846 0.991185112635
+0.178184453415  - val loss
+0.181200382047  - final_loss
 Validation Loss decreased. Great work
 
 
@@ -386,52 +330,24 @@ Validation Loss decreased. Great work
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-44s - loss: 0.1957 - acc: 0.9323 - val_loss: 0.1802 - val_acc: 0.9404
+Epoch 00000: val_loss improved from 0.17818 to 0.17574, saving model to ./test/cnn/test-weights-0.17574.h5
+Epoch 00000: val_loss improved from 0.17818 to 0.17574, saving model to ./test/cnn/test_best_weights.h5
+44s - loss: 0.1959 - acc: 0.9324 - val_loss: 0.1757 - val_acc: 0.9363
 (180000,) (180000,)
-160414 1688
-9546 8352
+161535 857
+11169 6439
 
-FA FR TA TR 0.0104131966293 0.533355682199 0.466644317801 0.989586803371
+FA FR TA TR 0.00527735356421 0.634313948205 0.365686051795 0.994722646436
 
 VALIDATION DATA
-0.940444444444 0.180223388175
+0.936333333333 0.175743340486
 (18000,) (18000,)
-16179 130
-942 749
+16264 72
+1074 590
 
-FA FR TA TR 0.00797105892452 0.557066824364 0.442933175636 0.992028941075
-0.180223388175  - val loss
-0.179312187685  - final_loss
-Inside Plateau  1
-
-
-
-9  iteration
-0.01  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss improved from 0.17931 to 0.17281, saving model to ./test/cnn/test-weights-0.17281.h5
-Epoch 00000: val_loss improved from 0.17931 to 0.17281, saving model to ./test/cnn/test_best_weights.h5
-44s - loss: 0.1933 - acc: 0.9332 - val_loss: 0.1728 - val_acc: 0.9399
-(180000,) (180000,)
-160636 1466
-9862 8036
-
-FA FR TA TR 0.00904368854178 0.551011286177 0.448988713823 0.990956311458
-
-VALIDATION DATA
-0.939944444444 0.172811836527
-(18000,) (18000,)
-16208 101
-980 711
-
-FA FR TA TR 0.00619289962597 0.579538734477 0.420461265523 0.993807100374
-0.172811836527  - val loss
-0.179312187685  - final_loss
+FA FR TA TR 0.00440744368266 0.645432692308 0.354567307692 0.995592556317
+0.175743340486  - val loss
+0.178184453415  - final_loss
 Validation Loss decreased. Great work
 
 
@@ -442,24 +358,24 @@ Validation Loss decreased. Great work
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
-Epoch 00000: val_loss improved from 0.17281 to 0.17246, saving model to ./test/cnn/test-weights-0.17246.h5
-Epoch 00000: val_loss improved from 0.17281 to 0.17246, saving model to ./test/cnn/test_best_weights.h5
-44s - loss: 0.1913 - acc: 0.9339 - val_loss: 0.1725 - val_acc: 0.9399
+Epoch 00000: val_loss improved from 0.17574 to 0.17459, saving model to ./test/cnn/test-weights-0.17459.h5
+Epoch 00000: val_loss improved from 0.17574 to 0.17459, saving model to ./test/cnn/test_best_weights.h5
+44s - loss: 0.1951 - acc: 0.9327 - val_loss: 0.1746 - val_acc: 0.9403
 (180000,) (180000,)
-160807 1295
-10249 7649
+160844 1548
+9743 7865
 
-FA FR TA TR 0.00798879717709 0.572633813834 0.427366186166 0.992011202823
+FA FR TA TR 0.00953248928519 0.553328032712 0.446671967288 0.990467510715
 
 VALIDATION DATA
-0.939944444444 0.172457446727
+0.940333333333 0.174592706925
 (18000,) (18000,)
-16200 109
-972 719
+16209 127
+947 717
 
-FA FR TA TR 0.00668342632902 0.574807806032 0.425192193968 0.993316573671
-0.172457446727  - val loss
-0.172811836527  - final_loss
+FA FR TA TR 0.00777424094025 0.569110576923 0.430889423077 0.99222575906
+0.174592706925  - val loss
+0.175743340486  - final_loss
 Validation Loss decreased. Great work
 
 
@@ -470,24 +386,52 @@ Validation Loss decreased. Great work
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
-Epoch 00000: val_loss improved from 0.17246 to 0.16905, saving model to ./test/cnn/test-weights-0.16905.h5
-Epoch 00000: val_loss improved from 0.17246 to 0.16905, saving model to ./test/cnn/test_best_weights.h5
-44s - loss: 0.1897 - acc: 0.9345 - val_loss: 0.1691 - val_acc: 0.9409
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+44s - loss: 0.1932 - acc: 0.9330 - val_loss: 0.1761 - val_acc: 0.9363
 (180000,) (180000,)
-160654 1448
-9702 8196
+161337 1055
+10556 7052
 
-FA FR TA TR 0.0089326473455 0.542071739859 0.457928260141 0.991067352655
+FA FR TA TR 0.00649662544953 0.599500227169 0.400499772831 0.99350337455
 
 VALIDATION DATA
-0.940888888889 0.169054943038
+0.936277777778 0.176068638368
 (18000,) (18000,)
-16203 106
-958 733
+16262 74
+1073 591
 
-FA FR TA TR 0.00649947881538 0.566528681254 0.433471318746 0.993500521185
-0.169054943038  - val loss
-0.172457446727  - final_loss
+FA FR TA TR 0.00452987267385 0.644831730769 0.355168269231 0.995470127326
+0.176068638368  - val loss
+0.174592706925  - final_loss
+Inside Plateau  1
+
+
+
+11  iteration
+0.01  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss improved from 0.17459 to 0.17281, saving model to ./test/cnn/test-weights-0.17281.h5
+Epoch 00000: val_loss improved from 0.17459 to 0.17281, saving model to ./test/cnn/test_best_weights.h5
+44s - loss: 0.1922 - acc: 0.9333 - val_loss: 0.1728 - val_acc: 0.9374
+(180000,) (180000,)
+161434 958
+10623 6985
+
+FA FR TA TR 0.0058993053845 0.603305315766 0.396694684234 0.994100694615
+
+VALIDATION DATA
+0.937444444444 0.172813195656
+(18000,) (18000,)
+16265 71
+1055 609
+
+FA FR TA TR 0.00434622918707 0.634014423077 0.365985576923 0.995653770813
+0.172813195656  - val loss
+0.174592706925  - final_loss
 Validation Loss decreased. Great work
 
 
@@ -498,24 +442,24 @@ Validation Loss decreased. Great work
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
-Epoch 00000: val_loss improved from 0.16905 to 0.16781, saving model to ./test/cnn/test-weights-0.16781.h5
-Epoch 00000: val_loss improved from 0.16905 to 0.16781, saving model to ./test/cnn/test_best_weights.h5
-44s - loss: 0.1874 - acc: 0.9347 - val_loss: 0.1678 - val_acc: 0.9397
+Epoch 00000: val_loss improved from 0.17281 to 0.17034, saving model to ./test/cnn/test-weights-0.17034.h5
+Epoch 00000: val_loss improved from 0.17281 to 0.17034, saving model to ./test/cnn/test_best_weights.h5
+44s - loss: 0.1904 - acc: 0.9340 - val_loss: 0.1703 - val_acc: 0.9440
 (180000,) (180000,)
-160836 1266
-9827 8071
+160515 1877
+9032 8576
 
-FA FR TA TR 0.00780989747196 0.54905576042 0.45094423958 0.992190102528
+FA FR TA TR 0.0115584511552 0.5129486597 0.4870513403 0.988441548845
 
 VALIDATION DATA
-0.939722222222 0.167807240314
+0.944 0.170335231066
 (18000,) (18000,)
-16225 84
-1001 690
+16190 146
+862 802
 
-FA FR TA TR 0.005150530382 0.591957421644 0.408042578356 0.994849469618
-0.167807240314  - val loss
-0.169054943038  - final_loss
+FA FR TA TR 0.00893731635651 0.518028846154 0.481971153846 0.991062683643
+0.170335231066  - val loss
+0.172813195656  - final_loss
 Validation Loss decreased. Great work
 
 
@@ -528,22 +472,22 @@ Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-44s - loss: 0.1852 - acc: 0.9360 - val_loss: 0.1688 - val_acc: 0.9443
+44s - loss: 0.1879 - acc: 0.9350 - val_loss: 0.1732 - val_acc: 0.9356
 (180000,) (180000,)
-160253 1849
-8764 9134
+161637 755
+10999 6609
 
-FA FR TA TR 0.0114063984405 0.48966364957 0.51033635043 0.98859360156
+FA FR TA TR 0.00464924380511 0.624659245797 0.375340754203 0.995350756195
 
 VALIDATION DATA
-0.944277777778 0.168769254896
+0.935611111111 0.173190926479
 (18000,) (18000,)
-16179 130
-873 818
+16273 63
+1096 568
 
-FA FR TA TR 0.00797105892452 0.516262566529 0.483737433471 0.992028941075
-0.168769254896  - val loss
-0.167807240314  - final_loss
+FA FR TA TR 0.00385651322233 0.658653846154 0.341346153846 0.996143486778
+0.173190926479  - val loss
+0.170335231066  - final_loss
 Inside Plateau  1
 
 
@@ -554,24 +498,24 @@ Inside Plateau  1
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
-Epoch 00000: val_loss improved from 0.16781 to 0.16367, saving model to ./test/cnn/test-weights-0.16367.h5
-Epoch 00000: val_loss improved from 0.16781 to 0.16367, saving model to ./test/cnn/test_best_weights.h5
-44s - loss: 0.1830 - acc: 0.9361 - val_loss: 0.1637 - val_acc: 0.9436
+Epoch 00000: val_loss improved from 0.17034 to 0.16412, saving model to ./test/cnn/test-weights-0.16412.h5
+Epoch 00000: val_loss improved from 0.17034 to 0.16412, saving model to ./test/cnn/test_best_weights.h5
+44s - loss: 0.1863 - acc: 0.9352 - val_loss: 0.1641 - val_acc: 0.9402
 (180000,) (180000,)
-160556 1546
-9244 8654
+161216 1176
+9906 7702
 
-FA FR TA TR 0.00953720496971 0.516482288524 0.483517711476 0.99046279503
+FA FR TA TR 0.00724173604611 0.562585188551 0.437414811449 0.992758263954
 
 VALIDATION DATA
-0.943555555556 0.163666915821
+0.940166666667 0.164116420855
 (18000,) (18000,)
-16194 115
-901 790
+16253 83
+994 670
 
-FA FR TA TR 0.00705132135631 0.532820816085 0.467179183915 0.992948678644
-0.163666915821  - val loss
-0.167807240314  - final_loss
+FA FR TA TR 0.00508080313418 0.597355769231 0.402644230769 0.994919196866
+0.164116420855  - val loss
+0.170335231066  - final_loss
 Validation Loss decreased. Great work
 
 
@@ -584,22 +528,22 @@ Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-44s - loss: 0.1821 - acc: 0.9366 - val_loss: 0.1663 - val_acc: 0.9451
+44s - loss: 0.1841 - acc: 0.9359 - val_loss: 0.1792 - val_acc: 0.9346
 (180000,) (180000,)
-160303 1799
-8588 9310
+161779 613
+11569 6039
 
-FA FR TA TR 0.011097950673 0.47983014862 0.52016985138 0.988902049327
+FA FR TA TR 0.00377481649342 0.657030895048 0.342969104952 0.996225183507
 
 VALIDATION DATA
-0.945111111111 0.166289649208
+0.934555555556 0.179153087215
 (18000,) (18000,)
-16181 128
-860 831
+16293 43
+1135 529
 
-FA FR TA TR 0.00784842724876 0.508574807806 0.491425192194 0.992151572751
-0.166289649208  - val loss
-0.163666915821  - final_loss
+FA FR TA TR 0.00263222331048 0.682091346154 0.317908653846 0.99736777669
+0.179153087215  - val loss
+0.164116420855  - final_loss
 Inside Plateau  1
 
 
@@ -610,24 +554,52 @@ Inside Plateau  1
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
-Epoch 00000: val_loss improved from 0.16367 to 0.15676, saving model to ./test/cnn/test-weights-0.15676.h5
-Epoch 00000: val_loss improved from 0.16367 to 0.15676, saving model to ./test/cnn/test_best_weights.h5
-44s - loss: 0.1791 - acc: 0.9371 - val_loss: 0.1568 - val_acc: 0.9460
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+44s - loss: 0.1831 - acc: 0.9365 - val_loss: 0.1744 - val_acc: 0.9352
 (180000,) (180000,)
-160329 1773
-8515 9383
+161793 599
+11513 6095
 
-FA FR TA TR 0.010937557834 0.475751480612 0.524248519388 0.989062442166
+FA FR TA TR 0.00368860535002 0.65385052249 0.34614947751 0.99631139465
 
 VALIDATION DATA
-0.946 0.156764617397
+0.935222222222 0.174398928093
 (18000,) (18000,)
-16193 116
-856 835
+16290 46
+1120 544
 
-FA FR TA TR 0.00711263719419 0.506209343584 0.493790656416 0.992887362806
-0.156764617397  - val loss
-0.163666915821  - final_loss
+FA FR TA TR 0.00281586679726 0.673076923077 0.326923076923 0.997184133203
+0.174398928093  - val loss
+0.164116420855  - final_loss
+Inside Plateau  2
+
+
+
+14  iteration
+0.01  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss improved from 0.16412 to 0.16120, saving model to ./test/cnn/test-weights-0.16120.h5
+Epoch 00000: val_loss improved from 0.16412 to 0.16120, saving model to ./test/cnn/test_best_weights.h5
+44s - loss: 0.1813 - acc: 0.9366 - val_loss: 0.1612 - val_acc: 0.9454
+(180000,) (180000,)
+160689 1703
+8896 8712
+
+FA FR TA TR 0.0104869698015 0.505224897774 0.494775102226 0.989513030199
+
+VALIDATION DATA
+0.945388888889 0.161199446221
+(18000,) (18000,)
+16192 144
+839 825
+
+FA FR TA TR 0.00881488736533 0.504206730769 0.495793269231 0.991185112635
+0.161199446221  - val loss
+0.164116420855  - final_loss
 Validation Loss decreased. Great work
 
 
@@ -640,22 +612,22 @@ Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-44s - loss: 0.1771 - acc: 0.9377 - val_loss: 0.1715 - val_acc: 0.9352
+44s - loss: 0.1787 - acc: 0.9379 - val_loss: 0.1639 - val_acc: 0.9377
 (180000,) (180000,)
-161401 701
-11267 6631
+161641 751
+10950 6658
 
-FA FR TA TR 0.00432443769972 0.629511677282 0.370488322718 0.9956755623
+FA FR TA TR 0.00462461204985 0.621876419809 0.378123580191 0.99537538795
 
 VALIDATION DATA
-0.935222222222 0.171524913351
+0.937666666667 0.163871683432
 (18000,) (18000,)
-16257 52
-1114 577
+16277 59
+1063 601
 
-FA FR TA TR 0.00318842356981 0.658781785925 0.341218214075 0.99681157643
-0.171524913351  - val loss
-0.156764617397  - final_loss
+FA FR TA TR 0.00361165523996 0.638822115385 0.361177884615 0.99638834476
+0.163871683432  - val loss
+0.161199446221  - final_loss
 Inside Plateau  1
 
 
@@ -666,24 +638,52 @@ Inside Plateau  1
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
-Epoch 00000: val_loss improved from 0.15676 to 0.15566, saving model to ./test/cnn/test-weights-0.15566.h5
-Epoch 00000: val_loss improved from 0.15676 to 0.15566, saving model to ./test/cnn/test_best_weights.h5
-44s - loss: 0.1751 - acc: 0.9387 - val_loss: 0.1557 - val_acc: 0.9412
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+44s - loss: 0.1770 - acc: 0.9386 - val_loss: 0.1714 - val_acc: 0.9361
 (180000,) (180000,)
-160989 1113
-9928 7970
+161722 670
+11036 6572
 
-FA FR TA TR 0.00686604730355 0.554698849033 0.445301150967 0.993133952696
+FA FR TA TR 0.00412581900586 0.62676056338 0.37323943662 0.995874180994
 
 VALIDATION DATA
-0.941166666667 0.155655218032
+0.936111111111 0.171413328994
 (18000,) (18000,)
-16222 87
-972 719
+16289 47
+1103 561
 
-FA FR TA TR 0.00533447789564 0.574807806032 0.425192193968 0.994665522104
-0.155655218032  - val loss
-0.156764617397  - final_loss
+FA FR TA TR 0.00287708129285 0.662860576923 0.337139423077 0.997122918707
+0.171413328994  - val loss
+0.161199446221  - final_loss
+Inside Plateau  2
+
+
+
+15  iteration
+0.01  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss improved from 0.16120 to 0.15866, saving model to ./test/cnn/test-weights-0.15866.h5
+Epoch 00000: val_loss improved from 0.16120 to 0.15866, saving model to ./test/cnn/test_best_weights.h5
+44s - loss: 0.1758 - acc: 0.9387 - val_loss: 0.1587 - val_acc: 0.9393
+(180000,) (180000,)
+161374 1018
+9877 7731
+
+FA FR TA TR 0.00626878171338 0.560938209905 0.439061790095 0.993731218287
+
+VALIDATION DATA
+0.939333333333 0.158657759756
+(18000,) (18000,)
+16257 79
+1013 651
+
+FA FR TA TR 0.00483594515181 0.608774038462 0.391225961538 0.995164054848
+0.158657759756  - val loss
+0.161199446221  - final_loss
 Validation Loss decreased. Great work
 
 
@@ -694,108 +694,24 @@ Validation Loss decreased. Great work
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-44s - loss: 0.1740 - acc: 0.9392 - val_loss: 0.1591 - val_acc: 0.9402
+Epoch 00000: val_loss improved from 0.15866 to 0.15233, saving model to ./test/cnn/test-weights-0.15233.h5
+Epoch 00000: val_loss improved from 0.15866 to 0.15233, saving model to ./test/cnn/test_best_weights.h5
+44s - loss: 0.1738 - acc: 0.9392 - val_loss: 0.1523 - val_acc: 0.9434
 (180000,) (180000,)
-161058 1044
-9763 8135
+161180 1212
+9324 8284
 
-FA FR TA TR 0.00644038938446 0.545479941893 0.454520058107 0.993559610616
+FA FR TA TR 0.00746342184344 0.529532030895 0.470467969105 0.992536578157
 
 VALIDATION DATA
-0.940166666667 0.159050280541
+0.943388888889 0.152331861307
 (18000,) (18000,)
-16248 61
-1016 675
+16238 98
+921 743
 
-FA FR TA TR 0.00374026611074 0.600827912478 0.399172087522 0.996259733889
-0.159050280541  - val loss
-0.155655218032  - final_loss
-Inside Plateau  1
-
-
-
-16  iteration
-0.01  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-44s - loss: 0.1720 - acc: 0.9396 - val_loss: 0.1752 - val_acc: 0.9337
-(180000,) (180000,)
-161435 667
-11078 6820
-
-FA FR TA TR 0.00411469321785 0.618951838194 0.381048161806 0.995885306782
-
-VALIDATION DATA
-0.933722222222 0.175217638416
-(18000,) (18000,)
-16275 34
-1159 532
-
-FA FR TA TR 0.00208473848795 0.685393258427 0.314606741573 0.997915261512
-0.175217638416  - val loss
-0.155655218032  - final_loss
-Inside Plateau  2
-
-
-
-16  iteration
-0.01  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-44s - loss: 0.1698 - acc: 0.9397 - val_loss: 0.1618 - val_acc: 0.9393
-(180000,) (180000,)
-161256 846
-10323 7575
-
-FA FR TA TR 0.00521893622534 0.576768354006 0.423231645994 0.994781063775
-
-VALIDATION DATA
-0.939277777778 0.161823385461
-(18000,) (18000,)
-16251 58
-1035 656
-
-FA FR TA TR 0.00355631859709 0.612063867534 0.387936132466 0.996443681403
-0.161823385461  - val loss
-0.155655218032  - final_loss
-Inside Plateau  3
-
-
-
-16  iteration
-0.01  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss improved from 0.15566 to 0.14819, saving model to ./test/cnn/test-weights-0.14819.h5
-Epoch 00000: val_loss improved from 0.15566 to 0.14819, saving model to ./test/cnn/test_best_weights.h5
-44s - loss: 0.1687 - acc: 0.9405 - val_loss: 0.1482 - val_acc: 0.9443
-(180000,) (180000,)
-160569 1533
-8628 9270
-
-FA FR TA TR 0.00945700855017 0.482065035199 0.517934964801 0.99054299145
-
-VALIDATION DATA
-0.944333333333 0.148186016788
-(18000,) (18000,)
-16226 83
-919 772
-
-FA FR TA TR 0.00508921454412 0.543465405086 0.456534594914 0.994910785456
-0.148186016788  - val loss
-0.155655218032  - final_loss
+FA FR TA TR 0.00599902056807 0.553485576923 0.446514423077 0.994000979432
+0.152331861307  - val loss
+0.158657759756  - final_loss
 Validation Loss decreased. Great work
 
 
@@ -808,22 +724,22 @@ Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-44s - loss: 0.1681 - acc: 0.9411 - val_loss: 0.1598 - val_acc: 0.9390
+44s - loss: 0.1724 - acc: 0.9397 - val_loss: 0.1536 - val_acc: 0.9497
 (180000,) (180000,)
-161207 895
-9951 7947
+160198 2194
+7737 9871
 
-FA FR TA TR 0.00552121503745 0.555983908817 0.444016091183 0.994478784963
+FA FR TA TR 0.0135105177595 0.439402544298 0.560597455702 0.986489482241
 
 VALIDATION DATA
-0.939 0.159815588441
+0.949722222222 0.153643648028
 (18000,) (18000,)
-16258 51
-1047 644
+16162 174
+731 933
 
-FA FR TA TR 0.00312710773193 0.619160260201 0.380839739799 0.996872892268
-0.159815588441  - val loss
-0.148186016788  - final_loss
+FA FR TA TR 0.0106513222331 0.439302884615 0.560697115385 0.989348677767
+0.153643648028  - val loss
+0.152331861307  - final_loss
 Inside Plateau  1
 
 
@@ -834,24 +750,24 @@ Inside Plateau  1
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
-Epoch 00000: val_loss improved from 0.14819 to 0.14559, saving model to ./test/cnn/test-weights-0.14559.h5
-Epoch 00000: val_loss improved from 0.14819 to 0.14559, saving model to ./test/cnn/test_best_weights.h5
-44s - loss: 0.1664 - acc: 0.9416 - val_loss: 0.1456 - val_acc: 0.9484
+Epoch 00000: val_loss improved from 0.15233 to 0.14999, saving model to ./test/cnn/test-weights-0.14999.h5
+Epoch 00000: val_loss improved from 0.15233 to 0.14999, saving model to ./test/cnn/test_best_weights.h5
+44s - loss: 0.1700 - acc: 0.9404 - val_loss: 0.1500 - val_acc: 0.9448
 (180000,) (180000,)
-160288 1814
-7900 9998
+161088 1304
+8938 8670
 
-FA FR TA TR 0.0111904850033 0.441390099452 0.558609900548 0.988809514997
+FA FR TA TR 0.00802995221439 0.507610177192 0.492389822808 0.991970047786
 
 VALIDATION DATA
-0.948388888889 0.145594509108
+0.944833333333 0.149990356237
 (18000,) (18000,)
-16185 124
-805 886
+16240 96
+897 767
 
-FA FR TA TR 0.00760316389723 0.476049674749 0.523950325251 0.992396836103
-0.145594509108  - val loss
-0.148186016788  - final_loss
+FA FR TA TR 0.00587659157689 0.5390625 0.4609375 0.994123408423
+0.149990356237  - val loss
+0.152331861307  - final_loss
 Validation Loss decreased. Great work
 
 
@@ -864,22 +780,22 @@ Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-44s - loss: 0.1648 - acc: 0.9424 - val_loss: 0.1557 - val_acc: 0.9404
+44s - loss: 0.1688 - acc: 0.9409 - val_loss: 0.1838 - val_acc: 0.9337
 (180000,) (180000,)
-161156 946
-9732 8166
+161880 512
+11489 6119
 
-FA FR TA TR 0.00583583176025 0.543747904794 0.456252095206 0.99416416824
+FA FR TA TR 0.00315286467314 0.652487505679 0.347512494321 0.996847135327
 
 VALIDATION DATA
-0.940388888889 0.155708257983
+0.933722222222 0.183841338868
 (18000,) (18000,)
-16255 54
-1019 672
+16301 35
+1158 506
 
-FA FR TA TR 0.00331105524557 0.602602010645 0.397397989355 0.996688944754
-0.155708257983  - val loss
-0.145594509108  - final_loss
+FA FR TA TR 0.00214250734574 0.695913461538 0.304086538462 0.997857492654
+0.183841338868  - val loss
+0.149990356237  - final_loss
 Inside Plateau  1
 
 
@@ -892,22 +808,22 @@ Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-44s - loss: 0.1647 - acc: 0.9424 - val_loss: 0.1556 - val_acc: 0.9410
+44s - loss: 0.1673 - acc: 0.9412 - val_loss: 0.1653 - val_acc: 0.9386
 (180000,) (180000,)
-161174 928
-9695 8203
+161750 642
+10732 6876
 
-FA FR TA TR 0.00572479056397 0.541680634708 0.458319365292 0.994275209436
+FA FR TA TR 0.00395339671905 0.60949568378 0.39050431622 0.996046603281
 
 VALIDATION DATA
-0.941 0.155645798259
+0.938555555556 0.165301001489
 (18000,) (18000,)
-16249 60
-1002 689
+16286 50
+1056 608
 
-FA FR TA TR 0.00367895027286 0.5925487877 0.4074512123 0.996321049727
-0.155645798259  - val loss
-0.145594509108  - final_loss
+FA FR TA TR 0.00306072477963 0.634615384615 0.365384615385 0.99693927522
+0.165301001489  - val loss
+0.149990356237  - final_loss
 Inside Plateau  2
 
 
@@ -920,22 +836,22 @@ Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-44s - loss: 0.1626 - acc: 0.9427 - val_loss: 0.1566 - val_acc: 0.9530
+44s - loss: 0.1665 - acc: 0.9414 - val_loss: 0.5154 - val_acc: 0.7098
 (180000,) (180000,)
-158425 3677
-5727 12171
+116115 46277
+1193 16415
 
-FA FR TA TR 0.0226832488186 0.319979886021 0.680020113979 0.977316751181
+FA FR TA TR 0.284970934529 0.0677532939573 0.932246706043 0.715029065471
 
 VALIDATION DATA
-0.953 0.156562460562
+0.709777777778 0.515408361594
 (18000,) (18000,)
-16044 265
-581 1110
+11201 5135
+89 1575
 
-FA FR TA TR 0.0162486970384 0.343583678297 0.656416321703 0.983751302962
-0.156562460562  - val loss
-0.145594509108  - final_loss
+FA FR TA TR 0.314336434868 0.0534855769231 0.946514423077 0.685663565132
+0.515408361594  - val loss
+0.149990356237  - final_loss
 Inside Plateau  3
 
 
@@ -946,332 +862,108 @@ Inside Plateau  3
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
-Epoch 00000: val_loss improved from 0.14559 to 0.14280, saving model to ./test/cnn/test-weights-0.14280.h5
-Epoch 00000: val_loss improved from 0.14559 to 0.14280, saving model to ./test/cnn/test_best_weights.h5
-45s - loss: 0.1623 - acc: 0.9432 - val_loss: 0.1428 - val_acc: 0.9462
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+44s - loss: 0.1652 - acc: 0.9421 - val_loss: 0.1543 - val_acc: 0.9528
 (180000,) (180000,)
-160639 1463
-8332 9566
+159365 3027
+6373 11235
 
-FA FR TA TR 0.00902518167574 0.465526874511 0.534473125489 0.990974818324
+FA FR TA TR 0.0186400807922 0.361937755566 0.638062244434 0.981359919208
 
 VALIDATION DATA
-0.946166666667 0.142801824212
+0.952777777778 0.15426141917
 (18000,) (18000,)
-16209 100
-869 822
+16113 223
+627 1037
 
-FA FR TA TR 0.00613158378809 0.513897102306 0.486102897694 0.993868416212
-0.142801824212  - val loss
-0.145594509108  - final_loss
-Validation Loss decreased. Great work
-
-
-
-19  iteration
-0.01  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-45s - loss: 0.1615 - acc: 0.9431 - val_loss: 0.1569 - val_acc: 0.9407
-(180000,) (180000,)
-161264 838
-9694 8204
-
-FA FR TA TR 0.00516958458255 0.541624762543 0.458375237457 0.994830415417
-
-VALIDATION DATA
-0.940666666667 0.156946242217
-(18000,) (18000,)
-16254 55
-1013 678
-
-FA FR TA TR 0.00337237108345 0.599053814311 0.400946185689 0.996627628917
-0.156946242217  - val loss
-0.142801824212  - final_loss
-Inside Plateau  1
-
-
-
-19  iteration
-0.01  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-44s - loss: 0.1608 - acc: 0.9432 - val_loss: 0.1483 - val_acc: 0.9447
-(180000,) (180000,)
-160768 1334
-8654 9244
-
-FA FR TA TR 0.0082293864357 0.483517711476 0.516482288524 0.991770613564
-
-VALIDATION DATA
-0.944666666667 0.148333498001
-(18000,) (18000,)
-16228 81
-915 776
-
-FA FR TA TR 0.00496658286835 0.541099940863 0.458900059137 0.995033417132
-0.148333498001  - val loss
-0.142801824212  - final_loss
-Inside Plateau  2
-
-
-
-19  iteration
-0.01  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-44s - loss: 0.1592 - acc: 0.9442 - val_loss: 0.1483 - val_acc: 0.9441
-(180000,) (180000,)
-160963 1139
-8887 9011
-
-FA FR TA TR 0.00702644014263 0.496535925802 0.503464074198 0.992973559857
-
-VALIDATION DATA
-0.944055555556 0.148285869663
-(18000,) (18000,)
-16236 73
-934 757
-
-FA FR TA TR 0.00447605616531 0.55233589592 0.44766410408 0.995523943835
-0.148285869663  - val loss
-0.142801824212  - final_loss
-Inside Plateau  3
-
-
-
-19  iteration
-0.01  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss improved from 0.14280 to 0.13979, saving model to ./test/cnn/test-weights-0.13979.h5
-Epoch 00000: val_loss improved from 0.14280 to 0.13979, saving model to ./test/cnn/test_best_weights.h5
-45s - loss: 0.1597 - acc: 0.9441 - val_loss: 0.1398 - val_acc: 0.9522
-(180000,) (180000,)
-159873 2229
-6925 10973
-
-FA FR TA TR 0.0137506014731 0.386914739077 0.613085260923 0.986249398527
-
-VALIDATION DATA
-0.952222222222 0.139785095427
-(18000,) (18000,)
-16155 154
-706 985
-
-FA FR TA TR 0.00944263903366 0.417504435245 0.582495564755 0.990557360966
-0.139785095427  - val loss
-0.142801824212  - final_loss
-Validation Loss decreased. Great work
-
-
-
-20  iteration
-0.01  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-44s - loss: 0.1587 - acc: 0.9444 - val_loss: 0.1479 - val_acc: 0.9427
-(180000,) (180000,)
-161069 1033
-9287 8611
-
-FA FR TA TR 0.00637253087562 0.518884791597 0.481115208403 0.993627469124
-
-VALIDATION DATA
-0.942722222222 0.147947011875
-(18000,) (18000,)
-16239 70
-961 730
-
-FA FR TA TR 0.00429210865166 0.56830277942 0.43169722058 0.995707891348
-0.147947011875  - val loss
-0.139785095427  - final_loss
-Inside Plateau  1
-
-
-
-20  iteration
-0.01  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-44s - loss: 0.1580 - acc: 0.9446 - val_loss: 0.1426 - val_acc: 0.9532
-(180000,) (180000,)
-159358 2744
-6295 11603
-
-FA FR TA TR 0.0169276134779 0.35171527545 0.64828472455 0.983072386522
-
-VALIDATION DATA
-0.953222222222 0.142633354591
-(18000,) (18000,)
-16099 210
-632 1059
-
-FA FR TA TR 0.012876325955 0.373743347132 0.626256652868 0.987123674045
-0.142633354591  - val loss
-0.139785095427  - final_loss
-Inside Plateau  2
-
-
-
-20  iteration
-0.01  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-45s - loss: 0.1573 - acc: 0.9450 - val_loss: 0.1580 - val_acc: 0.9400
-(180000,) (180000,)
-161291 811
-9686 8212
-
-FA FR TA TR 0.00500302278812 0.541177785227 0.458822214773 0.994996977212
-
-VALIDATION DATA
-0.94 0.158045332324
-(18000,) (18000,)
-16251 58
-1022 669
-
-FA FR TA TR 0.00355631859709 0.604376108811 0.395623891189 0.996443681403
-0.158045332324  - val loss
-0.139785095427  - final_loss
-Inside Plateau  3
-
-
-
-20  iteration
-0.01  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-44s - loss: 0.1573 - acc: 0.9454 - val_loss: 0.1404 - val_acc: 0.9523
-(180000,) (180000,)
-159741 2361
-6710 11188
-
-FA FR TA TR 0.0145649035792 0.374902223712 0.625097776288 0.985435096421
-
-VALIDATION DATA
-0.952277777778 0.140379336374
-(18000,) (18000,)
-16144 165
-694 997
-
-FA FR TA TR 0.0101171132504 0.410408042578 0.589591957422 0.98988288675
-0.140379336374  - val loss
-0.139785095427  - final_loss
+FA FR TA TR 0.0136508325171 0.376802884615 0.623197115385 0.986349167483
+0.15426141917  - val loss
+0.149990356237  - final_loss
 Reducing the learning rate by half
 
 
 
+18  iteration
+0.005  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss improved from 0.14999 to 0.14781, saving model to ./test/cnn/test-weights-0.14781.h5
+Epoch 00000: val_loss improved from 0.14999 to 0.14781, saving model to ./test/cnn/test_best_weights.h5
+45s - loss: 0.1588 - acc: 0.9441 - val_loss: 0.1478 - val_acc: 0.9437
+(180000,) (180000,)
+161332 1060
+9269 8339
+
+FA FR TA TR 0.0065274151436 0.526408450704 0.473591549296 0.993472584856
+
+VALIDATION DATA
+0.943722222222 0.147807891467
+(18000,) (18000,)
+16252 84
+929 735
+
+FA FR TA TR 0.00514201762977 0.558293269231 0.441706730769 0.99485798237
+0.147807891467  - val loss
+0.149990356237  - final_loss
+Validation Loss decreased. Great work
+
+
+
+19  iteration
+0.005  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss improved from 0.14781 to 0.14205, saving model to ./test/cnn/test-weights-0.14205.h5
+Epoch 00000: val_loss improved from 0.14781 to 0.14205, saving model to ./test/cnn/test_best_weights.h5
+45s - loss: 0.1580 - acc: 0.9439 - val_loss: 0.1421 - val_acc: 0.9468
+(180000,) (180000,)
+160830 1562
+8205 9403
+
+FA FR TA TR 0.00961870042859 0.465981372104 0.534018627896 0.990381299571
+
+VALIDATION DATA
+0.946777777778 0.142050311681
+(18000,) (18000,)
+16218 118
+840 824
+
+FA FR TA TR 0.00722331047992 0.504807692308 0.495192307692 0.99277668952
+0.142050311681  - val loss
+0.147807891467  - final_loss
+Validation Loss decreased. Great work
+
+
+
 20  iteration
 0.005  learning rate
 
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-45s - loss: 0.1520 - acc: 0.9461 - val_loss: 0.1413 - val_acc: 0.9457
+Epoch 00000: val_loss improved from 0.14205 to 0.13908, saving model to ./test/cnn/test-weights-0.13908.h5
+Epoch 00000: val_loss improved from 0.14205 to 0.13908, saving model to ./test/cnn/test_best_weights.h5
+45s - loss: 0.1575 - acc: 0.9443 - val_loss: 0.1391 - val_acc: 0.9483
 (180000,) (180000,)
-160786 1316
-8411 9487
+160782 1610
+8091 9517
 
-FA FR TA TR 0.00811834523942 0.469940775506 0.530059224494 0.991881654761
+FA FR TA TR 0.0099142814917 0.459507042254 0.540492957746 0.990085718508
 
 VALIDATION DATA
-0.945666666667 0.141335880154
+0.948277777778 0.13908318352
 (18000,) (18000,)
-16217 92
-886 805
+16224 112
+819 845
 
-FA FR TA TR 0.00564105708505 0.523950325251 0.476049674749 0.994358942915
-0.141335880154  - val loss
-0.139785095427  - final_loss
-Inside Plateau  1
-
-
-
-20  iteration
-0.005  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-45s - loss: 0.1511 - acc: 0.9467 - val_loss: 0.1430 - val_acc: 0.9447
-(180000,) (180000,)
-160926 1176
-8619 9279
-
-FA FR TA TR 0.00725469149054 0.481562185719 0.518437814281 0.992745308509
-
-VALIDATION DATA
-0.944722222222 0.14303916226
-(18000,) (18000,)
-16224 85
-910 781
-
-FA FR TA TR 0.00521184621988 0.538143110585 0.461856889415 0.99478815378
-0.14303916226  - val loss
-0.139785095427  - final_loss
-Inside Plateau  2
-
-
-
-20  iteration
-0.005  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss improved from 0.13979 to 0.13631, saving model to ./test/cnn/test-weights-0.13631.h5
-Epoch 00000: val_loss improved from 0.13979 to 0.13631, saving model to ./test/cnn/test_best_weights.h5
-45s - loss: 0.1508 - acc: 0.9467 - val_loss: 0.1363 - val_acc: 0.9494
-(180000,) (180000,)
-160454 1648
-7683 10215
-
-FA FR TA TR 0.0101664384153 0.429265839759 0.570734160241 0.989833561585
-
-VALIDATION DATA
-0.949444444444 0.136308151758
-(18000,) (18000,)
-16197 112
-798 893
-
-FA FR TA TR 0.00686737384266 0.47191011236 0.52808988764 0.993132626157
-0.136308151758  - val loss
-0.139785095427  - final_loss
+FA FR TA TR 0.00685602350637 0.4921875 0.5078125 0.993143976494
+0.13908318352  - val loss
+0.142050311681  - final_loss
 Validation Loss decreased. Great work
 
 
@@ -1282,24 +974,24 @@ Validation Loss decreased. Great work
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
-Epoch 00000: val_loss improved from 0.13631 to 0.13513, saving model to ./test/cnn/test-weights-0.13513.h5
-Epoch 00000: val_loss improved from 0.13631 to 0.13513, saving model to ./test/cnn/test_best_weights.h5
-45s - loss: 0.1510 - acc: 0.9467 - val_loss: 0.1351 - val_acc: 0.9517
+Epoch 00000: val_loss improved from 0.13908 to 0.13837, saving model to ./test/cnn/test-weights-0.13837.h5
+Epoch 00000: val_loss improved from 0.13908 to 0.13837, saving model to ./test/cnn/test_best_weights.h5
+45s - loss: 0.1571 - acc: 0.9443 - val_loss: 0.1384 - val_acc: 0.9512
 (180000,) (180000,)
-160070 2032
-7002 10896
+160016 2376
+6999 10609
 
-FA FR TA TR 0.0125353172694 0.391216895743 0.608783104257 0.987464682731
+FA FR TA TR 0.0146312626238 0.397489777374 0.602510222626 0.985368737376
 
 VALIDATION DATA
-0.951666666667 0.135130399297
+0.951222222222 0.138373713142
 (18000,) (18000,)
-16162 147
-723 968
+16178 158
+720 944
 
-FA FR TA TR 0.0090134281685 0.42755765819 0.57244234181 0.990986571832
-0.135130399297  - val loss
-0.136308151758  - final_loss
+FA FR TA TR 0.00967189030362 0.432692307692 0.567307692308 0.990328109696
+0.138373713142  - val loss
+0.13908318352  - final_loss
 Validation Loss decreased. Great work
 
 
@@ -1310,253 +1002,141 @@ Validation Loss decreased. Great work
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-45s - loss: 0.1505 - acc: 0.9467 - val_loss: 0.1405 - val_acc: 0.9466
+Epoch 00000: val_loss improved from 0.13837 to 0.13739, saving model to ./test/cnn/test-weights-0.13739.h5
+Epoch 00000: val_loss improved from 0.13837 to 0.13739, saving model to ./test/cnn/test_best_weights.h5
+45s - loss: 0.1566 - acc: 0.9442 - val_loss: 0.1374 - val_acc: 0.9504
 (180000,) (180000,)
-160765 1337
-8236 9662
+160378 2014
+7504 10104
 
-FA FR TA TR 0.00824789330175 0.46016314672 0.53983685328 0.991752106698
+FA FR TA TR 0.0124020887728 0.426169922762 0.573830077238 0.987597911227
 
 VALIDATION DATA
-0.946555555556 0.140451881952
+0.950388888889 0.137389122688
 (18000,) (18000,)
-16212 97
-865 826
+16209 127
+766 898
 
-FA FR TA TR 0.00594763627445 0.511531638084 0.488468361916 0.994052363726
-0.140451881952  - val loss
-0.135130399297  - final_loss
-Inside Plateau  1
-
-
-
-22  iteration
-0.005  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-45s - loss: 0.1502 - acc: 0.9469 - val_loss: 0.1439 - val_acc: 0.9446
-(180000,) (180000,)
-160964 1138
-8685 9213
-
-FA FR TA TR 0.00702027118728 0.485249748575 0.514750251425 0.992979728813
-
-VALIDATION DATA
-0.944555555556 0.143919142327
-(18000,) (18000,)
-16225 84
-914 777
-
-FA FR TA TR 0.005150530382 0.540508574808 0.459491425192 0.994849469618
-0.143919142327  - val loss
-0.135130399297  - final_loss
-Inside Plateau  2
-
-
-
-22  iteration
-0.005  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-45s - loss: 0.1503 - acc: 0.9472 - val_loss: 0.1371 - val_acc: 0.9489
-(180000,) (180000,)
-160626 1476
-8004 9894
-
-FA FR TA TR 0.00910537809527 0.447200804559 0.552799195441 0.990894621905
-
-VALIDATION DATA
-0.948888888889 0.13706978428
-(18000,) (18000,)
-16199 110
-810 881
-
-FA FR TA TR 0.0067447421669 0.479006505027 0.520993494973 0.993255257833
-0.13706978428  - val loss
-0.135130399297  - final_loss
-Inside Plateau  3
-
-
-
-22  iteration
-0.005  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-45s - loss: 0.1501 - acc: 0.9468 - val_loss: 0.1358 - val_acc: 0.9541
-(180000,) (180000,)
-159319 2783
-6106 11792
-
-FA FR TA TR 0.0171682027365 0.341155436362 0.658844563638 0.982831797263
-
-VALIDATION DATA
-0.954055555556 0.13584627733
-(18000,) (18000,)
-16104 205
-622 1069
-
-FA FR TA TR 0.0125697467656 0.367829686576 0.632170313424 0.987430253234
-0.13584627733  - val loss
-0.135130399297  - final_loss
-Reducing the learning rate by half
-
-
-
-22  iteration
-0.0025  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-45s - loss: 0.1472 - acc: 0.9476 - val_loss: 0.1370 - val_acc: 0.9486
-(180000,) (180000,)
-160653 1449
-8076 9822
-
-FA FR TA TR 0.00893881630085 0.451223600402 0.548776399598 0.991061183699
-
-VALIDATION DATA
-0.948611111111 0.137031467325
-(18000,) (18000,)
-16203 106
-819 872
-
-FA FR TA TR 0.00649947881538 0.484328799527 0.515671200473 0.993500521185
-0.137031467325  - val loss
-0.135130399297  - final_loss
-Inside Plateau  1
-
-
-
-22  iteration
-0.0025  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss improved from 0.13513 to 0.13409, saving model to ./test/cnn/test-weights-0.13409.h5
-Epoch 00000: val_loss improved from 0.13513 to 0.13409, saving model to ./test/cnn/test_best_weights.h5
-45s - loss: 0.1472 - acc: 0.9477 - val_loss: 0.1341 - val_acc: 0.9499
-(180000,) (180000,)
-160364 1738
-7416 10482
-
-FA FR TA TR 0.0107216443967 0.41434797184 0.58565202816 0.989278355603
-
-VALIDATION DATA
-0.949944444444 0.134091876003
-(18000,) (18000,)
-16182 127
-774 917
-
-FA FR TA TR 0.00778711141088 0.457717327025 0.542282672975 0.992212888589
-0.134091876003  - val loss
-0.135130399297  - final_loss
+FA FR TA TR 0.00777424094025 0.460336538462 0.539663461538 0.99222575906
+0.137389122688  - val loss
+0.138373713142  - final_loss
 Validation Loss decreased. Great work
 
 
 
 23  iteration
-0.0025  learning rate
+0.005  learning rate
 
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-45s - loss: 0.1472 - acc: 0.9477 - val_loss: 0.1356 - val_acc: 0.9496
+45s - loss: 0.1562 - acc: 0.9444 - val_loss: 0.1403 - val_acc: 0.9502
 (180000,) (180000,)
-160518 1584
-7759 10139
+160588 1804
+7648 9960
 
-FA FR TA TR 0.00977162527298 0.43351212426 0.56648787574 0.990228374727
+FA FR TA TR 0.0111089216218 0.434348023626 0.565651976374 0.988891078378
 
 VALIDATION DATA
-0.949611111111 0.135600974292
+0.950222222222 0.140250689844
 (18000,) (18000,)
-16197 112
-795 896
+16211 125
+771 893
 
-FA FR TA TR 0.00686737384266 0.470136014193 0.529863985807 0.993132626157
-0.135600974292  - val loss
-0.134091876003  - final_loss
+FA FR TA TR 0.00765181194907 0.463341346154 0.536658653846 0.992348188051
+0.140250689844  - val loss
+0.137389122688  - final_loss
 Inside Plateau  1
 
 
 
 23  iteration
-0.0025  learning rate
+0.005  learning rate
 
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-45s - loss: 0.1470 - acc: 0.9476 - val_loss: 0.1453 - val_acc: 0.9430
+45s - loss: 0.1552 - acc: 0.9449 - val_loss: 0.1448 - val_acc: 0.9448
 (180000,) (180000,)
-161053 1049
-8912 8986
+161209 1183
+8900 8708
 
-FA FR TA TR 0.00647123416121 0.497932729914 0.502067270086 0.993528765839
+FA FR TA TR 0.00728484161781 0.505452067242 0.494547932758 0.992715158382
 
 VALIDATION DATA
-0.943 0.145306095113
+0.944777777778 0.144782428889
 (18000,) (18000,)
-16229 80
-946 745
+16248 88
+906 758
 
-FA FR TA TR 0.00490526703047 0.559432288587 0.440567711413 0.99509473297
-0.145306095113  - val loss
-0.134091876003  - final_loss
+FA FR TA TR 0.00538687561214 0.544471153846 0.455528846154 0.994613124388
+0.144782428889  - val loss
+0.137389122688  - final_loss
 Inside Plateau  2
 
 
 
 23  iteration
-0.0025  learning rate
+0.005  learning rate
 
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-45s - loss: 0.1468 - acc: 0.9477 - val_loss: 0.1341 - val_acc: 0.9531
+45s - loss: 0.1546 - acc: 0.9452 - val_loss: 0.1471 - val_acc: 0.9436
 (180000,) (180000,)
-159781 2321
-6645 11253
+161386 1006
+9291 8317
 
-FA FR TA TR 0.0143181453653 0.37127053302 0.62872946698 0.985681854635
+FA FR TA TR 0.00619488644761 0.527657882781 0.472342117219 0.993805113552
 
 VALIDATION DATA
-0.953111111111 0.134103877743
+0.943611111111 0.147092948
 (18000,) (18000,)
-16131 178
-666 1025
+16259 77
+938 726
 
-FA FR TA TR 0.0109142191428 0.393849793022 0.606150206978 0.989085780857
-0.134103877743  - val loss
-0.134091876003  - final_loss
+FA FR TA TR 0.00471351616063 0.563701923077 0.436298076923 0.995286483839
+0.147092948  - val loss
+0.137389122688  - final_loss
 Inside Plateau  3
 
 
 
 23  iteration
+0.005  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+45s - loss: 0.1547 - acc: 0.9451 - val_loss: 0.1462 - val_acc: 0.9439
+(180000,) (180000,)
+161423 969
+9329 8279
+
+FA FR TA TR 0.00596704271146 0.529815992731 0.470184007269 0.994032957289
+
+VALIDATION DATA
+0.943944444444 0.146239326934
+(18000,) (18000,)
+16266 70
+939 725
+
+FA FR TA TR 0.00428501469148 0.564302884615 0.435697115385 0.995714985309
+0.146239326934  - val loss
+0.137389122688  - final_loss
+Reducing the learning rate by half
+
+
+
+23  iteration
 0.0025  learning rate
 
 TRAIN DATA
@@ -1564,51 +1144,163 @@ Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-45s - loss: 0.1464 - acc: 0.9478 - val_loss: 0.1348 - val_acc: 0.9497
+45s - loss: 0.1515 - acc: 0.9457 - val_loss: 0.1380 - val_acc: 0.9469
 (180000,) (180000,)
-160459 1643
-7613 10285
+160993 1399
+8348 9260
 
-FA FR TA TR 0.0101355936386 0.425354788244 0.574645211756 0.989864406361
+FA FR TA TR 0.00861495640179 0.4741026806 0.5258973194 0.991385043598
 
 VALIDATION DATA
-0.949722222222 0.134780545135
+0.946944444444 0.137992020567
 (18000,) (18000,)
-16193 116
-789 902
+16230 106
+849 815
 
-FA FR TA TR 0.00711263719419 0.466587817859 0.533412182141 0.992887362806
-0.134780545135  - val loss
-0.134091876003  - final_loss
-Reducing the learning rate by half
+FA FR TA TR 0.00648873653281 0.510216346154 0.489783653846 0.993511263467
+0.137992020567  - val loss
+0.137389122688  - final_loss
+Inside Plateau  1
 
 
 
 23  iteration
-0.00125  learning rate
+0.0025  learning rate
 
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
-Epoch 00000: val_loss improved from 0.13409 to 0.13359, saving model to ./test/cnn/test-weights-0.13359.h5
-Epoch 00000: val_loss improved from 0.13409 to 0.13359, saving model to ./test/cnn/test_best_weights.h5
-45s - loss: 0.1459 - acc: 0.9479 - val_loss: 0.1336 - val_acc: 0.9506
+Epoch 00000: val_loss improved from 0.13739 to 0.13531, saving model to ./test/cnn/test-weights-0.13531.h5
+Epoch 00000: val_loss improved from 0.13739 to 0.13531, saving model to ./test/cnn/test_best_weights.h5
+45s - loss: 0.1512 - acc: 0.9456 - val_loss: 0.1353 - val_acc: 0.9508
 (180000,) (180000,)
-160302 1800
-7292 10606
+160567 1825
+7645 9963
 
-FA FR TA TR 0.0111041196284 0.407419823444 0.592580176556 0.988895880372
+FA FR TA TR 0.0112382383369 0.434177646524 0.565822353476 0.988761761663
 
 VALIDATION DATA
-0.950555555556 0.133585226387
+0.950777777778 0.135305520654
 (18000,) (18000,)
-16178 131
-759 932
+16200 136
+750 914
 
-FA FR TA TR 0.0080323747624 0.448846836192 0.551153163808 0.991967625238
-0.133585226387  - val loss
-0.134091876003  - final_loss
+FA FR TA TR 0.00832517140059 0.450721153846 0.549278846154 0.991674828599
+0.135305520654  - val loss
+0.137389122688  - final_loss
 Validation Loss decreased. Great work
+
+
+
+24  iteration
+0.0025  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+45s - loss: 0.1510 - acc: 0.9460 - val_loss: 0.1373 - val_acc: 0.9474
+(180000,) (180000,)
+160913 1479
+8209 9399
+
+FA FR TA TR 0.00910759150697 0.466208541572 0.533791458428 0.990892408493
+
+VALIDATION DATA
+0.947444444444 0.137273574938
+(18000,) (18000,)
+16234 102
+844 820
+
+FA FR TA TR 0.00624387855044 0.507211538462 0.492788461538 0.99375612145
+0.137273574938  - val loss
+0.135305520654  - final_loss
+Inside Plateau  1
+
+
+
+24  iteration
+0.0025  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+45s - loss: 0.1513 - acc: 0.9460 - val_loss: 0.1354 - val_acc: 0.9512
+(180000,) (180000,)
+160413 1979
+7311 10297
+
+FA FR TA TR 0.0121865609143 0.415208995911 0.584791004089 0.987813439086
+
+VALIDATION DATA
+0.951222222222 0.135357309547
+(18000,) (18000,)
+16194 142
+736 928
+
+FA FR TA TR 0.00869245837414 0.442307692308 0.557692307692 0.991307541626
+0.135357309547  - val loss
+0.135305520654  - final_loss
+Inside Plateau  2
+
+
+
+24  iteration
+0.0025  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+45s - loss: 0.1506 - acc: 0.9461 - val_loss: 0.1379 - val_acc: 0.9532
+(180000,) (180000,)
+159862 2530
+6578 11030
+
+FA FR TA TR 0.0155795852012 0.373580190822 0.626419809178 0.984420414799
+
+VALIDATION DATA
+0.953222222222 0.137878079315
+(18000,) (18000,)
+16153 183
+659 1005
+
+FA FR TA TR 0.0112022526934 0.396033653846 0.603966346154 0.988797747307
+0.137878079315  - val loss
+0.135305520654  - final_loss
+Inside Plateau  3
+
+
+
+24  iteration
+0.0025  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+45s - loss: 0.1508 - acc: 0.9461 - val_loss: 0.1377 - val_acc: 0.9470
+(180000,) (180000,)
+161006 1386
+8330 9278
+
+FA FR TA TR 0.0085349031972 0.473080417992 0.526919582008 0.991465096803
+
+VALIDATION DATA
+0.947 0.137716986342
+(18000,) (18000,)
+16226 110
+844 820
+
+FA FR TA TR 0.00673359451518 0.507211538462 0.492788461538 0.993266405485
+0.137716986342  - val loss
+0.135305520654  - final_loss
+Reducing the learning rate by half
 
 
 
@@ -1620,22 +1312,22 @@ Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-45s - loss: 0.1456 - acc: 0.9480 - val_loss: 0.1381 - val_acc: 0.9473
+45s - loss: 0.1498 - acc: 0.9465 - val_loss: 0.1367 - val_acc: 0.9472
 (180000,) (180000,)
-160775 1327
-8211 9687
+160983 1409
+8342 9266
 
-FA FR TA TR 0.00818620374826 0.458766342608 0.541233657392 0.991813796252
+FA FR TA TR 0.00867653578994 0.473761926397 0.526238073603 0.99132346421
 
 VALIDATION DATA
-0.947333333333 0.138111712434
+0.947222222222 0.136735613926
 (18000,) (18000,)
-16209 100
-848 843
+16233 103
+847 817
 
-FA FR TA TR 0.00613158378809 0.501478415139 0.498521584861 0.993868416212
-0.138111712434  - val loss
-0.133585226387  - final_loss
+FA FR TA TR 0.00630509304603 0.509014423077 0.490985576923 0.993694906954
+0.136735613926  - val loss
+0.135305520654  - final_loss
 Inside Plateau  1
 
 
@@ -1646,52 +1338,24 @@ Inside Plateau  1
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-45s - loss: 0.1454 - acc: 0.9482 - val_loss: 0.1337 - val_acc: 0.9533
+Epoch 00000: val_loss improved from 0.13531 to 0.13515, saving model to ./test/cnn/test-weights-0.13515.h5
+Epoch 00000: val_loss improved from 0.13531 to 0.13515, saving model to ./test/cnn/test_best_weights.h5
+45s - loss: 0.1490 - acc: 0.9467 - val_loss: 0.1352 - val_acc: 0.9522
 (180000,) (180000,)
-159709 2393
-6471 11427
+160112 2280
+6924 10684
 
-FA FR TA TR 0.0147623101504 0.3615487764 0.6384512236 0.98523768985
+FA FR TA TR 0.0140401004976 0.393230349841 0.606769650159 0.985959899502
 
 VALIDATION DATA
-0.953333333333 0.133694199069
+0.952166666667 0.135151099361
 (18000,) (18000,)
-16128 181
-659 1032
+16171 165
+696 968
 
-FA FR TA TR 0.0110981666564 0.389710230633 0.610289769367 0.988901833344
-0.133694199069  - val loss
-0.133585226387  - final_loss
-Inside Plateau  2
-
-
-
-24  iteration
-0.00125  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss improved from 0.13359 to 0.13293, saving model to ./test/cnn/test-weights-0.13293.h5
-Epoch 00000: val_loss improved from 0.13359 to 0.13293, saving model to ./test/cnn/test_best_weights.h5
-45s - loss: 0.1455 - acc: 0.9480 - val_loss: 0.1329 - val_acc: 0.9511
-(180000,) (180000,)
-160263 1839
-7253 10645
-
-FA FR TA TR 0.011344708887 0.405240809029 0.594759190971 0.988655291113
-
-VALIDATION DATA
-0.951111111111 0.132930811356
-(18000,) (18000,)
-16184 125
-755 936
-
-FA FR TA TR 0.00766447973512 0.446481371969 0.553518628031 0.992335520265
-0.132930811356  - val loss
-0.133585226387  - final_loss
+FA FR TA TR 0.0101003917728 0.418269230769 0.581730769231 0.989899608227
+0.135151099361  - val loss
+0.135305520654  - final_loss
 Validation Loss decreased. Great work
 
 
@@ -1702,925 +1366,1093 @@ Validation Loss decreased. Great work
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-45s - loss: 0.1457 - acc: 0.9480 - val_loss: 0.1394 - val_acc: 0.9463
+Epoch 00000: val_loss improved from 0.13515 to 0.13407, saving model to ./test/cnn/test-weights-0.13407.h5
+Epoch 00000: val_loss improved from 0.13515 to 0.13407, saving model to ./test/cnn/test_best_weights.h5
+45s - loss: 0.1491 - acc: 0.9465 - val_loss: 0.1341 - val_acc: 0.9508
 (180000,) (180000,)
-160814 1288
-8281 9617
+160629 1763
+7696 9912
 
-FA FR TA TR 0.00794561448964 0.462677394122 0.537322605878 0.99205438551
+FA FR TA TR 0.0108564461304 0.437074057247 0.562925942753 0.98914355387
 
 VALIDATION DATA
-0.946333333333 0.139435688244
+0.950777777778 0.13407150858
 (18000,) (18000,)
-16215 94
-872 819
+16209 127
+759 905
 
-FA FR TA TR 0.00576368876081 0.515671200473 0.484328799527 0.994236311239
-0.139435688244  - val loss
-0.132930811356  - final_loss
-Inside Plateau  1
-
-
-
-25  iteration
-0.00125  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-45s - loss: 0.1447 - acc: 0.9481 - val_loss: 0.1332 - val_acc: 0.9537
-(180000,) (180000,)
-159654 2448
-6407 11491
-
-FA FR TA TR 0.0151016026946 0.357972957872 0.642027042128 0.984898397305
-
-VALIDATION DATA
-0.953722222222 0.133223393609
-(18000,) (18000,)
-16139 170
-663 1028
-
-FA FR TA TR 0.0104236924398 0.392075694855 0.607924305145 0.98957630756
-0.133223393609  - val loss
-0.132930811356  - final_loss
-Inside Plateau  2
-
-
-
-25  iteration
-0.00125  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-45s - loss: 0.1454 - acc: 0.9485 - val_loss: 0.1421 - val_acc: 0.9451
-(180000,) (180000,)
-160989 1113
-8671 9227
-
-FA FR TA TR 0.00686604730355 0.484467538272 0.515532461728 0.993133952696
-
-VALIDATION DATA
-0.945055555556 0.142051418604
-(18000,) (18000,)
-16221 88
-901 790
-
-FA FR TA TR 0.00539579373352 0.532820816085 0.467179183915 0.994604206266
-0.142051418604  - val loss
-0.132930811356  - final_loss
-Inside Plateau  3
-
-
-
-25  iteration
-0.00125  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-45s - loss: 0.1451 - acc: 0.9486 - val_loss: 0.1329 - val_acc: 0.9512
-(180000,) (180000,)
-160297 1805
-7276 10622
-
-FA FR TA TR 0.0111349644051 0.406525868812 0.593474131188 0.988865035595
-
-VALIDATION DATA
-0.951222222222 0.132943750974
-(18000,) (18000,)
-16180 129
-749 942
-
-FA FR TA TR 0.00790974308664 0.442933175636 0.557066824364 0.992090256913
-0.132943750974  - val loss
-0.132930811356  - final_loss
-Reducing the learning rate by half
-
-
-
-25  iteration
-0.000625  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-45s - loss: 0.1445 - acc: 0.9486 - val_loss: 0.1386 - val_acc: 0.9469
-(180000,) (180000,)
-160810 1292
-8269 9629
-
-FA FR TA TR 0.00797029031104 0.462006928148 0.537993071852 0.992029709689
-
-VALIDATION DATA
-0.946888888889 0.138566594728
-(18000,) (18000,)
-16211 98
-858 833
-
-FA FR TA TR 0.00600895211233 0.507392075695 0.492607924305 0.993991047888
-0.138566594728  - val loss
-0.132930811356  - final_loss
-Inside Plateau  1
-
-
-
-25  iteration
-0.000625  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss improved from 0.13293 to 0.13248, saving model to ./test/cnn/test-weights-0.13248.h5
-Epoch 00000: val_loss improved from 0.13293 to 0.13248, saving model to ./test/cnn/test_best_weights.h5
-45s - loss: 0.1444 - acc: 0.9484 - val_loss: 0.1325 - val_acc: 0.9531
-(180000,) (180000,)
-159919 2183
-6735 11163
-
-FA FR TA TR 0.0134668295271 0.376299027824 0.623700972176 0.986533170473
-
-VALIDATION DATA
-0.953111111111 0.132477761931
-(18000,) (18000,)
-16147 162
-682 1009
-
-FA FR TA TR 0.00993316573671 0.403311649911 0.596688350089 0.990066834263
-0.132477761931  - val loss
-0.132930811356  - final_loss
+FA FR TA TR 0.00777424094025 0.456129807692 0.543870192308 0.99222575906
+0.13407150858  - val loss
+0.135151099361  - final_loss
 Validation Loss decreased. Great work
 
 
 
 26  iteration
-0.000625  learning rate
+0.00125  learning rate
 
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-45s - loss: 0.1448 - acc: 0.9481 - val_loss: 0.1332 - val_acc: 0.9503
+45s - loss: 0.1491 - acc: 0.9462 - val_loss: 0.1399 - val_acc: 0.9463
 (180000,) (180000,)
-160377 1725
-7429 10469
+161169 1223
+8657 8951
 
-FA FR TA TR 0.0106414479772 0.415074309979 0.584925690021 0.989358552023
+FA FR TA TR 0.0075311591704 0.491651522035 0.508348477965 0.99246884083
 
 VALIDATION DATA
-0.950333333333 0.133194907265
+0.946277777778 0.139902630124
 (18000,) (18000,)
-16182 127
-767 924
+16245 91
+876 788
 
-FA FR TA TR 0.00778711141088 0.453577764636 0.546422235364 0.992212888589
-0.133194907265  - val loss
-0.132477761931  - final_loss
+FA FR TA TR 0.00557051909892 0.526442307692 0.473557692308 0.994429480901
+0.139902630124  - val loss
+0.13407150858  - final_loss
 Inside Plateau  1
 
 
 
 26  iteration
-0.000625  learning rate
+0.00125  learning rate
 
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-45s - loss: 0.1442 - acc: 0.9486 - val_loss: 0.1327 - val_acc: 0.9506
+Epoch 00000: val_loss improved from 0.13407 to 0.13393, saving model to ./test/cnn/test-weights-0.13393.h5
+Epoch 00000: val_loss improved from 0.13407 to 0.13393, saving model to ./test/cnn/test_best_weights.h5
+45s - loss: 0.1487 - acc: 0.9464 - val_loss: 0.1339 - val_acc: 0.9517
 (180000,) (180000,)
-160338 1764
-7351 10547
+160209 2183
+7074 10534
 
-FA FR TA TR 0.0108820372358 0.410716281149 0.589283718851 0.989117962764
+FA FR TA TR 0.0134427804325 0.401749204907 0.598250795093 0.986557219567
 
 VALIDATION DATA
-0.950555555556 0.132734850734
+0.951666666667 0.133930156877
 (18000,) (18000,)
-16183 126
-764 927
+16181 155
+715 949
 
-FA FR TA TR 0.007725795573 0.45180366647 0.54819633353 0.992274204427
-0.132734850734  - val loss
-0.132477761931  - final_loss
-Inside Plateau  2
-
-
-
-26  iteration
-0.000625  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-45s - loss: 0.1440 - acc: 0.9484 - val_loss: 0.1358 - val_acc: 0.9487
-(180000,) (180000,)
-160639 1463
-7950 9948
-
-FA FR TA TR 0.00902518167574 0.444183707677 0.555816292323 0.990974818324
-
-VALIDATION DATA
-0.948722222222 0.135816424042
-(18000,) (18000,)
-16200 109
-814 877
-
-FA FR TA TR 0.00668342632902 0.481371969249 0.518628030751 0.993316573671
-0.135816424042  - val loss
-0.132477761931  - final_loss
-Inside Plateau  3
-
-
-
-26  iteration
-0.000625  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss improved from 0.13248 to 0.13243, saving model to ./test/cnn/test-weights-0.13243.h5
-Epoch 00000: val_loss improved from 0.13248 to 0.13243, saving model to ./test/cnn/test_best_weights.h5
-45s - loss: 0.1444 - acc: 0.9486 - val_loss: 0.1324 - val_acc: 0.9514
-(180000,) (180000,)
-160251 1851
-7228 10670
-
-FA FR TA TR 0.0114187363512 0.403844004917 0.596155995083 0.988581263649
-
-VALIDATION DATA
-0.951444444444 0.132429833078
-(18000,) (18000,)
-16183 126
-748 943
-
-FA FR TA TR 0.007725795573 0.44234180958 0.55765819042 0.992274204427
-0.132429833078  - val loss
-0.132477761931  - final_loss
+FA FR TA TR 0.00948824681685 0.4296875 0.5703125 0.990511753183
+0.133930156877  - val loss
+0.13407150858  - final_loss
 Validation Loss decreased. Great work
 
 
 
 27  iteration
-0.000625  learning rate
+0.00125  learning rate
 
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-45s - loss: 0.1446 - acc: 0.9482 - val_loss: 0.1328 - val_acc: 0.9533
+45s - loss: 0.1491 - acc: 0.9466 - val_loss: 0.1349 - val_acc: 0.9523
 (180000,) (180000,)
-159756 2346
-6514 11384
+160118 2274
+6966 10642
 
-FA FR TA TR 0.014472369249 0.363951279473 0.636048720527 0.985527630751
+FA FR TA TR 0.0140031528647 0.395615629259 0.604384370741 0.985996847135
 
 VALIDATION DATA
-0.953277777778 0.132833285994
+0.952277777778 0.134876025558
 (18000,) (18000,)
-16139 170
-671 1020
+16171 165
+694 970
 
-FA FR TA TR 0.0104236924398 0.3968066233 0.6031933767 0.98957630756
-0.132833285994  - val loss
-0.132429833078  - final_loss
+FA FR TA TR 0.0101003917728 0.417067307692 0.582932692308 0.989899608227
+0.134876025558  - val loss
+0.133930156877  - final_loss
 Inside Plateau  1
 
 
 
 27  iteration
-0.000625  learning rate
+0.00125  learning rate
 
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-45s - loss: 0.1448 - acc: 0.9485 - val_loss: 0.1335 - val_acc: 0.9503
+45s - loss: 0.1487 - acc: 0.9465 - val_loss: 0.1358 - val_acc: 0.9482
 (180000,) (180000,)
-160416 1686
-7510 10388
+160929 1463
+8197 9411
 
-FA FR TA TR 0.0104008587186 0.419599955302 0.580400044698 0.989599141281
+FA FR TA TR 0.00900906448594 0.465527033167 0.534472966833 0.990990935514
 
 VALIDATION DATA
-0.950277777778 0.133450248573
+0.948166666667 0.135753861696
 (18000,) (18000,)
-16190 119
-776 915
+16225 111
+822 842
 
-FA FR TA TR 0.00729658470783 0.458900059137 0.541099940863 0.992703415292
-0.133450248573  - val loss
-0.132429833078  - final_loss
+FA FR TA TR 0.00679480901077 0.493990384615 0.506009615385 0.993205190989
+0.135753861696  - val loss
+0.133930156877  - final_loss
 Inside Plateau  2
 
 
 
 27  iteration
-0.000625  learning rate
+0.00125  learning rate
 
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-45s - loss: 0.1447 - acc: 0.9484 - val_loss: 0.1327 - val_acc: 0.9521
+45s - loss: 0.1485 - acc: 0.9466 - val_loss: 0.1345 - val_acc: 0.9500
 (180000,) (180000,)
-160225 1877
-7177 10721
+160813 1579
+8014 9594
 
-FA FR TA TR 0.0115791291903 0.400994524528 0.599005475472 0.98842087081
+FA FR TA TR 0.00972338538844 0.455134029986 0.544865970014 0.990276614612
 
 VALIDATION DATA
-0.952055555556 0.132716524899
+0.95 0.134508339246
 (18000,) (18000,)
-16178 131
-732 959
+16220 116
+784 880
 
-FA FR TA TR 0.0080323747624 0.432879952691 0.567120047309 0.991967625238
-0.132716524899  - val loss
-0.132429833078  - final_loss
+FA FR TA TR 0.00710088148874 0.471153846154 0.528846153846 0.992899118511
+0.134508339246  - val loss
+0.133930156877  - final_loss
 Inside Plateau  3
 
 
 
 27  iteration
-0.000625  learning rate
+0.00125  learning rate
 
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-45s - loss: 0.1442 - acc: 0.9482 - val_loss: 0.1331 - val_acc: 0.9502
+45s - loss: 0.1486 - acc: 0.9466 - val_loss: 0.1353 - val_acc: 0.9489
 (180000,) (180000,)
-160374 1728
-7418 10480
+160878 1514
+8086 9522
 
-FA FR TA TR 0.0106599548432 0.414459716169 0.585540283831 0.989340045157
+FA FR TA TR 0.00932311936549 0.459223080418 0.540776919582 0.990676880635
 
 VALIDATION DATA
-0.950166666667 0.133061643528
+0.948888888889 0.135279642224
 (18000,) (18000,)
-16184 125
-772 919
+16224 112
+808 856
 
-FA FR TA TR 0.00766447973512 0.456534594914 0.543465405086 0.992335520265
-0.133061643528  - val loss
-0.132429833078  - final_loss
+FA FR TA TR 0.00685602350637 0.485576923077 0.514423076923 0.993143976494
+0.135279642224  - val loss
+0.133930156877  - final_loss
 Reducing the learning rate by half
 
 
 
 27  iteration
-0.0003125  learning rate
+0.000625  learning rate
 
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-45s - loss: 0.1444 - acc: 0.9486 - val_loss: 0.1332 - val_acc: 0.9502
+45s - loss: 0.1483 - acc: 0.9467 - val_loss: 0.1361 - val_acc: 0.9476
 (180000,) (180000,)
-160402 1700
-7466 10432
+160970 1422
+8248 9360
 
-FA FR TA TR 0.0104872240935 0.417141580065 0.582858419935 0.989512775907
+FA FR TA TR 0.00875658899453 0.468423443889 0.531576556111 0.991243411005
 
 VALIDATION DATA
-0.950166666667 0.133214032766
+0.947611111111 0.136119336834
 (18000,) (18000,)
-16187 122
-775 916
+16227 109
+834 830
 
-FA FR TA TR 0.00748053222147 0.458308693081 0.541691306919 0.992519467779
-0.133214032766  - val loss
-0.132429833078  - final_loss
+FA FR TA TR 0.00667238001959 0.501201923077 0.498798076923 0.99332761998
+0.136119336834  - val loss
+0.133930156877  - final_loss
 Inside Plateau  1
 
 
 
 27  iteration
-0.0003125  learning rate
+0.000625  learning rate
 
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-45s - loss: 0.1442 - acc: 0.9486 - val_loss: 0.1326 - val_acc: 0.9506
+Epoch 00000: val_loss improved from 0.13393 to 0.13359, saving model to ./test/cnn/test-weights-0.13359.h5
+Epoch 00000: val_loss improved from 0.13393 to 0.13359, saving model to ./test/cnn/test_best_weights.h5
+45s - loss: 0.1481 - acc: 0.9470 - val_loss: 0.1336 - val_acc: 0.9508
 (180000,) (180000,)
-160281 1821
-7259 10639
+160692 1700
+7764 9844
 
-FA FR TA TR 0.0112336676907 0.405576042016 0.594423957984 0.988766332309
+FA FR TA TR 0.010468495985 0.44093593821 0.55906406179 0.989531504015
 
 VALIDATION DATA
-0.950611111111 0.132559137301
+0.950833333333 0.133592724194
 (18000,) (18000,)
-16183 126
-763 928
+16215 121
+764 900
 
-FA FR TA TR 0.007725795573 0.451212300414 0.548787699586 0.992274204427
-0.132559137301  - val loss
-0.132429833078  - final_loss
-Inside Plateau  2
-
-
-
-27  iteration
-0.0003125  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-45s - loss: 0.1439 - acc: 0.9485 - val_loss: 0.1331 - val_acc: 0.9503
-(180000,) (180000,)
-160398 1704
-7455 10443
-
-FA FR TA TR 0.0105118999149 0.416526986255 0.583473013745 0.989488100085
-
-VALIDATION DATA
-0.950277777778 0.133069285585
-(18000,) (18000,)
-16187 122
-773 918
-
-FA FR TA TR 0.00748053222147 0.45712596097 0.54287403903 0.992519467779
-0.133069285585  - val loss
-0.132429833078  - final_loss
-Inside Plateau  3
-
-
-
-27  iteration
-0.0003125  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss improved from 0.13243 to 0.13228, saving model to ./test/cnn/test-weights-0.13228.h5
-Epoch 00000: val_loss improved from 0.13243 to 0.13228, saving model to ./test/cnn/test_best_weights.h5
-46s - loss: 0.1438 - acc: 0.9484 - val_loss: 0.1323 - val_acc: 0.9513
-(180000,) (180000,)
-160243 1859
-7172 10726
-
-FA FR TA TR 0.011468087994 0.400715163705 0.599284836295 0.988531912006
-
-VALIDATION DATA
-0.951277777778 0.13227560503
-(18000,) (18000,)
-16177 132
-745 946
-
-FA FR TA TR 0.00809369060028 0.440567711413 0.559432288587 0.9919063094
-0.13227560503  - val loss
-0.132429833078  - final_loss
+FA FR TA TR 0.0074069539667 0.459134615385 0.540865384615 0.992593046033
+0.133592724194  - val loss
+0.133930156877  - final_loss
 Validation Loss decreased. Great work
 
 
 
 28  iteration
-0.0003125  learning rate
+0.000625  learning rate
 
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-46s - loss: 0.1444 - acc: 0.9484 - val_loss: 0.1329 - val_acc: 0.9502
+45s - loss: 0.1479 - acc: 0.9466 - val_loss: 0.1337 - val_acc: 0.9508
 (180000,) (180000,)
-160344 1758
-7370 10528
+160720 1672
+7818 9790
 
-FA FR TA TR 0.0108450235037 0.411777852274 0.588222147726 0.989154976496
+FA FR TA TR 0.0102960736982 0.444002726034 0.555997273966 0.989703926302
 
 VALIDATION DATA
-0.950166666667 0.132910963568
+0.950777777778 0.133743509968
 (18000,) (18000,)
-16180 129
-768 923
+16214 122
+764 900
 
-FA FR TA TR 0.00790974308664 0.454169130692 0.545830869308 0.992090256913
-0.132910963568  - val loss
-0.13227560503  - final_loss
+FA FR TA TR 0.00746816846229 0.459134615385 0.540865384615 0.992531831538
+0.133743509968  - val loss
+0.133592724194  - final_loss
 Inside Plateau  1
 
 
 
 28  iteration
-0.0003125  learning rate
+0.000625  learning rate
 
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
-Epoch 00000: val_loss improved from 0.13228 to 0.13203, saving model to ./test/cnn/test-weights-0.13203.h5
-Epoch 00000: val_loss improved from 0.13228 to 0.13203, saving model to ./test/cnn/test_best_weights.h5
-46s - loss: 0.1443 - acc: 0.9484 - val_loss: 0.1320 - val_acc: 0.9517
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+45s - loss: 0.1476 - acc: 0.9466 - val_loss: 0.1336 - val_acc: 0.9509
 (180000,) (180000,)
-160197 1905
-7126 10772
+160661 1731
+7695 9913
 
-FA FR TA TR 0.01175185994 0.398145044139 0.601854955861 0.98824814006
+FA FR TA TR 0.0106593920883 0.43701726488 0.56298273512 0.989340607912
 
 VALIDATION DATA
-0.951722222222 0.132034810189
+0.950888888889 0.133599854277
 (18000,) (18000,)
-16175 134
-735 956
+16212 124
+760 904
 
-FA FR TA TR 0.00821632227604 0.434654050857 0.565345949143 0.991783677724
-0.132034810189  - val loss
-0.13227560503  - final_loss
+FA FR TA TR 0.00759059745348 0.456730769231 0.543269230769 0.992409402547
+0.133599854277  - val loss
+0.133592724194  - final_loss
+Inside Plateau  2
+
+
+
+28  iteration
+0.000625  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+45s - loss: 0.1478 - acc: 0.9469 - val_loss: 0.1348 - val_acc: 0.9496
+(180000,) (180000,)
+160854 1538
+8035 9573
+
+FA FR TA TR 0.00947090989704 0.456326669696 0.543673330304 0.990529090103
+
+VALIDATION DATA
+0.949555555556 0.134843425469
+(18000,) (18000,)
+16222 114
+794 870
+
+FA FR TA TR 0.00697845249755 0.477163461538 0.522836538462 0.993021547502
+0.134843425469  - val loss
+0.133592724194  - final_loss
+Inside Plateau  3
+
+
+
+28  iteration
+0.000625  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss improved from 0.13359 to 0.13309, saving model to ./test/cnn/test-weights-0.13309.h5
+Epoch 00000: val_loss improved from 0.13359 to 0.13309, saving model to ./test/cnn/test_best_weights.h5
+45s - loss: 0.1470 - acc: 0.9474 - val_loss: 0.1331 - val_acc: 0.9521
+(180000,) (180000,)
+160232 2160
+7049 10559
+
+FA FR TA TR 0.0133011478398 0.400329395729 0.599670604271 0.98669885216
+
+VALIDATION DATA
+0.952055555556 0.133088201404
+(18000,) (18000,)
+16177 159
+704 960
+
+FA FR TA TR 0.00973310479922 0.423076923077 0.576923076923 0.990266895201
+0.133088201404  - val loss
+0.133592724194  - final_loss
 Validation Loss decreased. Great work
 
 
 
 29  iteration
-0.0003125  learning rate
+0.000625  learning rate
 
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
-Epoch 00000: val_loss improved from 0.13203 to 0.13193, saving model to ./test/cnn/test-weights-0.13193.h5
-Epoch 00000: val_loss improved from 0.13203 to 0.13193, saving model to ./test/cnn/test_best_weights.h5
-46s - loss: 0.1441 - acc: 0.9487 - val_loss: 0.1319 - val_acc: 0.9531
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+45s - loss: 0.1479 - acc: 0.9469 - val_loss: 0.1339 - val_acc: 0.9528
 (180000,) (180000,)
-159885 2217
-6674 11224
+160155 2237
+6949 10659
 
-FA FR TA TR 0.013676574009 0.372890825791 0.627109174209 0.986323425991
+FA FR TA TR 0.0137753091285 0.394650159019 0.605349840981 0.986224690871
 
 VALIDATION DATA
-0.953111111111 0.131931584583
+0.952777777778 0.133917881022
 (18000,) (18000,)
-16148 161
-683 1008
+16171 165
+685 979
 
-FA FR TA TR 0.00987184989883 0.403903015967 0.596096984033 0.990128150101
-0.131931584583  - val loss
-0.132034810189  - final_loss
+FA FR TA TR 0.0101003917728 0.411658653846 0.588341346154 0.989899608227
+0.133917881022  - val loss
+0.133088201404  - final_loss
+Inside Plateau  1
+
+
+
+29  iteration
+0.000625  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+45s - loss: 0.1475 - acc: 0.9471 - val_loss: 0.1344 - val_acc: 0.9498
+(180000,) (180000,)
+160819 1573
+7952 9656
+
+FA FR TA TR 0.00968643775555 0.451612903226 0.548387096774 0.990313562244
+
+VALIDATION DATA
+0.949777777778 0.13435310582
+(18000,) (18000,)
+16222 114
+790 874
+
+FA FR TA TR 0.00697845249755 0.474759615385 0.525240384615 0.993021547502
+0.13435310582  - val loss
+0.133088201404  - final_loss
+Inside Plateau  2
+
+
+
+29  iteration
+0.000625  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+45s - loss: 0.1480 - acc: 0.9465 - val_loss: 0.1331 - val_acc: 0.9518
+(180000,) (180000,)
+160407 1985
+7274 10334
+
+FA FR TA TR 0.0122235085472 0.413107678328 0.586892321672 0.987776491453
+
+VALIDATION DATA
+0.951777777778 0.133105588986
+(18000,) (18000,)
+16192 144
+724 940
+
+FA FR TA TR 0.00881488736533 0.435096153846 0.564903846154 0.991185112635
+0.133105588986  - val loss
+0.133088201404  - final_loss
+Inside Plateau  3
+
+
+
+29  iteration
+0.000625  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss improved from 0.13309 to 0.13272, saving model to ./test/cnn/test-weights-0.13272.h5
+Epoch 00000: val_loss improved from 0.13309 to 0.13272, saving model to ./test/cnn/test_best_weights.h5
+45s - loss: 0.1477 - acc: 0.9469 - val_loss: 0.1327 - val_acc: 0.9510
+(180000,) (180000,)
+160498 1894
+7429 10179
+
+FA FR TA TR 0.0116631361151 0.421910495229 0.578089504771 0.988336863885
+
+VALIDATION DATA
+0.951 0.132721894546
+(18000,) (18000,)
+16198 138
+744 920
+
+FA FR TA TR 0.00844760039177 0.447115384615 0.552884615385 0.991552399608
+0.132721894546  - val loss
+0.133088201404  - final_loss
 Validation Loss decreased. Great work
 
 
 
 30  iteration
-0.0003125  learning rate
+0.000625  learning rate
 
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-46s - loss: 0.1437 - acc: 0.9485 - val_loss: 0.1319 - val_acc: 0.9517
+45s - loss: 0.1477 - acc: 0.9469 - val_loss: 0.1335 - val_acc: 0.9507
 (180000,) (180000,)
-160159 1943
-7065 10833
+160738 1654
+7835 9773
 
-FA FR TA TR 0.0119862802433 0.394736842105 0.605263157895 0.988013719757
+FA FR TA TR 0.0101852307995 0.444968196274 0.555031803726 0.9898147692
 
 VALIDATION DATA
-0.951722222222 0.131941979994
+0.950722222222 0.133472498993
 (18000,) (18000,)
-16175 134
-735 956
+16217 119
+768 896
 
-FA FR TA TR 0.00821632227604 0.434654050857 0.565345949143 0.991783677724
-0.131941979994  - val loss
-0.131931584583  - final_loss
+FA FR TA TR 0.00728452497551 0.461538461538 0.538461538462 0.992715475024
+0.133472498993  - val loss
+0.132721894546  - final_loss
 Inside Plateau  1
 
 
 
 30  iteration
-0.0003125  learning rate
+0.000625  learning rate
 
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-46s - loss: 0.1446 - acc: 0.9485 - val_loss: 0.1320 - val_acc: 0.9517
+45s - loss: 0.1477 - acc: 0.9466 - val_loss: 0.1331 - val_acc: 0.9509
 (180000,) (180000,)
-160162 1940
-7060 10838
+160742 1650
+7833 9775
 
-FA FR TA TR 0.0119677733773 0.394457481283 0.605542518717 0.988032226623
+FA FR TA TR 0.0101605990443 0.44485461154 0.55514538846 0.989839400956
 
 VALIDATION DATA
-0.951666666667 0.131950463537
+0.950944444444 0.133127580769
 (18000,) (18000,)
-16171 138
-732 959
+16217 119
+764 900
 
-FA FR TA TR 0.00846158562757 0.432879952691 0.567120047309 0.991538414372
-0.131950463537  - val loss
-0.131931584583  - final_loss
+FA FR TA TR 0.00728452497551 0.459134615385 0.540865384615 0.992715475024
+0.133127580769  - val loss
+0.132721894546  - final_loss
 Inside Plateau  2
 
 
 
 30  iteration
-0.0003125  learning rate
+0.000625  learning rate
 
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-45s - loss: 0.1441 - acc: 0.9485 - val_loss: 0.1343 - val_acc: 0.9496
+45s - loss: 0.1475 - acc: 0.9470 - val_loss: 0.1354 - val_acc: 0.9483
 (180000,) (180000,)
-160526 1576
-7728 10170
+160943 1449
+8169 9439
 
-FA FR TA TR 0.00972227363018 0.431780087161 0.568219912839 0.99027772637
+FA FR TA TR 0.00892285334253 0.463936846888 0.536063153112 0.991077146657
 
 VALIDATION DATA
-0.949611111111 0.134293155018
+0.948277777778 0.135400218225
 (18000,) (18000,)
-16194 115
-792 899
+16225 111
+820 844
 
-FA FR TA TR 0.00705132135631 0.468361916026 0.531638083974 0.992948678644
-0.134293155018  - val loss
-0.131931584583  - final_loss
+FA FR TA TR 0.00679480901077 0.492788461538 0.507211538462 0.993205190989
+0.135400218225  - val loss
+0.132721894546  - final_loss
 Inside Plateau  3
 
 
 
 30  iteration
-0.0003125  learning rate
+0.000625  learning rate
 
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-46s - loss: 0.1441 - acc: 0.9483 - val_loss: 0.1330 - val_acc: 0.9506
+45s - loss: 0.1474 - acc: 0.9466 - val_loss: 0.1331 - val_acc: 0.9508
 (180000,) (180000,)
-160387 1715
-7438 10460
+160690 1702
+7728 9880
 
-FA FR TA TR 0.0105797584237 0.415577159459 0.584422840541 0.989420241576
+FA FR TA TR 0.0104808118627 0.438891412994 0.561108587006 0.989519188137
 
 VALIDATION DATA
-0.950611111111 0.132959382428
+0.950833333333 0.133130112946
 (18000,) (18000,)
-16190 119
-770 921
+16211 125
+760 904
 
-FA FR TA TR 0.00729658470783 0.455351862803 0.544648137197 0.992703415292
-0.132959382428  - val loss
-0.131931584583  - final_loss
+FA FR TA TR 0.00765181194907 0.456730769231 0.543269230769 0.992348188051
+0.133130112946  - val loss
+0.132721894546  - final_loss
 Reducing the learning rate by half
 
 
 
 30  iteration
-0.00015625  learning rate
+0.0003125  learning rate
 
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-46s - loss: 0.1440 - acc: 0.9486 - val_loss: 0.1323 - val_acc: 0.9510
+45s - loss: 0.1471 - acc: 0.9470 - val_loss: 0.1335 - val_acc: 0.9507
 (180000,) (180000,)
-160271 1831
-7226 10672
+160754 1638
+7837 9771
 
-FA FR TA TR 0.0112953572442 0.403732260588 0.596267739412 0.988704642756
+FA FR TA TR 0.0100867037785 0.445081781009 0.554918218991 0.989913296221
 
 VALIDATION DATA
-0.951 0.132280902747
+0.950722222222 0.133472588453
 (18000,) (18000,)
-16181 128
-754 937
+16219 117
+770 894
 
-FA FR TA TR 0.00784842724876 0.445890005914 0.554109994086 0.992151572751
-0.132280902747  - val loss
-0.131931584583  - final_loss
+FA FR TA TR 0.00716209598433 0.462740384615 0.537259615385 0.992837904016
+0.133472588453  - val loss
+0.132721894546  - final_loss
 Inside Plateau  1
 
 
 
 30  iteration
-0.00015625  learning rate
+0.0003125  learning rate
 
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-46s - loss: 0.1434 - acc: 0.9485 - val_loss: 0.1322 - val_acc: 0.9511
+Epoch 00000: val_loss improved from 0.13272 to 0.13271, saving model to ./test/cnn/test-weights-0.13271.h5
+Epoch 00000: val_loss improved from 0.13272 to 0.13271, saving model to ./test/cnn/test_best_weights.h5
+45s - loss: 0.1472 - acc: 0.9468 - val_loss: 0.1327 - val_acc: 0.9512
 (180000,) (180000,)
-160267 1835
-7236 10662
+160520 1872
+7454 10154
 
-FA FR TA TR 0.0113200330656 0.404290982233 0.595709017767 0.988679966934
+FA FR TA TR 0.0115276614612 0.423330304407 0.576669695593 0.988472338539
 
 VALIDATION DATA
-0.951055555556 0.132207143552
+0.951166666667 0.13270779508
 (18000,) (18000,)
-16182 127
-754 937
+16203 133
+746 918
 
-FA FR TA TR 0.00778711141088 0.445890005914 0.554109994086 0.992212888589
-0.132207143552  - val loss
-0.131931584583  - final_loss
-Inside Plateau  2
-
-
-
-30  iteration
-0.00015625  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-46s - loss: 0.1438 - acc: 0.9486 - val_loss: 0.1323 - val_acc: 0.9509
-(180000,) (180000,)
-160286 1816
-7272 10626
-
-FA FR TA TR 0.011202822914 0.406302380154 0.593697619846 0.988797177086
-
-VALIDATION DATA
-0.950944444444 0.132330150992
-(18000,) (18000,)
-16182 127
-756 935
-
-FA FR TA TR 0.00778711141088 0.447072738025 0.552927261975 0.992212888589
-0.132330150992  - val loss
-0.131931584583  - final_loss
-Inside Plateau  3
-
-
-
-30  iteration
-0.00015625  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-46s - loss: 0.1437 - acc: 0.9487 - val_loss: 0.1331 - val_acc: 0.9500
-(180000,) (180000,)
-160406 1696
-7483 10415
-
-FA FR TA TR 0.0104625482721 0.418091406861 0.581908593139 0.989537451728
-
-VALIDATION DATA
-0.95 0.133081407421
-(18000,) (18000,)
-16187 122
-778 913
-
-FA FR TA TR 0.00748053222147 0.460082791248 0.539917208752 0.992519467779
-0.133081407421  - val loss
-0.131931584583  - final_loss
-Reducing the learning rate by half
-
-
-
-30  iteration
-7.8125e-05  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-45s - loss: 0.1440 - acc: 0.9486 - val_loss: 0.1327 - val_acc: 0.9503
-(180000,) (180000,)
-160347 1755
-7377 10521
-
-FA FR TA TR 0.0108265166377 0.412168957425 0.587831042575 0.989173483362
-
-VALIDATION DATA
-0.950277777778 0.132650910609
-(18000,) (18000,)
-16184 125
-770 921
-
-FA FR TA TR 0.00766447973512 0.455351862803 0.544648137197 0.992335520265
-0.132650910609  - val loss
-0.131931584583  - final_loss
-Inside Plateau  1
-
-
-
-30  iteration
-7.8125e-05  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-46s - loss: 0.1438 - acc: 0.9489 - val_loss: 0.1323 - val_acc: 0.9510
-(180000,) (180000,)
-160285 1817
-7252 10646
-
-FA FR TA TR 0.0112089918693 0.405184936864 0.594815063136 0.988791008131
-
-VALIDATION DATA
-0.951 0.132289771832
-(18000,) (18000,)
-16182 127
-755 936
-
-FA FR TA TR 0.00778711141088 0.446481371969 0.553518628031 0.992212888589
-0.132289771832  - val loss
-0.131931584583  - final_loss
-Inside Plateau  2
-
-
-
-30  iteration
-7.8125e-05  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-46s - loss: 0.1438 - acc: 0.9489 - val_loss: 0.1331 - val_acc: 0.9502
-(180000,) (180000,)
-160412 1690
-7496 10402
-
-FA FR TA TR 0.01042553454 0.418817744999 0.581182255001 0.98957446546
-
-VALIDATION DATA
-0.950166666667 0.133073884798
-(18000,) (18000,)
-16187 122
-775 916
-
-FA FR TA TR 0.00748053222147 0.458308693081 0.541691306919 0.992519467779
-0.133073884798  - val loss
-0.131931584583  - final_loss
-Inside Plateau  3
-
-
-
-30  iteration
-7.8125e-05  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss improved from 0.13193 to 0.13172, saving model to ./test/cnn/test-weights-0.13172.h5
-Epoch 00000: val_loss improved from 0.13193 to 0.13172, saving model to ./test/cnn/test_best_weights.h5
-46s - loss: 0.1437 - acc: 0.9487 - val_loss: 0.1317 - val_acc: 0.9519
-(180000,) (180000,)
-160093 2009
-6952 10946
-
-FA FR TA TR 0.0123934312963 0.388423287518 0.611576712482 0.987606568704
-
-VALIDATION DATA
-0.951888888889 0.131717333019
-(18000,) (18000,)
-16166 143
-723 968
-
-FA FR TA TR 0.00876816481697 0.42755765819 0.57244234181 0.991231835183
-0.131717333019  - val loss
-0.131931584583  - final_loss
+FA FR TA TR 0.00814152791381 0.448317307692 0.551682692308 0.991858472086
+0.13270779508  - val loss
+0.132721894546  - final_loss
 Validation Loss decreased. Great work
 
 
 
 31  iteration
+0.0003125  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+45s - loss: 0.1470 - acc: 0.9470 - val_loss: 0.1344 - val_acc: 0.9494
+(180000,) (180000,)
+160883 1509
+8088 9520
+
+FA FR TA TR 0.00929232967141 0.459336665152 0.540663334848 0.990707670329
+
+VALIDATION DATA
+0.949444444444 0.134353518433
+(18000,) (18000,)
+16225 111
+799 865
+
+FA FR TA TR 0.00679480901077 0.480168269231 0.519831730769 0.993205190989
+0.134353518433  - val loss
+0.13270779508  - final_loss
+Inside Plateau  1
+
+
+
+31  iteration
+0.0003125  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss improved from 0.13271 to 0.13267, saving model to ./test/cnn/test-weights-0.13267.h5
+Epoch 00000: val_loss improved from 0.13271 to 0.13267, saving model to ./test/cnn/test_best_weights.h5
+46s - loss: 0.1468 - acc: 0.9470 - val_loss: 0.1327 - val_acc: 0.9509
+(180000,) (180000,)
+160615 1777
+7577 10031
+
+FA FR TA TR 0.0109426572738 0.430315765561 0.569684234439 0.989057342726
+
+VALIDATION DATA
+0.950888888889 0.132668294791
+(18000,) (18000,)
+16207 129
+755 909
+
+FA FR TA TR 0.00789666993144 0.453725961538 0.546274038462 0.992103330069
+0.132668294791  - val loss
+0.13270779508  - final_loss
+Validation Loss decreased. Great work
+
+
+
+32  iteration
+0.0003125  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss improved from 0.13267 to 0.13266, saving model to ./test/cnn/test-weights-0.13266.h5
+Epoch 00000: val_loss improved from 0.13267 to 0.13266, saving model to ./test/cnn/test_best_weights.h5
+46s - loss: 0.1466 - acc: 0.9467 - val_loss: 0.1327 - val_acc: 0.9509
+(180000,) (180000,)
+160648 1744
+7650 9958
+
+FA FR TA TR 0.0107394452929 0.43446160836 0.56553839164 0.989260554707
+
+VALIDATION DATA
+0.950888888889 0.132656447646
+(18000,) (18000,)
+16204 132
+752 912
+
+FA FR TA TR 0.00808031341822 0.451923076923 0.548076923077 0.991919686582
+0.132656447646  - val loss
+0.132668294791  - final_loss
+Validation Loss decreased. Great work
+
+
+
+33  iteration
+0.0003125  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+45s - loss: 0.1469 - acc: 0.9470 - val_loss: 0.1337 - val_acc: 0.9502
+(180000,) (180000,)
+160836 1556
+7989 9619
+
+FA FR TA TR 0.0095817527957 0.453714220809 0.546285779191 0.990418247204
+
+VALIDATION DATA
+0.950166666667 0.133650707626
+(18000,) (18000,)
+16220 116
+781 883
+
+FA FR TA TR 0.00710088148874 0.469350961538 0.530649038462 0.992899118511
+0.133650707626  - val loss
+0.132656447646  - final_loss
+Inside Plateau  1
+
+
+
+33  iteration
+0.0003125  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss improved from 0.13266 to 0.13244, saving model to ./test/cnn/test-weights-0.13244.h5
+Epoch 00000: val_loss improved from 0.13266 to 0.13244, saving model to ./test/cnn/test_best_weights.h5
+46s - loss: 0.1470 - acc: 0.9469 - val_loss: 0.1324 - val_acc: 0.9514
+(180000,) (180000,)
+160533 1859
+7462 10146
+
+FA FR TA TR 0.0114476082566 0.423784643344 0.576215356656 0.988552391743
+
+VALIDATION DATA
+0.951444444444 0.132443003313
+(18000,) (18000,)
+16200 136
+738 926
+
+FA FR TA TR 0.00832517140059 0.443509615385 0.556490384615 0.991674828599
+0.132443003313  - val loss
+0.132656447646  - final_loss
+Validation Loss decreased. Great work
+
+
+
+34  iteration
+0.0003125  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+45s - loss: 0.1472 - acc: 0.9469 - val_loss: 0.1342 - val_acc: 0.9492
+(180000,) (180000,)
+160880 1512
+8061 9547
+
+FA FR TA TR 0.00931080348786 0.45780327124 0.54219672876 0.990689196512
+
+VALIDATION DATA
+0.949222222222 0.134206473764
+(18000,) (18000,)
+16223 113
+801 863
+
+FA FR TA TR 0.00691723800196 0.481370192308 0.518629807692 0.993082761998
+0.134206473764  - val loss
+0.132443003313  - final_loss
+Inside Plateau  1
+
+
+
+34  iteration
+0.0003125  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss improved from 0.13244 to 0.13241, saving model to ./test/cnn/test-weights-0.13241.h5
+Epoch 00000: val_loss improved from 0.13244 to 0.13241, saving model to ./test/cnn/test_best_weights.h5
+46s - loss: 0.1467 - acc: 0.9474 - val_loss: 0.1324 - val_acc: 0.9512
+(180000,) (180000,)
+160520 1872
+7444 10164
+
+FA FR TA TR 0.0115276614612 0.422762380736 0.577237619264 0.988472338539
+
+VALIDATION DATA
+0.951222222222 0.1324134554
+(18000,) (18000,)
+16200 136
+742 922
+
+FA FR TA TR 0.00832517140059 0.445913461538 0.554086538462 0.991674828599
+0.1324134554  - val loss
+0.132443003313  - final_loss
+Validation Loss decreased. Great work
+
+
+
+35  iteration
+0.0003125  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+46s - loss: 0.1469 - acc: 0.9467 - val_loss: 0.1330 - val_acc: 0.9509
+(180000,) (180000,)
+160731 1661
+7806 9802
+
+FA FR TA TR 0.0102283363712 0.443321217628 0.556678782372 0.989771663629
+
+VALIDATION DATA
+0.950888888889 0.132952228056
+(18000,) (18000,)
+16217 119
+765 899
+
+FA FR TA TR 0.00728452497551 0.459735576923 0.540264423077 0.992715475024
+0.132952228056  - val loss
+0.1324134554  - final_loss
+Inside Plateau  1
+
+
+
+35  iteration
+0.0003125  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+45s - loss: 0.1468 - acc: 0.9473 - val_loss: 0.1334 - val_acc: 0.9506
+(180000,) (180000,)
+160757 1635
+7841 9767
+
+FA FR TA TR 0.0100682299621 0.445308950477 0.554691049523 0.989931770038
+
+VALIDATION DATA
+0.950555555556 0.133368126618
+(18000,) (18000,)
+16217 119
+771 893
+
+FA FR TA TR 0.00728452497551 0.463341346154 0.536658653846 0.992715475024
+0.133368126618  - val loss
+0.1324134554  - final_loss
+Inside Plateau  2
+
+
+
+35  iteration
+0.0003125  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+45s - loss: 0.1468 - acc: 0.9472 - val_loss: 0.1328 - val_acc: 0.9507
+(180000,) (180000,)
+160727 1665
+7780 9828
+
+FA FR TA TR 0.0102529681265 0.441844616084 0.558155383916 0.989747031873
+
+VALIDATION DATA
+0.950722222222 0.132836209824
+(18000,) (18000,)
+16215 121
+766 898
+
+FA FR TA TR 0.0074069539667 0.460336538462 0.539663461538 0.992593046033
+0.132836209824  - val loss
+0.1324134554  - final_loss
+Inside Plateau  3
+
+
+
+35  iteration
+0.0003125  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+46s - loss: 0.1464 - acc: 0.9471 - val_loss: 0.1342 - val_acc: 0.9493
+(180000,) (180000,)
+160892 1500
+8076 9532
+
+FA FR TA TR 0.00923690822208 0.458655156747 0.541344843253 0.990763091778
+
+VALIDATION DATA
+0.949277777778 0.13416203528
+(18000,) (18000,)
+16225 111
+802 862
+
+FA FR TA TR 0.00679480901077 0.481971153846 0.518028846154 0.993205190989
+0.13416203528  - val loss
+0.1324134554  - final_loss
+Reducing the learning rate by half
+
+
+
+35  iteration
+0.00015625  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+46s - loss: 0.1466 - acc: 0.9471 - val_loss: 0.1332 - val_acc: 0.9506
+(180000,) (180000,)
+160777 1615
+7876 9732
+
+FA FR TA TR 0.00994507118577 0.447296683326 0.552703316674 0.990054928814
+
+VALIDATION DATA
+0.950555555556 0.133238347822
+(18000,) (18000,)
+16219 117
+773 891
+
+FA FR TA TR 0.00716209598433 0.464543269231 0.535456730769 0.992837904016
+0.133238347822  - val loss
+0.1324134554  - final_loss
+Inside Plateau  1
+
+
+
+35  iteration
+0.00015625  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+46s - loss: 0.1470 - acc: 0.9471 - val_loss: 0.1326 - val_acc: 0.9508
+(180000,) (180000,)
+160627 1765
+7609 9999
+
+FA FR TA TR 0.010868762008 0.432133121308 0.567866878692 0.989131237992
+
+VALIDATION DATA
+0.950777777778 0.132600054539
+(18000,) (18000,)
+16205 131
+755 909
+
+FA FR TA TR 0.00801909892262 0.453725961538 0.546274038462 0.991980901077
+0.132600054539  - val loss
+0.1324134554  - final_loss
+Inside Plateau  2
+
+
+
+35  iteration
+0.00015625  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+46s - loss: 0.1464 - acc: 0.9473 - val_loss: 0.1325 - val_acc: 0.9508
+(180000,) (180000,)
+160600 1792
+7566 10042
+
+FA FR TA TR 0.011035026356 0.429691049523 0.570308950477 0.988964973644
+
+VALIDATION DATA
+0.950777777778 0.132494739936
+(18000,) (18000,)
+16204 132
+754 910
+
+FA FR TA TR 0.00808031341822 0.453125 0.546875 0.991919686582
+0.132494739936  - val loss
+0.1324134554  - final_loss
+Inside Plateau  3
+
+
+
+35  iteration
+0.00015625  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+46s - loss: 0.1468 - acc: 0.9470 - val_loss: 0.1326 - val_acc: 0.9511
+(180000,) (180000,)
+160649 1743
+7645 9963
+
+FA FR TA TR 0.0107332873541 0.434177646524 0.565822353476 0.989266712646
+
+VALIDATION DATA
+0.951055555556 0.132597043607
+(18000,) (18000,)
+16212 124
+757 907
+
+FA FR TA TR 0.00759059745348 0.454927884615 0.545072115385 0.992409402547
+0.132597043607  - val loss
+0.1324134554  - final_loss
+Reducing the learning rate by half
+
+
+
+35  iteration
+7.8125e-05  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss improved from 0.13241 to 0.13238, saving model to ./test/cnn/test-weights-0.13238.h5
+Epoch 00000: val_loss improved from 0.13241 to 0.13238, saving model to ./test/cnn/test_best_weights.h5
+46s - loss: 0.1466 - acc: 0.9472 - val_loss: 0.1324 - val_acc: 0.9509
+(180000,) (180000,)
+160575 1817
+7530 10078
+
+FA FR TA TR 0.0111889748263 0.427646524307 0.572353475693 0.988811025174
+
+VALIDATION DATA
+0.950888888889 0.132375485748
+(18000,) (18000,)
+16204 132
+752 912
+
+FA FR TA TR 0.00808031341822 0.451923076923 0.548076923077 0.991919686582
+0.132375485748  - val loss
+0.1324134554  - final_loss
+Validation Loss decreased. Great work
+
+
+
+36  iteration
 7.8125e-05  learning rate
 
 TRAIN DATA
@@ -2628,27 +2460,27 @@ Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-46s - loss: 0.1438 - acc: 0.9485 - val_loss: 0.1324 - val_acc: 0.9506
+46s - loss: 0.1461 - acc: 0.9474 - val_loss: 0.1324 - val_acc: 0.9508
 (180000,) (180000,)
-160305 1797
-7305 10593
+160580 1812
+7535 10073
 
-FA FR TA TR 0.0110856127623 0.408146161582 0.591853838418 0.988914387238
+FA FR TA TR 0.0111581851323 0.427930486143 0.572069513857 0.988841814868
 
 VALIDATION DATA
-0.950611111111 0.132436092926
+0.950777777778 0.13238812891
 (18000,) (18000,)
-16182 127
-762 929
+16204 132
+754 910
 
-FA FR TA TR 0.00778711141088 0.450620934358 0.549379065642 0.992212888589
-0.132436092926  - val loss
-0.131717333019  - final_loss
+FA FR TA TR 0.00808031341822 0.453125 0.546875 0.991919686582
+0.13238812891  - val loss
+0.132375485748  - final_loss
 Inside Plateau  1
 
 
 
-31  iteration
+36  iteration
 7.8125e-05  learning rate
 
 TRAIN DATA
@@ -2656,27 +2488,55 @@ Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-46s - loss: 0.1434 - acc: 0.9488 - val_loss: 0.1322 - val_acc: 0.9513
+46s - loss: 0.1460 - acc: 0.9474 - val_loss: 0.1325 - val_acc: 0.9508
 (180000,) (180000,)
-160267 1835
-7213 10685
+160627 1765
+7611 9997
 
-FA FR TA TR 0.0113200330656 0.403005922449 0.596994077551 0.988679966934
+FA FR TA TR 0.010868762008 0.432246706043 0.567753293957 0.989131237992
 
 VALIDATION DATA
-0.951277777778 0.132203775022
+0.950833333333 0.132512965884
 (18000,) (18000,)
-16180 129
-748 943
+16207 129
+756 908
 
-FA FR TA TR 0.00790974308664 0.44234180958 0.55765819042 0.992090256913
-0.132203775022  - val loss
-0.131717333019  - final_loss
+FA FR TA TR 0.00789666993144 0.454326923077 0.545673076923 0.992103330069
+0.132512965884  - val loss
+0.132375485748  - final_loss
 Inside Plateau  2
 
 
 
-31  iteration
+36  iteration
+7.8125e-05  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss improved from 0.13238 to 0.13234, saving model to ./test/cnn/test-weights-0.13234.h5
+Epoch 00000: val_loss improved from 0.13238 to 0.13234, saving model to ./test/cnn/test_best_weights.h5
+46s - loss: 0.1463 - acc: 0.9472 - val_loss: 0.1323 - val_acc: 0.9510
+(180000,) (180000,)
+160558 1834
+7501 10107
+
+FA FR TA TR 0.0112936597862 0.425999545661 0.574000454339 0.988706340214
+
+VALIDATION DATA
+0.951 0.132339904298
+(18000,) (18000,)
+16203 133
+749 915
+
+FA FR TA TR 0.00814152791381 0.450120192308 0.549879807692 0.991858472086
+0.132339904298  - val loss
+0.132375485748  - final_loss
+Validation Loss decreased. Great work
+
+
+
+37  iteration
 7.8125e-05  learning rate
 
 TRAIN DATA
@@ -2684,27 +2544,27 @@ Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-46s - loss: 0.1438 - acc: 0.9486 - val_loss: 0.1320 - val_acc: 0.9516
+46s - loss: 0.1466 - acc: 0.9471 - val_loss: 0.1328 - val_acc: 0.9510
 (180000,) (180000,)
-160228 1874
-7163 10735
+160707 1685
+7737 9871
 
-FA FR TA TR 0.0115606223242 0.400212314225 0.599787685775 0.988439377676
+FA FR TA TR 0.0103761269028 0.439402544298 0.560597455702 0.989623873097
 
 VALIDATION DATA
-0.951555555556 0.132035513603
+0.951 0.132772468636
 (18000,) (18000,)
-16179 130
-742 949
+16216 120
+762 902
 
-FA FR TA TR 0.00797105892452 0.438793613247 0.561206386753 0.992028941075
-0.132035513603  - val loss
-0.131717333019  - final_loss
-Inside Plateau  3
+FA FR TA TR 0.00734573947111 0.457932692308 0.542067307692 0.992654260529
+0.132772468636  - val loss
+0.132339904298  - final_loss
+Inside Plateau  1
 
 
 
-31  iteration
+37  iteration
 7.8125e-05  learning rate
 
 TRAIN DATA
@@ -2712,83 +2572,83 @@ Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-46s - loss: 0.1434 - acc: 0.9488 - val_loss: 0.1320 - val_acc: 0.9513
+46s - loss: 0.1464 - acc: 0.9471 - val_loss: 0.1325 - val_acc: 0.9508
 (180000,) (180000,)
-160234 1868
-7169 10729
+160619 1773
+7586 10022
 
-FA FR TA TR 0.0115236085921 0.400547547212 0.599452452788 0.988476391408
+FA FR TA TR 0.0109180255185 0.430826896865 0.569173103135 0.989081974482
 
 VALIDATION DATA
-0.951333333333 0.132045812812
+0.950777777778 0.132458069119
 (18000,) (18000,)
-16178 131
-745 946
+16205 131
+755 909
 
-FA FR TA TR 0.0080323747624 0.440567711413 0.559432288587 0.991967625238
-0.132045812812  - val loss
-0.131717333019  - final_loss
-Reducing the learning rate by half
-
-
-
-31  iteration
-3.90625e-05  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-47s - loss: 0.1434 - acc: 0.9488 - val_loss: 0.1325 - val_acc: 0.9504
-(180000,) (180000,)
-160329 1773
-7333 10565
-
-FA FR TA TR 0.010937557834 0.409710582188 0.590289417812 0.989062442166
-
-VALIDATION DATA
-0.950444444444 0.132524343567
-(18000,) (18000,)
-16183 126
-766 925
-
-FA FR TA TR 0.007725795573 0.452986398581 0.547013601419 0.992274204427
-0.132524343567  - val loss
-0.131717333019  - final_loss
-Inside Plateau  1
-
-
-
-31  iteration
-3.90625e-05  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-46s - loss: 0.1438 - acc: 0.9485 - val_loss: 0.1324 - val_acc: 0.9506
-(180000,) (180000,)
-160310 1792
-7305 10593
-
-FA FR TA TR 0.0110547679856 0.408146161582 0.591853838418 0.988945232014
-
-VALIDATION DATA
-0.950611111111 0.132421369023
-(18000,) (18000,)
-16182 127
-762 929
-
-FA FR TA TR 0.00778711141088 0.450620934358 0.549379065642 0.992212888589
-0.132421369023  - val loss
-0.131717333019  - final_loss
+FA FR TA TR 0.00801909892262 0.453725961538 0.546274038462 0.991980901077
+0.132458069119  - val loss
+0.132339904298  - final_loss
 Inside Plateau  2
 
 
 
-31  iteration
+37  iteration
+7.8125e-05  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+46s - loss: 0.1467 - acc: 0.9470 - val_loss: 0.1327 - val_acc: 0.9511
+(180000,) (180000,)
+160689 1703
+7689 9919
+
+FA FR TA TR 0.0104869698015 0.436676510677 0.563323489323 0.989513030199
+
+VALIDATION DATA
+0.951055555556 0.132660875701
+(18000,) (18000,)
+16214 122
+759 905
+
+FA FR TA TR 0.00746816846229 0.456129807692 0.543870192308 0.992531831538
+0.132660875701  - val loss
+0.132339904298  - final_loss
+Inside Plateau  3
+
+
+
+37  iteration
+7.8125e-05  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+46s - loss: 0.1465 - acc: 0.9470 - val_loss: 0.1325 - val_acc: 0.9509
+(180000,) (180000,)
+160620 1772
+7592 10016
+
+FA FR TA TR 0.0109118675797 0.431167651068 0.568832348932 0.98908813242
+
+VALIDATION DATA
+0.950888888889 0.132492953456
+(18000,) (18000,)
+16205 131
+753 911
+
+FA FR TA TR 0.00801909892262 0.452524038462 0.547475961538 0.991980901077
+0.132492953456  - val loss
+0.132339904298  - final_loss
+Reducing the learning rate by half
+
+
+
+37  iteration
 3.90625e-05  learning rate
 
 TRAIN DATA
@@ -2796,27 +2656,27 @@ Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-46s - loss: 0.1437 - acc: 0.9487 - val_loss: 0.1323 - val_acc: 0.9511
+46s - loss: 0.1466 - acc: 0.9468 - val_loss: 0.1324 - val_acc: 0.9510
 (180000,) (180000,)
-160289 1813
-7263 10635
+160572 1820
+7523 10085
 
-FA FR TA TR 0.0111843160479 0.405799530674 0.594200469326 0.988815683952
+FA FR TA TR 0.0112074486428 0.427248977737 0.572751022263 0.988792551357
 
 VALIDATION DATA
-0.951055555556 0.132294546243
+0.951 0.132351214839
 (18000,) (18000,)
-16182 127
-754 937
+16204 132
+750 914
 
-FA FR TA TR 0.00778711141088 0.445890005914 0.554109994086 0.992212888589
-0.132294546243  - val loss
-0.131717333019  - final_loss
-Inside Plateau  3
+FA FR TA TR 0.00808031341822 0.450721153846 0.549278846154 0.991919686582
+0.132351214839  - val loss
+0.132339904298  - final_loss
+Inside Plateau  1
 
 
 
-31  iteration
+37  iteration
 3.90625e-05  learning rate
 
 TRAIN DATA
@@ -2824,223 +2684,279 @@ Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-46s - loss: 0.1439 - acc: 0.9486 - val_loss: 0.1323 - val_acc: 0.9510
+46s - loss: 0.1465 - acc: 0.9470 - val_loss: 0.1327 - val_acc: 0.9510
 (180000,) (180000,)
-160295 1807
-7276 10622
+160687 1705
+7687 9921
 
-FA FR TA TR 0.0111473023158 0.406525868812 0.593474131188 0.988852697684
+FA FR TA TR 0.0104992856791 0.436562925943 0.563437074057 0.989500714321
 
 VALIDATION DATA
-0.951 0.132326782528
+0.951 0.132691869126
 (18000,) (18000,)
-16183 126
-756 935
+16214 122
+760 904
 
-FA FR TA TR 0.007725795573 0.447072738025 0.552927261975 0.992274204427
-0.132326782528  - val loss
-0.131717333019  - final_loss
-Reducing the learning rate by half
-
-
-
-31  iteration
-1.953125e-05  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-46s - loss: 0.1432 - acc: 0.9487 - val_loss: 0.1322 - val_acc: 0.9511
-(180000,) (180000,)
-160285 1817
-7253 10645
-
-FA FR TA TR 0.0112089918693 0.405240809029 0.594759190971 0.988791008131
-
-VALIDATION DATA
-0.951055555556 0.132230261154
-(18000,) (18000,)
-16182 127
-754 937
-
-FA FR TA TR 0.00778711141088 0.445890005914 0.554109994086 0.992212888589
-0.132230261154  - val loss
-0.131717333019  - final_loss
-Inside Plateau  1
-
-
-
-31  iteration
-1.953125e-05  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-46s - loss: 0.1438 - acc: 0.9486 - val_loss: 0.1321 - val_acc: 0.9512
-(180000,) (180000,)
-160265 1837
-7210 10688
-
-FA FR TA TR 0.0113323709763 0.402838305956 0.597161694044 0.988667629024
-
-VALIDATION DATA
-0.951222222222 0.132143180665
-(18000,) (18000,)
-16181 128
-750 941
-
-FA FR TA TR 0.00784842724876 0.443524541691 0.556475458309 0.992151572751
-0.132143180665  - val loss
-0.131717333019  - final_loss
+FA FR TA TR 0.00746816846229 0.456730769231 0.543269230769 0.992531831538
+0.132691869126  - val loss
+0.132339904298  - final_loss
 Inside Plateau  2
 
 
 
-31  iteration
-1.953125e-05  learning rate
+37  iteration
+3.90625e-05  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss improved from 0.13234 to 0.13225, saving model to ./test/cnn/test-weights-0.13225.h5
+Epoch 00000: val_loss improved from 0.13234 to 0.13225, saving model to ./test/cnn/test_best_weights.h5
+46s - loss: 0.1462 - acc: 0.9471 - val_loss: 0.1323 - val_acc: 0.9512
+(180000,) (180000,)
+160503 1889
+7421 10187
+
+FA FR TA TR 0.011632346421 0.421456156293 0.578543843707 0.988367653579
+
+VALIDATION DATA
+0.951166666667 0.132250548498
+(18000,) (18000,)
+16198 138
+741 923
+
+FA FR TA TR 0.00844760039177 0.4453125 0.5546875 0.991552399608
+0.132250548498  - val loss
+0.132339904298  - final_loss
+Validation Loss decreased. Great work
+
+
+
+38  iteration
+3.90625e-05  learning rate
 
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-46s - loss: 0.1438 - acc: 0.9483 - val_loss: 0.1322 - val_acc: 0.9511
+46s - loss: 0.1465 - acc: 0.9471 - val_loss: 0.1325 - val_acc: 0.9508
 (180000,) (180000,)
-160266 1836
-7213 10685
+160637 1755
+7605 10003
 
-FA FR TA TR 0.0113262020209 0.403005922449 0.596994077551 0.988673797979
+FA FR TA TR 0.0108071826198 0.43190595184 0.56809404816 0.98919281738
 
 VALIDATION DATA
-0.951111111111 0.132169733336
+0.950833333333 0.132511812088
 (18000,) (18000,)
-16181 128
-752 939
+16207 129
+756 908
 
-FA FR TA TR 0.00784842724876 0.444707273802 0.555292726198 0.992151572751
-0.132169733336  - val loss
-0.131717333019  - final_loss
-Inside Plateau  3
-
-
-
-31  iteration
-1.953125e-05  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-46s - loss: 0.1437 - acc: 0.9483 - val_loss: 0.1325 - val_acc: 0.9504
-(180000,) (180000,)
-160334 1768
-7348 10550
-
-FA FR TA TR 0.0109067130572 0.410548664655 0.589451335345 0.989093286943
-
-VALIDATION DATA
-0.950388888889 0.132546413187
-(18000,) (18000,)
-16183 126
-767 924
-
-FA FR TA TR 0.007725795573 0.453577764636 0.546422235364 0.992274204427
-0.132546413187  - val loss
-0.131717333019  - final_loss
-Reducing the learning rate by half
-
-
-
-31  iteration
-9.765625e-06  learning rate
-
-TRAIN DATA
-Train on 180000 samples, validate on 18000 samples
-Epoch 1/1
-Epoch 00000: val_loss did not improve
-Epoch 00000: val_loss did not improve
-46s - loss: 0.1433 - acc: 0.9487 - val_loss: 0.1322 - val_acc: 0.9512
-(180000,) (180000,)
-160267 1835
-7219 10679
-
-FA FR TA TR 0.0113200330656 0.403341155436 0.596658844564 0.988679966934
-
-VALIDATION DATA
-0.951166666667 0.132174130317
-(18000,) (18000,)
-16181 128
-751 940
-
-FA FR TA TR 0.00784842724876 0.444115907747 0.555884092253 0.992151572751
-0.132174130317  - val loss
-0.131717333019  - final_loss
+FA FR TA TR 0.00789666993144 0.454326923077 0.545673076923 0.992103330069
+0.132511812088  - val loss
+0.132250548498  - final_loss
 Inside Plateau  1
 
 
 
-31  iteration
-9.765625e-06  learning rate
+38  iteration
+3.90625e-05  learning rate
 
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-46s - loss: 0.1434 - acc: 0.9485 - val_loss: 0.1322 - val_acc: 0.9511
+46s - loss: 0.1466 - acc: 0.9472 - val_loss: 0.1327 - val_acc: 0.9510
 (180000,) (180000,)
-160281 1821
-7242 10656
+160690 1702
+7688 9920
 
-FA FR TA TR 0.0112336676907 0.40462621522 0.59537378478 0.988766332309
+FA FR TA TR 0.0104808118627 0.43661971831 0.56338028169 0.989519188137
 
 VALIDATION DATA
-0.951111111111 0.132215222097
+0.951 0.132689977553
 (18000,) (18000,)
-16182 127
-753 938
+16214 122
+760 904
 
-FA FR TA TR 0.00778711141088 0.445298639858 0.554701360142 0.992212888589
-0.132215222097  - val loss
-0.131717333019  - final_loss
+FA FR TA TR 0.00746816846229 0.456730769231 0.543269230769 0.992531831538
+0.132689977553  - val loss
+0.132250548498  - final_loss
 Inside Plateau  2
 
 
 
-31  iteration
-9.765625e-06  learning rate
+38  iteration
+3.90625e-05  learning rate
 
 TRAIN DATA
 Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-46s - loss: 0.1437 - acc: 0.9487 - val_loss: 0.1322 - val_acc: 0.9511
+46s - loss: 0.1464 - acc: 0.9470 - val_loss: 0.1323 - val_acc: 0.9510
 (180000,) (180000,)
-160287 1815
-7255 10643
+160566 1826
+7523 10085
 
-FA FR TA TR 0.0111966539586 0.405352553358 0.594647446642 0.988803346041
+FA FR TA TR 0.0112443962757 0.427248977737 0.572751022263 0.988755603724
 
 VALIDATION DATA
-0.951055555556 0.132245248616
+0.951 0.132326048219
 (18000,) (18000,)
-16182 127
-754 937
+16204 132
+750 914
 
-FA FR TA TR 0.00778711141088 0.445890005914 0.554109994086 0.992212888589
-0.132245248616  - val loss
-0.131717333019  - final_loss
+FA FR TA TR 0.00808031341822 0.450721153846 0.549278846154 0.991919686582
+0.132326048219  - val loss
+0.132250548498  - final_loss
 Inside Plateau  3
 
 
 
-31  iteration
+38  iteration
+3.90625e-05  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+46s - loss: 0.1465 - acc: 0.9472 - val_loss: 0.1326 - val_acc: 0.9511
+(180000,) (180000,)
+160674 1718
+7675 9933
+
+FA FR TA TR 0.0105793388837 0.435881417537 0.564118582463 0.989420661116
+
+VALIDATION DATA
+0.951055555556 0.132569017063
+(18000,) (18000,)
+16213 123
+758 906
+
+FA FR TA TR 0.00752938295788 0.455528846154 0.544471153846 0.992470617042
+0.132569017063  - val loss
+0.132250548498  - final_loss
+Reducing the learning rate by half
+
+
+
+38  iteration
+1.953125e-05  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+46s - loss: 0.1463 - acc: 0.9471 - val_loss: 0.1325 - val_acc: 0.9508
+(180000,) (180000,)
+160639 1753
+7613 9995
+
+FA FR TA TR 0.0107948667422 0.432360290777 0.567639709223 0.989205133258
+
+VALIDATION DATA
+0.950833333333 0.132457183792
+(18000,) (18000,)
+16206 130
+755 909
+
+FA FR TA TR 0.00795788442703 0.453725961538 0.546274038462 0.992042115573
+0.132457183792  - val loss
+0.132250548498  - final_loss
+Inside Plateau  1
+
+
+
+38  iteration
+1.953125e-05  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+46s - loss: 0.1466 - acc: 0.9470 - val_loss: 0.1325 - val_acc: 0.9509
+(180000,) (180000,)
+160657 1735
+7648 9960
+
+FA FR TA TR 0.0106840238435 0.434348023626 0.565651976374 0.989315976156
+
+VALIDATION DATA
+0.950944444444 0.132510166979
+(18000,) (18000,)
+16211 125
+758 906
+
+FA FR TA TR 0.00765181194907 0.455528846154 0.544471153846 0.992348188051
+0.132510166979  - val loss
+0.132250548498  - final_loss
+Inside Plateau  2
+
+
+
+38  iteration
+1.953125e-05  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+46s - loss: 0.1465 - acc: 0.9475 - val_loss: 0.1325 - val_acc: 0.9508
+(180000,) (180000,)
+160640 1752
+7614 9994
+
+FA FR TA TR 0.0107887088034 0.432417083144 0.567582916856 0.989211291197
+
+VALIDATION DATA
+0.950833333333 0.132454383804
+(18000,) (18000,)
+16207 129
+756 908
+
+FA FR TA TR 0.00789666993144 0.454326923077 0.545673076923 0.992103330069
+0.132454383804  - val loss
+0.132250548498  - final_loss
+Inside Plateau  3
+
+
+
+38  iteration
+1.953125e-05  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+46s - loss: 0.1465 - acc: 0.9472 - val_loss: 0.1326 - val_acc: 0.9510
+(180000,) (180000,)
+160675 1717
+7673 9935
+
+FA FR TA TR 0.0105731809449 0.435767832803 0.564232167197 0.989426819055
+
+VALIDATION DATA
+0.951 0.132556405326
+(18000,) (18000,)
+16213 123
+759 905
+
+FA FR TA TR 0.00752938295788 0.456129807692 0.543870192308 0.992470617042
+0.132556405326  - val loss
+0.132250548498  - final_loss
+Reducing the learning rate by half
+
+
+
+38  iteration
 9.765625e-06  learning rate
 
 TRAIN DATA
@@ -3048,21 +2964,220 @@ Train on 180000 samples, validate on 18000 samples
 Epoch 1/1
 Epoch 00000: val_loss did not improve
 Epoch 00000: val_loss did not improve
-46s - loss: 0.1437 - acc: 0.9485 - val_loss: 0.1323 - val_acc: 0.9509
+46s - loss: 0.1460 - acc: 0.9473 - val_loss: 0.1324 - val_acc: 0.9508
 (180000,) (180000,)
-160295 1807
-7276 10622
+160636 1756
+7613 9995
 
-FA FR TA TR 0.0111473023158 0.406525868812 0.593474131188 0.988852697684
+FA FR TA TR 0.0108133405586 0.432360290777 0.567639709223 0.989186659441
 
 VALIDATION DATA
-0.950944444444 0.13232025472
+0.950833333333 0.13244902482
 (18000,) (18000,)
-16182 127
-756 935
+16207 129
+756 908
 
-FA FR TA TR 0.00778711141088 0.447072738025 0.552927261975 0.992212888589
-0.13232025472  - val loss
-0.131717333019  - final_loss
+FA FR TA TR 0.00789666993144 0.454326923077 0.545673076923 0.992103330069
+0.13244902482  - val loss
+0.132250548498  - final_loss
+Inside Plateau  1
+
+
+
+38  iteration
+9.765625e-06  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+46s - loss: 0.1464 - acc: 0.9470 - val_loss: 0.1325 - val_acc: 0.9509
+(180000,) (180000,)
+160650 1742
+7640 9968
+
+FA FR TA TR 0.0107271294152 0.433893684689 0.566106315311 0.989272870585
+
+VALIDATION DATA
+0.950888888889 0.132491213842
+(18000,) (18000,)
+16208 128
+756 908
+
+FA FR TA TR 0.00783545543585 0.454326923077 0.545673076923 0.992164544564
+0.132491213842  - val loss
+0.132250548498  - final_loss
+Inside Plateau  2
+
+
+
+38  iteration
+9.765625e-06  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+46s - loss: 0.1465 - acc: 0.9470 - val_loss: 0.1325 - val_acc: 0.9508
+(180000,) (180000,)
+160637 1755
+7616 9992
+
+FA FR TA TR 0.0108071826198 0.432530667878 0.567469332122 0.98919281738
+
+VALIDATION DATA
+0.950833333333 0.13246243605
+(18000,) (18000,)
+16207 129
+756 908
+
+FA FR TA TR 0.00789666993144 0.454326923077 0.545673076923 0.992103330069
+0.13246243605  - val loss
+0.132250548498  - final_loss
+Inside Plateau  3
+
+
+
+38  iteration
+9.765625e-06  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+46s - loss: 0.1460 - acc: 0.9471 - val_loss: 0.1326 - val_acc: 0.9511
+(180000,) (180000,)
+160693 1699
+7695 9913
+
+FA FR TA TR 0.0104623380462 0.43701726488 0.56298273512 0.989537661954
+
+VALIDATION DATA
+0.951111111111 0.132618850887
+(18000,) (18000,)
+16215 121
+759 905
+
+FA FR TA TR 0.0074069539667 0.456129807692 0.543870192308 0.992593046033
+0.132618850887  - val loss
+0.132250548498  - final_loss
 Reducing the learning rate by half
-   32/18000 [..............................] - ETA: 2s
+
+
+
+38  iteration
+4.8828125e-06  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+46s - loss: 0.1461 - acc: 0.9472 - val_loss: 0.1326 - val_acc: 0.9511
+(180000,) (180000,)
+160674 1718
+7677 9931
+
+FA FR TA TR 0.0105793388837 0.435995002272 0.564004997728 0.989420661116
+
+VALIDATION DATA
+0.951055555556 0.132566471653
+(18000,) (18000,)
+16214 122
+759 905
+
+FA FR TA TR 0.00746816846229 0.456129807692 0.543870192308 0.992531831538
+0.132566471653  - val loss
+0.132250548498  - final_loss
+Inside Plateau  1
+
+
+
+38  iteration
+4.8828125e-06  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+46s - loss: 0.1467 - acc: 0.9470 - val_loss: 0.1325 - val_acc: 0.9509
+(180000,) (180000,)
+160644 1748
+7625 9983
+
+FA FR TA TR 0.0107640770481 0.433041799182 0.566958200818 0.989235922952
+
+VALIDATION DATA
+0.950888888889 0.132474673612
+(18000,) (18000,)
+16208 128
+756 908
+
+FA FR TA TR 0.00783545543585 0.454326923077 0.545673076923 0.992164544564
+0.132474673612  - val loss
+0.132250548498  - final_loss
+Inside Plateau  2
+
+
+
+38  iteration
+4.8828125e-06  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+47s - loss: 0.1464 - acc: 0.9470 - val_loss: 0.1324 - val_acc: 0.9508
+(180000,) (180000,)
+160627 1765
+7598 10010
+
+FA FR TA TR 0.010868762008 0.43150840527 0.56849159473 0.989131237992
+
+VALIDATION DATA
+0.950777777778 0.132417548094
+(18000,) (18000,)
+16204 132
+754 910
+
+FA FR TA TR 0.00808031341822 0.453125 0.546875 0.991919686582
+0.132417548094  - val loss
+0.132250548498  - final_loss
+Inside Plateau  3
+
+
+
+38  iteration
+4.8828125e-06  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+46s - loss: 0.1461 - acc: 0.9471 - val_loss: 0.1324 - val_acc: 0.9508
+(180000,) (180000,)
+160622 1770
+7591 10017
+
+FA FR TA TR 0.0108995517021 0.431110858701 0.568889141299 0.989100448298
+
+VALIDATION DATA
+0.950833333333 0.132406132913
+(18000,) (18000,)
+16204 132
+753 911
+
+FA FR TA TR 0.00808031341822 0.452524038462 0.547475961538 0.991919686582
+0.132406132913  - val loss
+0.132250548498  - final_loss
+Reducing the learning rate by half
+   32/18000 [..............................] - ETA: 2s  448/18000 [..............................] - ETA: 2s  864/18000 [>.............................] - ETA: 2s 1312/18000 [=>............................] - ETA: 2s 1760/18000 [=>............................] - ETA: 1s 2240/18000 [==>...........................] - ETA: 1s 2688/18000 [===>..........................] - ETA: 1s 3136/18000 [====>.........................] - ETA: 1s 3616/18000 [=====>........................] - ETA: 1s 4096/18000 [=====>........................] - ETA: 1s 4576/18000 [======>.......................] - ETA: 1s 5024/18000 [=======>......................] - ETA: 1s 5472/18000 [========>.....................] - ETA: 1s 5920/18000 [========>.....................] - ETA: 1s 6368/18000 [=========>....................] - ETA: 1s 6816/18000 [==========>...................] - ETA: 1s 7264/18000 [===========>..................] - ETA: 1s 7712/18000 [===========>..................] - ETA: 1s 8160/18000 [============>.................] - ETA: 1s 8608/18000 [=============>................] - ETA: 1s 9056/18000 [==============>...............] - ETA: 1s 9504/18000 [==============>...............] - ETA: 0s 9952/18000 [===============>..............] - ETA: 0s10368/18000 [================>.............] - ETA: 0s10816/18000 [=================>............] - ETA: 0s11264/18000 [=================>............] - ETA: 0s11712/18000 [==================>...........] - ETA: 0s12160/18000 [===================>..........] - ETA: 0s12640/18000 [====================>.........] - ETA: 0s13088/18000 [====================>.........] - ETA: 0s13536/18000 [=====================>........] - ETA: 0s13984/18000 [======================>.......] - ETA: 0s14432/18000 [=======================>......] - ETA: 0s14880/18000 [=======================>......] - ETA: 0s15328/18000 [========================>.....] - ETA: 0s15776/18000 [=========================>....] - ETA: 0s16224/18000 [==========================>...] - ETA: 0s16672/18000 [==========================>...] - ETA: 0s17120/18000 [===========================>..] - ETA: 0s17568/18000 [============================>.] - ETA: 0s18000/18000 [==============================] - 2s     
+
+ROC AREA 0.961537413093
+(18000,) (18000,)

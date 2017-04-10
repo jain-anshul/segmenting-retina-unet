@@ -24,6 +24,8 @@ class Tee(object):
     def write(self, obj):
         for f in self.files:
             f.write(obj)
+    def flush(self):
+        pass
 
 f = open('cnn.log', 'w')
 backup = sys.stdout
@@ -169,7 +171,7 @@ while run_flag:
 model.load_weights('./'+name_experiment+'/'+algorithm+'/'+name_experiment +'_best_weights.h5')
 y_pred = model.predict(patches_imgs_val, batch_size=32, verbose=1)
 
-print '\n', roc_auc_score(patches_masks_val[:,1], y_pred[:,1])
+print '\n','ROC AREA', roc_auc_score(patches_masks_val[:,1], y_pred[:,1])
 print y_pred[:,1].shape, patches_masks_val[:,1].shape
 skplt.plot_roc_curve(patches_masks_val[:,1], y_pred, curves=('each_class'))
 plt.savefig('./'+name_experiment+'/'+algorithm+'/'+name_experiment +'_roc.png')
