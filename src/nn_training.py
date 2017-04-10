@@ -111,7 +111,7 @@ count_neg_iter = 0
 iter_count = 1
 nb_neg_cycles = 3
 lr = 0.01
-nb_count_plateau = 5
+nb_count_plateau = 3
 count_plateau = 0
 
 while run_flag:
