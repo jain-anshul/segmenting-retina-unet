@@ -1,7 +1,3 @@
-import numpy as np
-np.random.seed(1337)
-import ConfigParser
-
 from keras.models import Model
 from keras.layers import Input, merge, Convolution2D, MaxPooling2D, UpSampling2D, Reshape, core, Dropout, Flatten, Dense
 from keras.optimizers import Adam
@@ -10,15 +6,22 @@ from keras import backend as K
 from keras.utils.visualize_util import plot
 from keras.optimizers import SGD
 from keras.utils import np_utils
+from sklearn.metrics import roc_auc_score
+from help_functions import *
+from extract_patches import get_data_training
 
 import scikitplot.plotters as skplt
-from sklearn.metrics import roc_auc_score
 import matplotlib.pyplot as plt
 import models
-
 import sys
+import numpy as np
+import ConfigParser
+
+np.random.seed(1337)
+
 sys.path.insert(0, './utils/')
 algorithm = sys.argv[1]
+
 
 class Tee(object):
     def __init__(self, *files):
@@ -33,22 +36,20 @@ f = open(algorithm+'.log', 'w')
 backup = sys.stdout
 sys.stdout = Tee(sys.stdout, f)
 
-# sys.stdout = open('logfile', 'w')
-from help_functions import *
 
-#function to obtain data for training/testing (validation)
-from extract_patches import get_data_training
 
-#Define the neural network
+# Get neural network
 def get_net(n_ch,patch_height,patch_width):
     if algorithm == 'nn':
         return models.nn(n_ch,patch_height,patch_width)
     elif algorithm == 'cnn':
         return models.cnn(n_ch,patch_height,patch_width)
 
+
 #========= Load settings from Config file
 config = ConfigParser.RawConfigParser()
 config.read('configuration.txt')
+
 
 #patch to the datasets
 path_data = config.get('data paths', 'path_local')
@@ -79,6 +80,7 @@ patches_imgs_val, patches_masks_val = get_data_training(
 n_ch = patches_imgs_train.shape[1]
 patch_height = patches_imgs_train.shape[2]
 patch_width = patches_imgs_train.shape[3]
+
 model = get_net(n_ch, patch_height, patch_width)  #the U-net model
 print "Check: final output of the network:"
 print model.output_shape
@@ -94,12 +96,8 @@ patches_masks_train = np_utils.to_categorical(patches_masks_train, 2)
 patches_masks_val = np_utils.to_categorical(patches_masks_val, 2)
 
 
-
 run_flag = True
-
 first_iter = True
-
-# Setting the final accuracy to 0 just for the start
 final_loss = 999999
 count_neg_iter = 0
 iter_count = 1
