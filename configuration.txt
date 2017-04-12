@@ -9,7 +9,7 @@ val_groundTruth = DRIVE_dataset_groundTruth_validation.hdf5
 
 
 [experiment name]
-name = test
+name = log
 
 
 [data attributes]

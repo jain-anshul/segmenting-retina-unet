@@ -32,7 +32,7 @@ class Tee(object):
     def flush(self):
         pass
 
-f = open(algorithm+'.log', 'w')
+f = open('./'+name_experiment+'/'+algorithm+'/'+algorithm+'.log', 'a')
 backup = sys.stdout
 sys.stdout = Tee(sys.stdout, f)
 
