@@ -14,9 +14,11 @@ from keras.utils import np_utils
 import scikitplot.plotters as skplt
 from sklearn.metrics import roc_auc_score
 import matplotlib.pyplot as plt
+import models
 
 import sys
 sys.path.insert(0, './utils/')
+algorithm = sys.argv[1]
 
 class Tee(object):
     def __init__(self, *files):
@@ -27,7 +29,7 @@ class Tee(object):
     def flush(self):
         pass
 
-f = open('nn.log', 'w')
+f = open(algorithm+'.log', 'w')
 backup = sys.stdout
 sys.stdout = Tee(sys.stdout, f)
 
@@ -38,26 +40,16 @@ from help_functions import *
 from extract_patches import get_data_training
 
 #Define the neural network
-def get_unet(n_ch,patch_height,patch_width):
-    inputs = Input((n_ch, patch_height, patch_width))
-    
-    dnn = Flatten()(inputs)
-    dnn1 = Dense(256)(dnn) 
-    dnn2 = Dense(2)(dnn1)
-
-    dnn2 = core.Activation('softmax')(dnn2)
-
-    model = Model(input=inputs, output=dnn2)
-
-    # sgd = SGD(lr=0.01, decay=1e-6, momentum=0.3, nesterov=False)
-    # model.compile(optimizer='sgd', loss='categorical_crossentropy',metrics=['accuracy'])
-
-    return model
+def get_net(n_ch,patch_height,patch_width):
+    if algorithm == 'nn':
+        return models.nn(n_ch,patch_height,patch_width)
+    elif algorithm == 'cnn':
+        return models.cnn(n_ch,patch_height,patch_width)
 
 #========= Load settings from Config file
 config = ConfigParser.RawConfigParser()
 config.read('configuration.txt')
-algorithm = 'nn'
+
 #patch to the datasets
 path_data = config.get('data paths', 'path_local')
 #Experiment name
@@ -87,7 +79,7 @@ patches_imgs_val, patches_masks_val = get_data_training(
 n_ch = patches_imgs_train.shape[1]
 patch_height = patches_imgs_train.shape[2]
 patch_width = patches_imgs_train.shape[3]
-model = get_unet(n_ch, patch_height, patch_width)  #the U-net model
+model = get_net(n_ch, patch_height, patch_width)  #the U-net model
 print "Check: final output of the network:"
 print model.output_shape
 model.summary()

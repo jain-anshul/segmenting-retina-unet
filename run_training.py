@@ -1,3 +1,3 @@
 import os, sys
 print sys.argv[1]
-os.system('python ./src/'+sys.argv[1]+'_training.py')
+os.system('python ./src/training.py '+sys.argv[1])
