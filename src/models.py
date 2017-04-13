@@ -1,3 +1,6 @@
+from keras.models import Model
+from keras.layers import Input, merge, Convolution2D, MaxPooling2D, UpSampling2D, Reshape, core, Dropout, Flatten, Dense
+
 def nn(n_ch,patch_height,patch_width):
     inputs = Input((n_ch, patch_height, patch_width))
     

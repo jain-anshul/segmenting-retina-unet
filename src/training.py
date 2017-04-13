@@ -1,8 +1,4 @@
-from keras.models import Model
-from keras.layers import Input, merge, Convolution2D, MaxPooling2D, UpSampling2D, Reshape, core, Dropout, Flatten, Dense
-from keras.optimizers import Adam
 from keras.callbacks import ModelCheckpoint, LearningRateScheduler, ReduceLROnPlateau
-from keras import backend as K
 from keras.utils.vis_utils import plot_model
 from keras.optimizers import SGD
 from keras.utils import np_utils
