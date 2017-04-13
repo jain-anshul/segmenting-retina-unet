@@ -7,8 +7,6 @@ from keras.utils.vis_utils import plot_model
 from keras.optimizers import SGD
 from keras.utils import np_utils
 from sklearn.metrics import roc_auc_score
-from help_functions import *
-from extract_patches import get_data_training
 
 import scikitplot.plotters as skplt
 import matplotlib.pyplot as plt
@@ -17,11 +15,12 @@ import sys
 import numpy as np
 import ConfigParser
 
-np.random.seed(1337)
-
 sys.path.insert(0, './utils/')
 algorithm = sys.argv[1]
+from help_functions import *
+from extract_patches import get_data_training
 
+np.random.seed(1337)
 
 class Tee(object):
     def __init__(self, *files):
