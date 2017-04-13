@@ -22,6 +22,19 @@ from extract_patches import get_data_training
 
 np.random.seed(1337)
 
+#========= Load settings from Config file
+config = ConfigParser.RawConfigParser()
+config.read('configuration.txt')
+
+#patch to the datasets
+path_data = config.get('data paths', 'path_local')
+#Experiment name
+name_experiment = config.get('experiment name', 'name')
+#training settings
+N_epochs = int(config.get('training settings', 'N_epochs'))
+batch_size = int(config.get('training settings', 'batch_size'))
+
+
 class Tee(object):
     def __init__(self, *files):
         self.files = files
@@ -45,18 +58,6 @@ def get_net(n_ch,patch_height,patch_width):
         return models.cnn(n_ch,patch_height,patch_width)
 
 
-#========= Load settings from Config file
-config = ConfigParser.RawConfigParser()
-config.read('configuration.txt')
-
-
-#patch to the datasets
-path_data = config.get('data paths', 'path_local')
-#Experiment name
-name_experiment = config.get('experiment name', 'name')
-#training settings
-N_epochs = int(config.get('training settings', 'N_epochs'))
-batch_size = int(config.get('training settings', 'batch_size'))
 
 patches_imgs_train, patches_masks_train = get_data_training(
     DRIVE_train_imgs_original = path_data + config.get('data paths', 'train_imgs_original'),
