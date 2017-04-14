@@ -1,6 +1,5 @@
 import numpy as np
 np.random.seed(1337)
-import random
 import ConfigParser
 
 from help_functions import load_hdf5
@@ -64,9 +63,9 @@ def extract_random(full_imgs,full_masks, patch_h,patch_w, N_patches, inside=True
     for i in range(full_imgs.shape[0]):  #loop over the full images
         k=0
         while k <patch_per_img:
-            x_center = random.randint(0+int(patch_w/2),img_w-int(patch_w/2)-1)
+            x_center = np.random.randint(low = 0+int(patch_w/2),high = img_w-int(patch_w/2))
             # print "x_center " +str(x_center)
-            y_center = random.randint(0+int(patch_h/2),img_h-int(patch_h/2)-1)
+            y_center = np.random.randint(low = 0+int(patch_h/2),high = img_h-int(patch_h/2))
             # print "y_center " +str(y_center)
             #check whether the patch is fully contained in the FOV
             if inside==True:
