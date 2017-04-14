@@ -111,7 +111,7 @@ while run_flag:
     model.compile(optimizer=sgd, loss='binary_crossentropy', metrics=['accuracy'])
     
     print '\n','TRAIN DATA'
-    model.fit(patches_imgs_train, patches_masks_train, nb_epoch=1, batch_size=batch_size, verbose=2, validation_data=(patches_imgs_val, patches_masks_val), shuffle=True, callbacks=[checkpointer, bestcheckpointer])
+    model.fit(patches_imgs_train, patches_masks_train, epochs=1, batch_size=batch_size, verbose=2, validation_data=(patches_imgs_val, patches_masks_val), shuffle=True, callbacks=[checkpointer, bestcheckpointer])
     y_pred = model.predict(patches_imgs_train, batch_size=32, verbose=2)
     fa, fr, ta, tr = class_accuracy(y_pred[:, 1], patches_masks_train[:, 1])
     print '\n',"FA FR TA TR", fa, fr, ta, tr
