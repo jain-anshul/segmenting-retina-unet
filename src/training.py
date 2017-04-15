@@ -14,7 +14,7 @@ import ConfigParser
 sys.path.insert(0, './utils/')
 algorithm = sys.argv[1]
 from help_functions import *
-from extract_patches import get_data_training
+from extract_patches import get_data_training, get_data_val
 
 np.random.seed(1337)
 
@@ -60,11 +60,12 @@ patches_imgs_train, patches_masks_train = get_data_training(
     DRIVE_train_groudTruth = path_data + config.get('data paths', 'train_groundTruth'),  #masks
     patch_height = int(config.get('data attributes', 'patch_height')),
     patch_width = int(config.get('data attributes', 'patch_width')),
-    N_subimgs = int(config.get('training settings', 'N_subimgs')),
+    N_subimgs_positive = int(config.get('training settings', 'N_subimgs_positive')),
+    N_subimgs_negative = int(config.get('training settings', 'N_subimgs_negative')),
     inside_FOV = config.getboolean('training settings', 'inside_FOV') #select the patches only inside the FOV  (default == True)
 )
 
-patches_imgs_val, patches_masks_val = get_data_training(
+patches_imgs_val, patches_masks_val = get_data_val(
     DRIVE_train_imgs_original = path_data + config.get('data paths', 'val_imgs_original'),
     DRIVE_train_groudTruth = path_data + config.get('data paths', 'val_groundTruth'),  #masks
     patch_height = int(config.get('data attributes', 'patch_height')),
