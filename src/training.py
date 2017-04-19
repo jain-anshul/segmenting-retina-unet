@@ -10,6 +10,7 @@ import models
 import sys
 import numpy as np
 import ConfigParser
+import os
 
 sys.path.insert(0, './utils/')
 algorithm = sys.argv[1]
@@ -39,6 +40,10 @@ class Tee(object):
             f.write(obj)
     def flush(self):
         pass
+
+if not os.path.exists('./'+name_experiment+'/'+algorithm+'/'):
+    print("DIRECTORY Created")
+    os.makedirs('./'+name_experiment+'/'+algorithm+'/')
 
 f = open('./'+name_experiment+'/'+algorithm+'/'+algorithm+'.log', 'a')
 backup = sys.stdout
