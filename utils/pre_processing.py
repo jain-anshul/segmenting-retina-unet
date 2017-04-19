@@ -13,6 +13,7 @@ def my_PreProc(data):
     train_imgs = rgb2gray(data)
     #my preprocessing:
     train_imgs = dataset_normalized(train_imgs)
+    train_imgs = clahe_equalized(train_imgs)
     train_imgs = train_imgs/255.  #reduce to 0-1 range
     return train_imgs
 
@@ -28,3 +29,12 @@ def dataset_normalized(imgs):
             (np.max(imgs_normalized[i])-np.min(imgs_normalized[i])))*255
     return imgs_normalized
 
+def clahe_equalized(imgs):
+    assert (len(imgs.shape)==4)  #4D arrays
+    assert (imgs.shape[1]==1)  #check the channel is 1
+    #create a CLAHE object (Arguments are optional).
+    clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8,8))
+    imgs_equalized = np.empty(imgs.shape)
+    for i in range(imgs.shape[0]):
+        imgs_equalized[i,0] = clahe.apply(np.array(imgs[i,0], dtype = np.uint8))
+    return imgs_equalized
