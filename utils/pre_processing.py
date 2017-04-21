@@ -10,6 +10,8 @@ def my_PreProc_patches(data):
     assert(len(data.shape)==4)
     assert (data.shape[1]==1)
     data = fourier_transform_real(data)
+    for i in range(data.shape[0]):
+        data[i] = image_normalize(data[i])
 
     return data
 
@@ -26,6 +28,14 @@ def my_PreProc(data):
     #train_imgs = clahe_equalized(train_imgs)
     train_imgs = train_imgs/255.  #reduce to 0-1 range
     return train_imgs
+
+
+def image_normalize(img):
+    img_std = np.std(img)
+    img_mean = np.mean(img)
+    img_normalized = (img-img_mean)/img_std
+
+    return img_normalized
 
 def dataset_normalized(imgs):
     assert (len(imgs.shape)==4)  #4D arrays
