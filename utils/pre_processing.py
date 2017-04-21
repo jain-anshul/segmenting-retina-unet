@@ -4,7 +4,7 @@ from PIL import Image
 import cv2
 
 from help_functions import *
-
+from bob.sp import fft
 
 def my_PreProc(data):
     assert(len(data.shape)==4)
@@ -13,7 +13,8 @@ def my_PreProc(data):
     train_imgs = rgb2gray(data)
     #my preprocessing:
     train_imgs = dataset_normalized(train_imgs)
-    train_imgs = clahe_equalized(train_imgs)
+    train_imgs = fourier_transform_real(train_imgs)
+    #train_imgs = clahe_equalized(train_imgs)
     train_imgs = train_imgs/255.  #reduce to 0-1 range
     return train_imgs
 
@@ -38,3 +39,24 @@ def clahe_equalized(imgs):
     for i in range(imgs.shape[0]):
         imgs_equalized[i,0] = clahe.apply(np.array(imgs[i,0], dtype = np.uint8))
     return imgs_equalized
+
+def fourier_transform_real(imgs):
+    for i in range(imgs.shape[0]):
+        freq_img = bob.sp.fft(imgs[i].astype(np.complex128))
+        imgs[i] = np.real(freq_img)
+
+    return imgs
+
+def fourier_transform_imag(imgs):
+    for i in range(imgs.shape[0]):
+        freq_img = bob.sp.fft(imgs[i].astype(np.complex128))
+        imgs[i] = np.imag(freq_img)
+
+    return imgs
+
+def fourier_transform_abs(imgs):
+    for i in range(imgs.shape[0]):
+        freq_img = bob.sp.fft(imgs[i].astype(np.complex128))
+        imgs[i] = np.abs(freq_img)
+
+    return imgs
