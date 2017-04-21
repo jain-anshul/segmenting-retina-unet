@@ -3,7 +3,7 @@ np.random.seed(1337)
 import ConfigParser
 
 from help_functions import load_hdf5
-from pre_processing import my_PreProc
+from pre_processing import my_PreProc, my_PreProc_patches
 
 def get_data_val(DRIVE_train_imgs_original,
                       DRIVE_train_groudTruth,
@@ -34,6 +34,9 @@ def get_data_val(DRIVE_train_imgs_original,
     #extract the TRAINING patches from the full images
     patches_imgs_train, patches_masks_train = extract_random_val(train_imgs,train_masks,patch_height,patch_width,N_subimgs,inside_FOV)
     data_consistency_check_patches(patches_imgs_train, patches_masks_train)
+    
+    ##fourier transform of patches
+    patches_imgs_train = my_PreProc_patches(patches_imgs_train)
 
     print "\ntrain PATCHES images/masks shape:"
     print patches_imgs_train.shape
@@ -71,7 +74,8 @@ def get_data_training(DRIVE_train_imgs_original,
     #extract the TRAINING patches from the full images
     patches_imgs_train, patches_masks_train = extract_random(train_imgs,train_masks,patch_height,patch_width,N_subimgs_positive,N_subimgs_negative,inside_FOV)
     data_consistency_check_patches(patches_imgs_train, patches_masks_train)
-
+    ##Fourier transform of patches
+    patches_imgs_train = my_PreProc_patches(patches_imgs_train)
     print "\ntrain PATCHES images/masks shape:"
     print patches_imgs_train.shape
     print "train PATCHES images range (min-max): " +str(np.min(patches_imgs_train)) +' - '+str(np.max(patches_imgs_train))

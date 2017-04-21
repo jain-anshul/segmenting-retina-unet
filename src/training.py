@@ -83,6 +83,8 @@ n_ch = patches_imgs_train.shape[1]
 patch_height = patches_imgs_train.shape[2]
 patch_width = patches_imgs_train.shape[3]
 
+
+
 model = get_net(n_ch, patch_height, patch_width)  #the U-net model
 print "Check: final output of the network:"
 print model.output_shape
