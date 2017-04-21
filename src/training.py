@@ -41,11 +41,11 @@ class Tee(object):
     def flush(self):
         pass
 
-if not os.path.exists('./log/'+name_experiment+'/'+algorithm+'/'):
+if not os.path.exists('./log/log_balanced/'+name_experiment+'/'+algorithm+'/'):
     print("DIRECTORY Created")
-    os.makedirs('./log/'+name_experiment+'/'+algorithm+'/')
+    os.makedirs('./log/log_balanced/'+name_experiment+'/'+algorithm+'/')
 
-f = open('./log/'+name_experiment+'/'+algorithm+'/'+algorithm+'.log', 'a')
+f = open('./log/log_balanced/'+name_experiment+'/'+algorithm+'/'+algorithm+'.log', 'a')
 backup = sys.stdout
 sys.stdout = Tee(sys.stdout, f)
 
@@ -87,12 +87,12 @@ model = get_net(n_ch, patch_height, patch_width)  #the U-net model
 print "Check: final output of the network:"
 print model.output_shape
 model.summary()
-plot_model(model, to_file='./log/'+name_experiment+'/'+algorithm+'/'+name_experiment + '_model.png')   #check how the model looks like
+plot_model(model, to_file='./log/log_balanced/'+name_experiment+'/'+algorithm+'/'+name_experiment + '_model.png')   #check how the model looks like
 json_string = model.to_json()
-open('./log/'+name_experiment+'/'+algorithm+'/'+name_experiment +'_architecture.json', 'w').write(json_string)
+open('./log/log_balanced/'+name_experiment+'/'+algorithm+'/'+name_experiment +'_architecture.json', 'w').write(json_string)
 
-checkpointer = ModelCheckpoint(filepath='./log/'+name_experiment+'/'+algorithm+'/'+name_experiment + '-weights-{val_loss:.5f}.h5',verbose=1, monitor='val_loss', mode='auto', save_best_only=True) #save at each epoch if the validation decreased
-bestcheckpointer = ModelCheckpoint(filepath='./log/'+name_experiment+'/'+algorithm+'/'+name_experiment +'_best_weights.h5', verbose=1, monitor='val_loss', mode='auto', save_best_only=True)
+checkpointer = ModelCheckpoint(filepath='./log/log_balanced/'+name_experiment+'/'+algorithm+'/'+name_experiment + '-weights-{val_loss:.5f}.h5',verbose=1, monitor='val_loss', mode='auto', save_best_only=True) #save at each epoch if the validation decreased
+bestcheckpointer = ModelCheckpoint(filepath='./log/log_balanced/'+name_experiment+'/'+algorithm+'/'+name_experiment +'_best_weights.h5', verbose=1, monitor='val_loss', mode='auto', save_best_only=True)
 
 patches_masks_train = np_utils.to_categorical(patches_masks_train, 2)
 patches_masks_val = np_utils.to_categorical(patches_masks_val, 2)
@@ -157,10 +157,10 @@ while run_flag:
         if count_neg_iter > nb_neg_cycles:
             run_flag = False
             
-model.load_weights('./log/'+name_experiment+'/'+algorithm+'/'+name_experiment +'_best_weights.h5')
+model.load_weights('./log/log_balanced/'+name_experiment+'/'+algorithm+'/'+name_experiment +'_best_weights.h5')
 y_pred = model.predict(patches_imgs_val, batch_size=32, verbose=1)
 
 print '\n', 'ROC AREA: ', roc_auc_score(patches_masks_val[:,1], y_pred[:,1])
 print y_pred[:,1].shape, patches_masks_val[:,1].shape
 skplt.plot_roc_curve(patches_masks_val[:,1], y_pred, curves=('each_class'))
-plt.savefig('./log/'+name_experiment+'/'+algorithm+'/'+name_experiment +'_roc.png')
+plt.savefig('./log/log_balanced/'+name_experiment+'/'+algorithm+'/'+name_experiment +'_roc.png')
