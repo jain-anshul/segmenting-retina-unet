@@ -41,22 +41,23 @@ def clahe_equalized(imgs):
     return imgs_equalized
 
 def fourier_transform_real(imgs):
+    print(imgs.shape)
     for i in range(imgs.shape[0]):
-        freq_img = bob.sp.fft(imgs[i].astype(np.complex128))
-        imgs[i] = np.real(freq_img)
+        freq_img = fft(imgs[i][0].astype(np.complex128))
+        imgs[i][0] = np.real(freq_img)
 
     return imgs
 
 def fourier_transform_imag(imgs):
     for i in range(imgs.shape[0]):
-        freq_img = bob.sp.fft(imgs[i].astype(np.complex128))
-        imgs[i] = np.imag(freq_img)
+        freq_img = fft(imgs[i][0].astype(np.complex128))
+        imgs[i][0] = np.imag(freq_img)
 
     return imgs
 
 def fourier_transform_abs(imgs):
     for i in range(imgs.shape[0]):
-        freq_img = bob.sp.fft(imgs[i].astype(np.complex128))
-        imgs[i] = np.abs(freq_img)
+        freq_img = fft(imgs[i][0].astype(np.complex128))
+        imgs[i][0] = np.abs(freq_img)
 
     return imgs
