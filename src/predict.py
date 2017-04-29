@@ -78,4 +78,4 @@ print "predicted images size :"
 print predictions.shape
 
 # ===== Convert the prediction arrays in corresponding images
-pred_img = conv_to_imgs(pred=predictions,img_h=gtruth.shape[2],img_w=gtruth.shape[3],mode='original', patch_h=patch_height, patch_w=patch_width)
+pred_img = conv_to_imgs(pred=predictions,img_h=img_truth.shape[2],img_w=img_truth.shape[3],mode='original', patch_h=patch_height, patch_w=patch_width)
