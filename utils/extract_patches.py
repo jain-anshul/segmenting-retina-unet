@@ -13,7 +13,7 @@ def get_data_val(DRIVE_train_imgs_original,
                       inside_FOV):
     train_imgs_original = load_hdf5(DRIVE_train_imgs_original)
     train_masks = load_hdf5(DRIVE_train_groudTruth) #masks always the same
-    # visualize(group_images(train_imgs_original[0:20,:,:,:],5),'imgs_train')#.show()  #check original imgs train
+    visualize(group_images(train_imgs_original[0:2,:,:,:],2),'imgs_validation')#.show()  #check original imgs train
 
     # TODO: preprocessing
     train_imgs = my_PreProc(train_imgs_original)
@@ -53,7 +53,8 @@ def get_data_training(DRIVE_train_imgs_original,
                       inside_FOV):
     train_imgs_original = load_hdf5(DRIVE_train_imgs_original)
     train_masks = load_hdf5(DRIVE_train_groudTruth) #masks always the same
-    # visualize(group_images(train_imgs_original[0:20,:,:,:],5),'imgs_train')#.show()  #check original imgs train
+    
+    visualize(group_images(train_imgs_original[0:18,:,:,:],6),'imgs_train')#.show()  #check original imgs train
 
     # TODO: preprocessing
     train_imgs = my_PreProc(train_imgs_original)
