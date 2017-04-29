@@ -52,3 +52,17 @@ def class_accuracy(y_predicted, y_value, threshold=0.5):
 
     return (false_alarm / float(total_negative_examples), false_reject / float(total_positive_examples),
             true_alarm / float(total_positive_examples), true_reject / float(total_negative_examples))
+
+
+# visualize image (as PIL image, NOT as matplotlib!)
+def visualize(data, filename):
+    assert (len(data.shape) == 3)  # height*width*channels
+    img = None
+    if data.shape[2] == 1:  # in case it is black and white
+        data = np.reshape(data, (data.shape[0], data.shape[1]))
+    if np.max(data) > 1:
+        img = Image.fromarray(data.astype(np.uint8))  # the image is already 0-255
+    else:
+        img = Image.fromarray((data * 255).astype(np.uint8))  # the image is between 0-1
+    img.save(filename + '.png')
+    return img
