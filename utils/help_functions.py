@@ -83,7 +83,7 @@ def group_images(data, per_row):
         totimg = np.concatenate((totimg, all_stripe[i]), axis=0)
     return totimg
 
-def conv_to_imgs(pred, mode='original', img_h, img_w, patch_h, patch_w):
+def conv_to_imgs(pred, img_h, img_w, patch_h, patch_w, mode='original'):
     assert (len(pred.shape) == 2)  # 3D array: (Npatches,2)
     assert (pred.shape[1] == 2)  # check the classes are 2
     pred_image = np.empty((pred.shape[0]))  # (Npatches,height*width)
