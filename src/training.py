@@ -69,7 +69,8 @@ patches_imgs_train, patches_masks_train = get_data_training(
     patch_width = int(config.get('data attributes', 'patch_width')),
     N_subimgs_positive = int(config.get('training settings', 'N_subimgs_positive')),
     N_subimgs_negative = int(config.get('training settings', 'N_subimgs_negative')),
-    inside_FOV = config.getboolean('training settings', 'inside_FOV') #select the patches only inside the FOV  (default == True)
+    inside_FOV = config.getboolean('training settings', 'inside_FOV'), #select the patches only inside the FOV  (default == True)
+    path_experiment = log_path_experiment
 )
 
 patches_imgs_val, patches_masks_val = get_data_val(
@@ -78,7 +79,8 @@ patches_imgs_val, patches_masks_val = get_data_val(
     patch_height = int(config.get('data attributes', 'patch_height')),
     patch_width = int(config.get('data attributes', 'patch_width')),
     N_subimgs = int(config.get('validation settings', 'N_subimgs')),
-    inside_FOV = config.getboolean('validation settings', 'inside_FOV') #select the patches only inside the FOV  (default == True)
+    inside_FOV = config.getboolean('validation settings', 'inside_FOV'), #select the patches only inside the FOV  (default == True)
+    path_experiment = log_path_experiment
 )
 
 n_ch = patches_imgs_train.shape[1]
