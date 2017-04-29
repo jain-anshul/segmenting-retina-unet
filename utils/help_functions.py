@@ -88,7 +88,7 @@ def conv_to_imgs(pred, img_h, img_w, patch_h, patch_w, path_experiment, mode='or
     assert (pred.shape[1] == 2)  # check the classes are 2
     pred_image = np.empty((pred.shape[0]))  # (Npatches,height*width)
     img_descp = mode
-    threshold = 0.4
+    threshold = 0.5
     if mode == "original":
         for i in range(pred.shape[0]):
             pred_image[i] = pred[i, 1]
