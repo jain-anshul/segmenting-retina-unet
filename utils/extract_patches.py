@@ -114,6 +114,9 @@ def get_data_testing_single_image(DRIVE_test_imgs_original,
     # extract the TEST patches from the full images
     patches_imgs_test = extract_ordered_single_image(test_imgs, patch_height, patch_width)
     patches_masks_test = extract_ordered_single_image(test_masks, patch_height, patch_width)
+    
+    patches_imgs_test = my_PreProc_patches(patches_imgs_test)
+
     data_consistency_check_patches(patches_imgs_test, patches_masks_test)
 
     print "\ntest PATCHES images/masks shape:"

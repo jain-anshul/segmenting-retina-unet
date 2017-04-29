@@ -73,6 +73,6 @@ print patches_imgs_test.shape, patches_masks_test.shape
 model = model_from_json(open(path_experiment + name_experiment + '_architecture.json').read())
 model.load_weights(path_experiment + name_experiment + '_best_weights.h5')
 # Calculate the predictions
-predictions = model.predict(patches_imgs_test, batch_size=32, verbose=0)
+predictions = model.predict(patches_imgs_test, batch_size=32, verbose=1)
 print "predicted images size :"
 print predictions.shape
