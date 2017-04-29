@@ -2,7 +2,7 @@ import numpy as np
 np.random.seed(1337)
 import ConfigParser
 
-from help_functions import load_hdf5
+from help_functions import load_hdf5, visualize, group_images
 from pre_processing import my_PreProc, my_PreProc_patches
 
 def get_data_val(DRIVE_train_imgs_original,
@@ -13,7 +13,7 @@ def get_data_val(DRIVE_train_imgs_original,
                       inside_FOV):
     train_imgs_original = load_hdf5(DRIVE_train_imgs_original)
     train_masks = load_hdf5(DRIVE_train_groudTruth) #masks always the same
-    visualize(group_images(train_imgs_original[0:2,:,:,:],2),'imgs_validation')#.show()  #check original imgs train
+    visualize(group_images(train_imgs_original[0:2,:,:,:],2),'imgs_validation')  #check original imgs train
 
     # TODO: preprocessing
     train_imgs = my_PreProc(train_imgs_original)
@@ -54,7 +54,7 @@ def get_data_training(DRIVE_train_imgs_original,
     train_imgs_original = load_hdf5(DRIVE_train_imgs_original)
     train_masks = load_hdf5(DRIVE_train_groudTruth) #masks always the same
     
-    visualize(group_images(train_imgs_original[0:18,:,:,:],6),'imgs_train')#.show()  #check original imgs train
+    visualize(group_images(train_imgs_original[0:18,:,:,:],6),'imgs_train')  #check original imgs train
 
     # TODO: preprocessing
     train_imgs = my_PreProc(train_imgs_original)
@@ -82,6 +82,47 @@ def get_data_training(DRIVE_train_imgs_original,
     print "train PATCHES images range (min-max): " +str(np.min(patches_imgs_train)) +' - '+str(np.max(patches_imgs_train))
 
     return patches_imgs_train, patches_masks_train#, patches_imgs_test, patches_masks_test
+
+
+# Load the original data and return the extracted patches for training/testing
+def get_data_testing_single_image(DRIVE_test_imgs_original, 
+                                  DRIVE_test_groudTruth, 
+                                  patch_height, 
+                                  patch_width,
+                                  index):
+    ### test
+    test_imgs_original = load_hdf5(DRIVE_test_imgs_original)
+    test_masks = load_hdf5(DRIVE_test_groudTruth)
+
+    test_imgs = my_PreProc(test_imgs_original)
+    test_masks = test_masks / 255.
+
+    # extend both images and masks so they can be divided exactly by the patches dimensions
+    test_imgs = test_imgs[index, :, :, :]
+    test_masks = test_masks[index, :, :, :]
+    # test_imgs = paint_border(test_imgs, patch_height, patch_width)
+    # test_masks = paint_border(test_masks, patch_height, patch_width)
+
+    # check masks are within 0-1
+    assert (np.max(test_masks) == 1 and np.min(test_masks) == 0)
+
+    print "\ntest images/masks shape:"
+    print test_imgs.shape
+    print "test images range (min-max): " + str(np.min(test_imgs)) + ' - ' + str(np.max(test_imgs))
+    print "test masks are within 0-1\n"
+
+    # extract the TEST patches from the full images
+    patches_imgs_test = extract_ordered_single_image(test_imgs, patch_height, patch_width)
+    patches_masks_test = extract_ordered_single_image(test_masks, patch_height, patch_width)
+    data_consistency_check_patches(patches_imgs_test, patches_masks_test)
+
+    print "\ntest PATCHES images/masks shape:"
+    print patches_imgs_test.shape
+    print "test PATCHES images range (min-max): " + str(np.min(patches_imgs_test)) + ' - ' + str(
+        np.max(patches_imgs_test))
+
+    return patches_imgs_test, patches_masks_test
+
 
 #extract patches randomly in the full training images
 #  -- Inside OR in full image
@@ -169,6 +210,28 @@ def extract_random_val(full_imgs,full_masks, patch_h,patch_w, N_patches, inside=
             k+=1  #per full_img
         
     return patches, patches_masks
+
+# Divide all the full_img in pacthes
+def extract_ordered_single_image(full_img, patch_h, patch_w):
+    assert (len(full_img.shape) == 3)  # 3D arrays
+    assert (full_img.shape[0] == 1 or full_img.shape[0] == 3)  # check the channel is 1 or 3
+    img_h = full_img.shape[1]  # height of the full image
+    img_w = full_img.shape[2]  # width of the full image
+    N_patches_h = img_h - (patch_h-1) 
+    N_patches_w = img_w - (patch_w-1) 
+
+    N_patches_tot = (N_patches_h * N_patches_w)
+
+    patches = np.empty((N_patches_tot, full_img.shape[0], patch_h, patch_w))
+
+    iter_tot = 0  # iter over the total number of patches (N_patches)
+    for h in range(N_patches_h):
+        for w in range(N_patches_w):
+            patch = full_img[:, h:(h + patch_h), w:(w + patch_w)]
+            patches[iter_tot] = patch
+            iter_tot += 1  # total
+    assert (iter_tot == N_patches_tot)
+    return patches  # array with all the full_imgs divided in patches
 
 
 def data_consistency_check(imgs,masks):
