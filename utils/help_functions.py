@@ -83,7 +83,7 @@ def group_images(data, per_row):
         totimg = np.concatenate((totimg, all_stripe[i]), axis=0)
     return totimg
 
-def conv_to_imgs(pred, img_h, img_w, patch_h, patch_w, path_experiment, mode='original'):
+def conv_to_imgs(pred, img_h, img_w, patch_h, patch_w, path_experiment, index, mode='original'):
     assert (len(pred.shape) == 2)  # 3D array: (Npatches,2)
     assert (pred.shape[1] == 2)  # check the classes are 2
     pred_image = np.empty((pred.shape[0]))  # (Npatches,height*width)
@@ -102,6 +102,7 @@ def conv_to_imgs(pred, img_h, img_w, patch_h, patch_w, path_experiment, mode='or
     else:
         print "mode " + str(mode) + " not recognized, it can be 'original' or 'threshold'"
         exit()
+    img_descp = "["+str(index)+"]"
     pred_image = np.reshape(pred_image, (1, (img_h - (patch_h-1)), (img_w - (patch_w-1))))
     final_image = np.zeros((1,img_h,img_w))
     final_image[:, int(patch_h/2):int(img_h-patch_h/2), int(patch_w/2):int(img_w-patch_w/2)] = pred_image

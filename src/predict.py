@@ -51,32 +51,34 @@ img_truth= load_hdf5(gtruth)
 
 visualize(group_images(img_truth[0:20,:,:,:],5),path_experiment + 'test_gtruth')
 
-# ============ Load the data and divide in patches
-patches_imgs_test = None
-new_height = None
-new_width = None
-masks_test = None
-patches_masks_test = None
-patches_imgs_test, patches_masks_test = get_data_testing_single_image(
-    DRIVE_test_imgs_original=DRIVE_test_imgs_original,  # original
-    DRIVE_test_groudTruth=path_data + config.get('data paths', 'test_groundTruth'),  # masks
-    patch_height=patch_height,
-    patch_width=patch_width,
-    index=0
-)
-
-print patches_imgs_test.shape, patches_masks_test.shape
-
-# ================ Run the prediction of the patches ==================================
-
 # Load the saved model
 model = model_from_json(open(path_experiment + name_experiment + '_architecture.json').read())
 model.load_weights(path_experiment + name_experiment + '_best_weights.h5')
-# Calculate the predictions
-predictions = model.predict(patches_imgs_test, batch_size=32, verbose=1)
-print "predicted images size :"
-print predictions.shape
 
-# ===== Convert the prediction arrays in corresponding images
+for index in range(test_imgs_orig.shape[0])
+	# ============ Load the data and divide in patches
+	patches_imgs_test = None
+	new_height = None
+	new_width = None
+	masks_test = None
+	patches_masks_test = None
+	patches_imgs_test, patches_masks_test = get_data_testing_single_image(
+	    DRIVE_test_imgs_original=DRIVE_test_imgs_original,  # original
+	    DRIVE_test_groudTruth=path_data + config.get('data paths', 'test_groundTruth'),  # masks
+	    patch_height=patch_height,
+	    patch_width=patch_width,
+	    index=index
+	)
 
-pred_img = conv_to_imgs(pred=predictions,img_h=img_truth.shape[2],img_w=img_truth.shape[3],mode='threshold', patch_h=patch_height, patch_w=patch_width, path_experiment = path_experiment)
+	print patches_imgs_test.shape, patches_masks_test.shape
+
+	# ================ Run the prediction of the patches ==================================
+
+	# Calculate the predictions
+	predictions = model.predict(patches_imgs_test, batch_size=32, verbose=1)
+	print "predicted images size :"
+	print predictions.shape
+
+	# ===== Convert the prediction arrays in corresponding images
+
+	pred_img = conv_to_imgs(pred=predictions,img_h=img_truth.shape[2],img_w=img_truth.shape[3],mode='threshold', patch_h=patch_height, patch_w=patch_width, path_experiment = path_experiment, index=index)
