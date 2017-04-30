@@ -86,10 +86,10 @@ patch_height = patches_imgs_train.shape[2]
 patch_width = patches_imgs_train.shape[3]
 
 # Visualizing patches
-visualize(group_images(patches_imgs_train[0:20, :, :, :], 5),
-          log_path_experiment + "sample_input_imgs_patches")
-visualize(group_images(patches_masks_train[0:20, :, :, :], 5),
-          log_path_experiment + "sample_input_masks_patches")
+# visualize(group_images(patches_imgs_train[0:20, :, :, :], 5),
+#           log_path_experiment + "sample_input_imgs_patches")
+# visualize(group_images(patches_masks_train[0:20, :, :, :], 5),
+#           log_path_experiment + "sample_input_masks_patches")
 
 model = get_net(n_ch, patch_height, patch_width)  #the U-net model
 print "Check: final output of the network:"

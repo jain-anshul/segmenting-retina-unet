@@ -9,9 +9,9 @@ from bob.sp import fft
 def my_PreProc_patches(data):
     assert(len(data.shape)==4)
     assert (data.shape[1]==1)
-    data = fourier_transform_real(data)
-    for i in range(data.shape[0]):
-        data[i] = image_normalize(data[i])
+    #data = fourier_transform_real(data)
+    #for i in range(data.shape[0]):
+    #    data[i] = image_normalize(data[i])
 
     return data
 
@@ -22,10 +22,10 @@ def my_PreProc(data):
     #black-white conversion
     train_imgs = rgb2gray(data)
     #my preprocessing:
-    #train_imgs = dataset_normalized(train_imgs)
-    #train_imgs = fourier_transform_real(train_imgs)
     train_imgs = dataset_normalized(train_imgs)
-    #train_imgs = clahe_equalized(train_imgs)
+    #train_imgs = fourier_transform_real(train_imgs)
+    #train_imgs = dataset_normalized(train_imgs)
+    train_imgs = clahe_equalized(train_imgs)
     train_imgs = train_imgs/255.  #reduce to 0-1 range
     return train_imgs
 
