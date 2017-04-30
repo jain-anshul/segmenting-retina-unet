@@ -88,7 +88,7 @@ def conv_to_imgs(pred, img_h, img_w, patch_h, patch_w, path_experiment, index, m
     assert (pred.shape[1] == 2)  # check the classes are 2
     pred_image = np.empty((pred.shape[0]))  # (Npatches,height*width)
     img_descp = mode
-    threshold = 0.5
+    threshold = 0.4
     if mode == "original":
         for i in range(pred.shape[0]):
             pred_image[i] = pred[i, 1]
@@ -102,7 +102,7 @@ def conv_to_imgs(pred, img_h, img_w, patch_h, patch_w, path_experiment, index, m
     else:
         print "mode " + str(mode) + " not recognized, it can be 'original' or 'threshold'"
         exit()
-    img_descp = "["+str(index)+"]"
+    img_descp += "["+str(index)+"]"
     pred_image = np.reshape(pred_image, (1, (img_h - (patch_h-1)), (img_w - (patch_w-1))))
     final_image = np.zeros((1,img_h,img_w))
     final_image[:, int(patch_h/2):int(img_h-patch_h/2), int(patch_w/2):int(img_w-patch_w/2)] = pred_image
