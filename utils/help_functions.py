@@ -83,16 +83,19 @@ def group_images(data, per_row):
         totimg = np.concatenate((totimg, all_stripe[i]), axis=0)
     return totimg
 
-def conv_to_imgs(pred, img_h, img_w, patch_h, patch_w, mode='original'):
+def conv_to_imgs(pred, img_h, img_w, patch_h, patch_w, path_experiment, mode='original'):
     assert (len(pred.shape) == 2)  # 3D array: (Npatches,2)
     assert (pred.shape[1] == 2)  # check the classes are 2
     pred_image = np.empty((pred.shape[0]))  # (Npatches,height*width)
+    img_descp = mode
+    threshold = 0.4
     if mode == "original":
         for i in range(pred.shape[0]):
             pred_image[i] = pred[i, 1]
     elif mode == "threshold":
+        img_descp += "_" + str(threshold)
         for i in range(pred.shape[0]):
-            if pred[i, 1] >= 0.5:
+            if pred[i, 1] >= threshold:
                 pred_image[i] = 1
             else:
                 pred_image[i] = 0
@@ -103,4 +106,5 @@ def conv_to_imgs(pred, img_h, img_w, patch_h, patch_w, mode='original'):
     final_image = np.zeros((1,img_h,img_w))
     final_image[:, int(patch_h/2):int(img_h-patch_h/2), int(patch_w/2):int(img_w-patch_w/2)] = pred_image
     print pred_image.shape, final_image.shape
+    visualize(np.transpose(final_image, (1, 2, 0)), path_experiment + 'test_prediction_' + img_descp)
     return final_image
