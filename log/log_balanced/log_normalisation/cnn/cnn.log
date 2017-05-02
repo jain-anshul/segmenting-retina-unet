@@ -1888,3 +1888,566 @@ Reducing the learning rate by half
    32/18000 [..............................] - ETA: 1s  800/18000 [>.............................] - ETA: 1s 1632/18000 [=>............................] - ETA: 1s 2464/18000 [===>..........................] - ETA: 0s 3296/18000 [====>.........................] - ETA: 0s 4128/18000 [=====>........................] - ETA: 0s 4928/18000 [=======>......................] - ETA: 0s 5760/18000 [========>.....................] - ETA: 0s 6560/18000 [=========>....................] - ETA: 0s 7392/18000 [===========>..................] - ETA: 0s 8160/18000 [============>.................] - ETA: 0s 8960/18000 [=============>................] - ETA: 0s 9696/18000 [===============>..............] - ETA: 0s10496/18000 [================>.............] - ETA: 0s11296/18000 [=================>............] - ETA: 0s12032/18000 [===================>..........] - ETA: 0s12864/18000 [====================>.........] - ETA: 0s13696/18000 [=====================>........] - ETA: 0s14528/18000 [=======================>......] - ETA: 0s15296/18000 [========================>.....] - ETA: 0s16096/18000 [=========================>....] - ETA: 0s16896/18000 [===========================>..] - ETA: 0s17696/18000 [============================>.] - ETA: 0s
 ROC AREA:  0.961882225798
 (18000,) (18000,)
+('\n\nTraining images normalised successfully, shape is ', (18, 1, 584, 565))
+
+train images/masks shape:
+(18, 1, 565, 565)
+train images range (min-max): 0.0 - 1.0
+train masks are within 0-1
+
+positive patches per full image: 5000
+negative patches per full image: 5000
+('\n\nTraining patches normalised successfully, shape is ', (180000, 1, 27, 27))
+
+train PATCHES images/masks shape:
+(180000, 1, 27, 27)
+train PATCHES images range (min-max): 0.0 - 1.0
+('\n\nTraining images normalised successfully, shape is ', (2, 1, 584, 565))
+
+train images/masks shape:
+(2, 1, 565, 565)
+train images range (min-max): 0.0 - 1.0
+train masks are within 0-1
+
+patches per full image: 9000
+('\n\nTraining patches normalised successfully, shape is ', (18000, 1, 27, 27))
+
+train PATCHES images/masks shape:
+(18000, 1, 27, 27)
+train PATCHES images range (min-max): 0.0 - 1.0
+Check: final output of the network:
+(None, 2)
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_1 (InputLayer)         (None, 1, 27, 27)         0         
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 32, 27, 27)        320       
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 32, 27, 27)        0         
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 32, 13, 13)        0         
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 5408)              0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 2)                 10818     
+_________________________________________________________________
+activation_1 (Activation)    (None, 2)                 0         
+=================================================================
+Total params: 11,138
+Trainable params: 11,138
+Non-trainable params: 0
+_________________________________________________________________
+
+
+
+1  iteration
+0.01  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss improved from inf to 0.42565, saving model to ./log/log_balanced/log_normalisation/cnn/log_normalisation-weights-0.42565.h5
+Epoch 00000: val_loss improved from inf to 0.42565, saving model to ./log/log_balanced/log_normalisation/cnn/log_normalisation_best_weights.h5
+39s - loss: 0.5621 - acc: 0.6819 - val_loss: 0.4257 - val_acc: 0.9108
+(180000,) (180000,)
+83111 6889
+31161 58839
+
+FA FR TA TR 0.0765444444444 0.346233333333 0.653766666667 0.923455555556
+
+VALIDATION DATA
+0.910833333333 0.425652017805
+(18000,) (18000,)
+15409 990
+615 986
+
+FA FR TA TR 0.0603695347277 0.384134915678 0.615865084322 0.939630465272
+0.425652017805  - val loss
+999999  - final_loss
+Validation Loss decreased. Great work
+
+
+
+2  iteration
+0.01  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+38s - loss: 0.4626 - acc: 0.7910 - val_loss: 0.4276 - val_acc: 0.8711
+(180000,) (180000,)
+77475 12525
+18973 71027
+
+FA FR TA TR 0.139166666667 0.210811111111 0.789188888889 0.860833333333
+
+VALIDATION DATA
+0.871055555556 0.427590300481
+(18000,) (18000,)
+14418 1981
+340 1261
+
+FA FR TA TR 0.120800048783 0.212367270456 0.787632729544 0.879199951217
+0.427590300481  - val loss
+0.425652017805  - final_loss
+Inside Plateau 1
+
+
+
+2  iteration
+0.01  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss improved from 0.42565 to 0.29346, saving model to ./log/log_balanced/log_normalisation/cnn/log_normalisation-weights-0.29346.h5
+Epoch 00000: val_loss improved from 0.42565 to 0.29346, saving model to ./log/log_balanced/log_normalisation/cnn/log_normalisation_best_weights.h5
+39s - loss: 0.4268 - acc: 0.8123 - val_loss: 0.2935 - val_acc: 0.9349
+(180000,) (180000,)
+85812 4188
+33401 56599
+
+FA FR TA TR 0.0465333333333 0.371122222222 0.628877777778 0.953466666667
+
+VALIDATION DATA
+0.934888888889 0.293456590838
+(18000,) (18000,)
+15919 480
+692 909
+
+FA FR TA TR 0.0292700774437 0.43222985634 0.56777014366 0.970729922556
+0.293456590838  - val loss
+0.425652017805  - final_loss
+Validation Loss decreased. Great work
+
+
+
+3  iteration
+0.01  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+41s - loss: 0.4042 - acc: 0.8258 - val_loss: 0.3838 - val_acc: 0.8854
+(180000,) (180000,)
+80379 9621
+17730 72270
+
+FA FR TA TR 0.1069 0.197 0.803 0.8931
+
+VALIDATION DATA
+0.885444444444 0.383765275637
+(18000,) (18000,)
+14603 1796
+266 1335
+
+FA FR TA TR 0.109518873102 0.166146158651 0.833853841349 0.890481126898
+0.383765275637  - val loss
+0.293456590838  - final_loss
+Inside Plateau 1
+
+
+
+3  iteration
+0.01  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+41s - loss: 0.3834 - acc: 0.8359 - val_loss: 0.5223 - val_acc: 0.7196
+(180000,) (180000,)
+64077 25923
+5297 84703
+
+FA FR TA TR 0.288033333333 0.0588555555556 0.941144444444 0.711966666667
+
+VALIDATION DATA
+0.719611111111 0.522328669495
+(18000,) (18000,)
+11419 4980
+67 1534
+
+FA FR TA TR 0.303677053479 0.0418488444722 0.958151155528 0.696322946521
+0.522328669495  - val loss
+0.293456590838  - final_loss
+Inside Plateau 2
+
+
+
+3  iteration
+0.01  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss improved from 0.29346 to 0.23126, saving model to ./log/log_balanced/log_normalisation/cnn/log_normalisation-weights-0.23126.h5
+Epoch 00000: val_loss improved from 0.29346 to 0.23126, saving model to ./log/log_balanced/log_normalisation/cnn/log_normalisation_best_weights.h5
+41s - loss: 0.3672 - acc: 0.8450 - val_loss: 0.2313 - val_acc: 0.9444
+(180000,) (180000,)
+87240 2760
+32941 57059
+
+FA FR TA TR 0.0306666666667 0.366011111111 0.633988888889 0.969333333333
+
+VALIDATION DATA
+0.944444444444 0.231260818839
+(18000,) (18000,)
+16066 333
+667 934
+
+FA FR TA TR 0.0203061162266 0.416614615865 0.583385384135 0.979693883773
+0.231260818839  - val loss
+0.293456590838  - final_loss
+Validation Loss decreased. Great work
+
+
+
+4  iteration
+0.01  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+40s - loss: 0.3510 - acc: 0.8533 - val_loss: 0.3199 - val_acc: 0.9227
+(180000,) (180000,)
+82801 7199
+17185 72815
+
+FA FR TA TR 0.0799888888889 0.190944444444 0.809055555556 0.920011111111
+
+VALIDATION DATA
+0.922666666667 0.31987998724
+(18000,) (18000,)
+15313 1086
+306 1295
+
+FA FR TA TR 0.0662235502165 0.19113054341 0.80886945659 0.933776449784
+0.31987998724  - val loss
+0.231260818839  - final_loss
+Inside Plateau 1
+
+
+
+4  iteration
+0.01  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+41s - loss: 0.3412 - acc: 0.8592 - val_loss: 0.3197 - val_acc: 0.9165
+(180000,) (180000,)
+82977 7023
+15925 74075
+
+FA FR TA TR 0.0780333333333 0.176944444444 0.823055555556 0.921966666667
+
+VALIDATION DATA
+0.9165 0.319670035495
+(18000,) (18000,)
+15131 1268
+235 1366
+
+FA FR TA TR 0.0773217879139 0.146783260462 0.853216739538 0.922678212086
+0.319670035495  - val loss
+0.231260818839  - final_loss
+Inside Plateau 2
+
+
+
+4  iteration
+0.01  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+41s - loss: 0.3311 - acc: 0.8645 - val_loss: 0.6512 - val_acc: 0.5702
+(180000,) (180000,)
+47250 42750
+1619 88381
+
+FA FR TA TR 0.475 0.0179888888889 0.982011111111 0.525
+
+VALIDATION DATA
+0.570222222222 0.651165307204
+(18000,) (18000,)
+8682 7717
+19 1582
+
+FA FR TA TR 0.470577474236 0.0118675827608 0.988132417239 0.529422525764
+0.651165307204  - val loss
+0.231260818839  - final_loss
+Inside Plateau 3
+
+
+
+4  iteration
+0.01  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss improved from 0.23126 to 0.21074, saving model to ./log/log_balanced/log_normalisation/cnn/log_normalisation-weights-0.21074.h5
+Epoch 00000: val_loss improved from 0.23126 to 0.21074, saving model to ./log/log_balanced/log_normalisation/cnn/log_normalisation_best_weights.h5
+41s - loss: 0.3235 - acc: 0.8687 - val_loss: 0.2107 - val_acc: 0.9443
+(180000,) (180000,)
+86629 3371
+24907 65093
+
+FA FR TA TR 0.0374555555556 0.276744444444 0.723255555556 0.962544444444
+
+VALIDATION DATA
+0.944277777778 0.210743002892
+(18000,) (18000,)
+15833 566
+437 1164
+
+FA FR TA TR 0.0345142996524 0.272954403498 0.727045596502 0.965485700348
+0.210743002892  - val loss
+0.231260818839  - final_loss
+Validation Loss decreased. Great work
+
+
+
+5  iteration
+0.01  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+41s - loss: 0.3183 - acc: 0.8717 - val_loss: 0.2484 - val_acc: 0.9371
+(180000,) (180000,)
+84502 5498
+17239 72761
+
+FA FR TA TR 0.0610888888889 0.191544444444 0.808455555556 0.938911111111
+
+VALIDATION DATA
+0.937111111111 0.248430561781
+(18000,) (18000,)
+15568 831
+301 1300
+
+FA FR TA TR 0.0506738215745 0.188007495315 0.811992504685 0.949326178426
+0.248430561781  - val loss
+0.210743002892  - final_loss
+Inside Plateau 1
+
+
+
+5  iteration
+0.01  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+41s - loss: 0.3134 - acc: 0.8738 - val_loss: 0.3838 - val_acc: 0.8730
+(180000,) (180000,)
+77178 12822
+7502 82498
+
+FA FR TA TR 0.142466666667 0.0833555555556 0.916644444444 0.857533333333
+
+VALIDATION DATA
+0.873 0.383794175122
+(18000,) (18000,)
+14211 2188
+98 1503
+
+FA FR TA TR 0.133422769681 0.0612117426608 0.938788257339 0.866577230319
+0.383794175122  - val loss
+0.210743002892  - final_loss
+Inside Plateau 2
+
+
+
+5  iteration
+0.01  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss improved from 0.21074 to 0.20819, saving model to ./log/log_balanced/log_normalisation/cnn/log_normalisation-weights-0.20819.h5
+Epoch 00000: val_loss improved from 0.21074 to 0.20819, saving model to ./log/log_balanced/log_normalisation/cnn/log_normalisation_best_weights.h5
+42s - loss: 0.3098 - acc: 0.8754 - val_loss: 0.2082 - val_acc: 0.9451
+(180000,) (180000,)
+86507 3493
+23023 66977
+
+FA FR TA TR 0.0388111111111 0.255811111111 0.744188888889 0.961188888889
+
+VALIDATION DATA
+0.945111111111 0.208192314545
+(18000,) (18000,)
+15778 621
+367 1234
+
+FA FR TA TR 0.0378681626928 0.229231730169 0.770768269831 0.962131837307
+0.208192314545  - val loss
+0.210743002892  - final_loss
+Validation Loss decreased. Great work
+
+
+
+6  iteration
+0.01  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+42s - loss: 0.3072 - acc: 0.8780 - val_loss: 0.2370 - val_acc: 0.9395
+(180000,) (180000,)
+84779 5221
+16903 73097
+
+FA FR TA TR 0.0580111111111 0.187811111111 0.812188888889 0.941988888889
+
+VALIDATION DATA
+0.9395 0.236988372498
+(18000,) (18000,)
+15601 798
+291 1310
+
+FA FR TA TR 0.0486615037502 0.181761399126 0.818238600874 0.95133849625
+0.236988372498  - val loss
+0.208192314545  - final_loss
+Inside Plateau 1
+
+
+
+6  iteration
+0.01  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+41s - loss: 0.3047 - acc: 0.8795 - val_loss: 0.3230 - val_acc: 0.9105
+(180000,) (180000,)
+80491 9509
+9770 80230
+
+FA FR TA TR 0.105655555556 0.108555555556 0.891444444444 0.894344444444
+
+VALIDATION DATA
+0.9105 0.322969747384
+(18000,) (18000,)
+14926 1473
+138 1463
+
+FA FR TA TR 0.0898225501555 0.0861961274204 0.91380387258 0.910177449845
+0.322969747384  - val loss
+0.208192314545  - final_loss
+Inside Plateau 2
+
+
+
+6  iteration
+0.01  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+42s - loss: 0.3028 - acc: 0.8803 - val_loss: 0.2133 - val_acc: 0.9436
+(180000,) (180000,)
+85861 4139
+20246 69754
+
+FA FR TA TR 0.0459888888889 0.224955555556 0.775044444444 0.954011111111
+
+VALIDATION DATA
+0.943611111111 0.213336853663
+(18000,) (18000,)
+15729 670
+345 1256
+
+FA FR TA TR 0.0408561497652 0.215490318551 0.784509681449 0.959143850235
+0.213336853663  - val loss
+0.208192314545  - final_loss
+Inside Plateau 3
+
+
+
+6  iteration
+0.01  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+41s - loss: 0.3008 - acc: 0.8820 - val_loss: 0.2384 - val_acc: 0.9373
+(180000,) (180000,)
+84726 5274
+15681 74319
+
+FA FR TA TR 0.0586 0.174233333333 0.825766666667 0.9414
+
+VALIDATION DATA
+0.937333333333 0.238378845427
+(18000,) (18000,)
+15511 888
+240 1361
+
+FA FR TA TR 0.0541496432709 0.149906308557 0.850093691443 0.945850356729
+0.238378845427  - val loss
+0.208192314545  - final_loss
+Reducing the learning rate by half
+
+
+
+6  iteration
+0.005  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1
+Epoch 00000: val_loss did not improve
+Epoch 00000: val_loss did not improve
+42s - loss: 0.2909 - acc: 0.8878 - val_loss: 0.2874 - val_acc: 0.9234
+(180000,) (180000,)
+82829 7171
+12098 77902
+
+FA FR TA TR 0.0796777777778 0.134422222222 0.865577777778 0.920322222222
+
+VALIDATION DATA
+0.923388888889 0.287373770078
+(18000,) (18000,)
+15188 1211
+168 1433
+
+FA FR TA TR 0.0738459662175 0.10493441599 0.89506558401 0.926154033783
+0.287373770078  - val loss
+0.208192314545  - final_loss
+Inside Plateau 1
+
+
+
+6  iteration
+0.005  learning rate
+
+TRAIN DATA
+Train on 180000 samples, validate on 18000 samples
+Epoch 1/1

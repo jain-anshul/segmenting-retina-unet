@@ -9,11 +9,13 @@ from bob.sp import fft
 
 def my_PreProc_patches(data):
     assert(len(data.shape)==4)
-    data = gabor_DWT(imgs = data, number_of_scales = 2, number_of_directions = 2)
+    # data = gabor_DWT(imgs = data, number_of_scales = 2, number_of_directions = 2)
     # data = fourier_transform_real_imag(data)
-    for i in range(data.shape[0]):
-      data[i] = image_normalize(data[i])
+    # for i in range(data.shape[0]):
+    #   data[i] = image_normalize(data[i])
+    # data = fourier_transform_real_imag_raw_image(data)
     print("\n\nTraining patches normalised successfully, shape is ",data.shape)
+
     return data
 
 
@@ -104,3 +106,14 @@ def gabor_DWT(imgs, number_of_scales, number_of_directions):
 
     return transformed_img
 
+def fourier_transform_real_imag_raw_image(imgs):
+    print imgs.shape
+    transformed_patch = np.empty((imgs.shape[0],imgs.shape[1]*3,imgs.shape[2],imgs.shape[3]))
+    for i in range(imgs.shape[0]):
+        freq_img = fft(imgs[i][0].astype(np.complex128))
+        
+        transformed_patch[i][0] = np.real(freq_img)
+        transformed_patch[i][1] = np.imag(freq_img)
+        transformed_patch[i][2] = imgs[i][0]
+    print("Adding real+imaginary+raw part", transformed_patch.shape)
+    return transformed_patch
