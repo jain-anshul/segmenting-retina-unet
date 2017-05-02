@@ -21,6 +21,47 @@ def my_PreProc_patches(data):
 
     return data
 
+def my_PreProc_patches_ROC_testing(data, name_experiment):
+    assert(len(data.shape)==4)
+    if name_experiment=="log_normalisation_patches-fft-real_normalisation":
+        data = fourier_transform_real(data)
+        for i in range(data.shape[0]):
+            data[i] = image_normalize(data[i])
+    elif name_experiment=="log_normalisation_patches-fft-real-imag_normalisation":
+        data = fourier_transform_real_imag(data)
+        for i in range(data.shape[0]):
+            data[i] = image_normalize(data[i])
+    elif name_experiment=="log_normalisation_patches-fft-real-imag-raw_normalisation":
+        data = fourier_transform_real_imag_raw_image(data)
+        for i in range(data.shape[0]):
+            data[i][:2] = image_normalize(data[i][:2])
+            data[i][2] = image_normalize(data[i][2])
+
+    # data = gabor_DWT_real_imag(imgs = data, number_of_scales = 4, number_of_directions = 2)
+    # data = gabor_DWT_real(imgs = data, number_of_scales = 2, number_of_directions = 4)
+    print("\n\nTraining patches normalised successfully, shape is ",data.shape)
+
+    return data
+
+def my_PreProc_ROC_testing(data, name_experiment):
+    assert(len(data.shape)==4)
+    assert (data.shape[1]==3)  #Use the original images
+    
+    #black-white conversion
+    train_imgs = rgb2gray(data)
+    #my preprocessing:
+    train_imgs = dataset_normalized(train_imgs)
+
+    if name_experiment=="log_normalisation_clahe":
+        train_imgs = clahe_equalized(train_imgs)
+    
+    # train_imgs = gabor_DWT_real_imag(imgs = train_imgs, number_of_scales = 2, number_of_directions = 2)
+    #train_imgs = fourier_transform_real(train_imgs)
+    #train_imgs = dataset_normalized(train_imgs)
+    train_imgs = train_imgs/255.  #reduce to 0-1 range
+    print("\n\nTraining images normalised successfully, shape is ",train_imgs.shape)
+    return train_imgs
+
 
 def my_PreProc(data):
     assert(len(data.shape)==4)
