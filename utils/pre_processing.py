@@ -9,7 +9,7 @@ from bob.sp import fft
 def my_PreProc_patches(data):
     assert(len(data.shape)==4)
     assert (data.shape[1]==1)
-    data = fourier_transform_abs(data)
+    data = fourier_transform_real_imag(data)
     for i in range(data.shape[0]):
        data[i] = image_normalize(data[i])
 
@@ -80,3 +80,14 @@ def fourier_transform_abs(imgs):
         imgs[i][0] = np.abs(freq_img)
 
     return imgs
+
+def fourier_transform_real_imag(imgs):
+    print imgs.shape
+    transformed_patch = np.empty((imgs.shape[0],imgs.shape[1]*2,imgs.shape[2],imgs.shape[3]))
+    for i in range(imgs.shape[0]):
+        freq_img = fft(imgs[i][0].astype(np.complex128))
+        
+        transformed_patch[i][0] = np.real(freq_img)
+        transformed_patch[i][1] = np.imag(freq_img)
+    print("Adding real+imaginary part", transformed_patch.shape)
+    return transformed_patch
