@@ -3,16 +3,17 @@ np.random.seed(1337)
 from PIL import Image
 import cv2
 
+import bob.ip.gabor as gabor
 from help_functions import *
 from bob.sp import fft
 
 def my_PreProc_patches(data):
     assert(len(data.shape)==4)
     assert (data.shape[1]==1)
-    data = fourier_transform_real_imag(data)
-    for i in range(data.shape[0]):
-       data[i] = image_normalize(data[i])
-
+    # data = fourier_transform_real_imag(data)
+    # for i in range(data.shape[0]):
+    #   data[i] = image_normalize(data[i])
+    
     return data
 
 
@@ -23,8 +24,9 @@ def my_PreProc(data):
     train_imgs = rgb2gray(data)
     #my preprocessing:
     train_imgs = dataset_normalized(train_imgs)
+    train_imgs = gabor_DWT(train_imgs)
     #train_imgs = fourier_transform_real(train_imgs)
-    #train_imgs = dataset_normalized(train_imgs)
+    train_imgs = dataset_normalized(train_imgs)
     #train_imgs = clahe_equalized(train_imgs)
     train_imgs = train_imgs/255.  #reduce to 0-1 range
     return train_imgs
@@ -91,3 +93,14 @@ def fourier_transform_real_imag(imgs):
         transformed_patch[i][1] = np.imag(freq_img)
     print("Adding real+imaginary part", transformed_patch.shape)
     return transformed_patch
+
+
+def gabor_DWT(imgs, number_of_scales, number_of_directions):
+    gwt = gabor.Transform(number_of_scales = number_of_scales, number_of_directions = number_of_directions)
+    transformed_img = numpy.empty((imgs.shape[0],imgs.shape[1]*number_of_scales*number_of_directions, imgs.shape[2],imgs.shape[3] ))
+    for index in range(imgs):
+        transformed_img[i] = gwt(img[i])
+        transformed_img[i] = np.real(transformed_img[i])
+
+    return transformed_img
+
