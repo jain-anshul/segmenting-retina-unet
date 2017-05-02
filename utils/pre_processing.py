@@ -9,11 +9,11 @@ from bob.sp import fft
 
 def my_PreProc_patches(data):
     assert(len(data.shape)==4)
-    
+    data = gabor_DWT(imgs = data, number_of_scales = 2, number_of_directions = 2)
     # data = fourier_transform_real_imag(data)
-    # for i in range(data.shape[0]):
-    #   data[i] = image_normalize(data[i])
-    
+    for i in range(data.shape[0]):
+      data[i] = image_normalize(data[i])
+    print("\n\nTraining patches normalised successfully, shape is ",data.shape)
     return data
 
 
@@ -24,11 +24,12 @@ def my_PreProc(data):
     train_imgs = rgb2gray(data)
     #my preprocessing:
     train_imgs = dataset_normalized(train_imgs)
-    train_imgs = gabor_DWT(imgs = train_imgs, number_of_scales = 2, number_of_directions = 2)
+    #train_imgs = gabor_DWT(imgs = train_imgs, number_of_scales = 2, number_of_directions = 2)
     #train_imgs = fourier_transform_real(train_imgs)
-    train_imgs = dataset_normalized(train_imgs)
+    #train_imgs = dataset_normalized(train_imgs)
     #train_imgs = clahe_equalized(train_imgs)
     train_imgs = train_imgs/255.  #reduce to 0-1 range
+    print("\n\nTraining images normalised successfully, shape is ",train_imgs.shape)
     return train_imgs
 
 
