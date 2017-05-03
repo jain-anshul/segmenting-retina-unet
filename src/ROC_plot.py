@@ -78,7 +78,7 @@ for name_experiment in name_experiment_list:
 	print "\nArea under the ROC curve: " + str(AUC_ROC)
 	# roc_curve = plt.figure()
 	# plt.figure()
-	plt.plot(fpr, tpr, '-', label=name_experiment[25:]+'(AUC = %0.4f)' % AUC_ROC)
+	plt.plot(fpr, tpr, '-', label=name_experiment[17:]+'(AUC = %0.4f)' % AUC_ROC)
 	plt.title('ROC curve')
 	plt.xlabel("FPR (False Positive Rate)")
 	plt.ylabel("TPR (True Positive Rate)")
