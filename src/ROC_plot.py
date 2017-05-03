@@ -42,8 +42,8 @@ algorithm = "cnn"
 # name_experiment_list=["log_normalisation_patches-fft-real_normalisation","log_normalisation_patches-fft-real-imag_normalisation","log_normalisation_patches-fft-real-imag-raw_normalisation"]
 # name_experiment_list = ["log_normalisation_patches-gabor(2,2)-real_normalisation","log_normalisation_patches-gabor(2,2)-real_normalisation_reduced-dataset","log_normalisation_patches-gabor(2,4)-real_normalisation_reduced-dataset", "log_normalisation_patches-gabor(4,2)-real_normalisation_reduced-dataset","log_normalisation_patches-gabor(2,2)-real-imag_normalisation_reduced-dataset","log_normalisation_patches-fft-abs_normalisation","log_normalisation_patches-fft-imag_normalisation", "log_normalisation_patches-fft-real-imag-raw_normalisation_reduced-dataset"]
 # plt.figure(0).clf()
-name_experiment_list=["log_normalisation_patches-gabor(2,2)-real_normalisation_reduced-dataset","log_normalisation_patches-gabor(2,4)-real_normalisation_reduced-dataset", "log_normalisation_patches-gabor(4,2)-real_normalisation_reduced-dataset"]
-
+# name_experiment_list=["log_normalisation_patches-gabor(2,2)-real_normalisation_reduced-dataset","log_normalisation_patches-gabor(2,4)-real_normalisation_reduced-dataset", "log_normalisation_patches-gabor(4,2)-real_normalisation_reduced-dataset"]
+name_experiment_list=["log_normalisation_patches-gabor(2,2)-real_normalisation_reduced-dataset","log_normalisation_patches-gabor(2,2)-real-imag_normalisation_reduced-dataset"]
 # plt.title('ROC curve')
 # plt.xlabel("FPR (False Positive Rate)")
 # plt.ylabel("TPR (True Positive Rate)")
