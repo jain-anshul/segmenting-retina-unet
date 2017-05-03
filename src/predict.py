@@ -55,7 +55,9 @@ visualize(group_images(img_truth[0:20,:,:,:],5),path_experiment + 'test_gtruth')
 model = model_from_json(open(path_experiment + name_experiment + '_architecture.json').read())
 model.load_weights(path_experiment + name_experiment + '_best_weights.h5')
 
-for index in range(test_imgs_orig.shape[0]):
+#for index in range(test_imgs_orig.shape[0]):
+for index in range(1):
+
 	print(index+1," image")
 	# ============ Load the data and divide in patches
 	patches_imgs_test = None
