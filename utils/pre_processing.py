@@ -9,14 +9,14 @@ from bob.sp import fft
 
 def my_PreProc_patches(data):
     assert(len(data.shape)==4)
-    data = fourier_transform_real_imag_raw_image(data)
-    # data = gabor_DWT_real_imag(imgs = data, number_of_scales = 4, number_of_directions = 2)
+    # data = fourier_transform_real_imag_raw_image(data)
+    data = gabor_DWT_real_imag(imgs = data, number_of_scales = 2, number_of_directions = 2)
     # data = gabor_DWT_real(imgs = data, number_of_scales = 2, number_of_directions = 2)
     # data = fourier_transform_real_imag(data)
     for i in range(data.shape[0]):
-        # data[i] = image_normalize(data[i])
-        data[i][:2] = image_normalize(data[i][:2])
-        data[i][2] = image_normalize(data[i][2])
+        data[i] = image_normalize(data[i])
+        # data[i][:2] = image_normalize(data[i][:2])
+        # data[i][2] = image_normalize(data[i][2])
     print("\n\nTraining patches normalised successfully, shape is ",data.shape)
 
     return data
@@ -36,9 +36,40 @@ def my_PreProc_patches_ROC_testing(data, name_experiment):
         for i in range(data.shape[0]):
             data[i][:2] = image_normalize(data[i][:2])
             data[i][2] = image_normalize(data[i][2])
-
+    elif name_experiment=="log_normalisation_patches-gabor(2,2)-real_normalisation":
+        data = gabor_DWT_real(imgs = data, number_of_scales = 2, number_of_directions = 2)
+        for i in range(data.shape[0]):
+            data[i] = image_normalize(data[i])
+    elif name_experiment=="log_normalisation_patches-gabor(2,2)-real_normalisation_reduced-dataset":
+        data = gabor_DWT_real(imgs = data, number_of_scales = 2, number_of_directions = 2)
+        for i in range(data.shape[0]):
+            data[i] = image_normalize(data[i])
+    elif name_experiment=="log_normalisation_patches-gabor(2,4)-real_normalisation_reduced-dataset":
+        data = gabor_DWT_real(imgs = data, number_of_scales = 2, number_of_directions = 4)
+        for i in range(data.shape[0]):
+            data[i] = image_normalize(data[i])
+    elif name_experiment=="log_normalisation_patches-gabor(4,2)-real_normalisation_reduced-dataset":
+        data = gabor_DWT_real(imgs = data, number_of_scales = 4, number_of_directions = 2)
+        for i in range(data.shape[0]):
+            data[i] = image_normalize(data[i])
+    elif name_experiment=="log_normalisation_patches-gabor(2,2)-real-imag_normalisation_reduced-dataset":
+        data = gabor_DWT_real_imag(imgs = data, number_of_scales = 2, number_of_directions = 2)
+        for i in range(data.shape[0]):
+            data[i] = image_normalize(data[i])
+    elif name_experiment=="log_normalisation_patches-fft-abs_normalisation":
+        data = fourier_transform_abs(data)
+        for i in range(data.shape[0]):
+            data[i] = image_normalize(data[i])
+    elif name_experiment=="log_normalisation_patches-fft-imag_normalisation":
+        data = fourier_transform_imag(data)
+        for i in range(data.shape[0]):
+            data[i] = image_normalize(data[i])
+    elif name_experiment=="log_normalisation_patches-fft-real-imag-raw_normalisation_reduced-dataset":
+        data = fourier_transform_real_imag_raw_image(data)
+        for i in range(data.shape[0]):
+            data[i][:2] = image_normalize(data[i][:2])
+            data[i][2] = image_normalize(data[i][2])
     # data = gabor_DWT_real_imag(imgs = data, number_of_scales = 4, number_of_directions = 2)
-    # data = gabor_DWT_real(imgs = data, number_of_scales = 2, number_of_directions = 4)
     print("\n\nTraining patches normalised successfully, shape is ",data.shape)
 
     return data
