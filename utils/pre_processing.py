@@ -11,7 +11,7 @@ def my_PreProc_patches(data):
     assert(len(data.shape)==4)
     # data = fourier_transform_real_imag_raw_image(data)
     # data = gabor_DWT_real_imag(imgs = data, number_of_scales = 4, number_of_directions = 2)
-    data = gabor_DWT_real(imgs = data, number_of_scales = 4, number_of_directions = 2)
+    data = gabor_DWT_real(imgs = data, number_of_scales = 2, number_of_directions = 4)
     # data = fourier_transform_real_imag(data)
     for i in range(data.shape[0]):
         data[i] = image_normalize(data[i])
