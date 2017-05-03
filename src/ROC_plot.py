@@ -76,12 +76,13 @@ for name_experiment in name_experiment_list:
 	# test_integral = np.trapz(tpr,fpr) #trapz is numpy integration
 	print "\nArea under the ROC curve: " + str(AUC_ROC)
 	# roc_curve = plt.figure()
+	plt.figure()
 	plt.plot(fpr, tpr, '-', label=name_experiment[25:]+'(AUC = %0.4f)' % AUC_ROC)
 	plt.title('ROC curve')
 	plt.xlabel("FPR (False Positive Rate)")
 	plt.ylabel("TPR (True Positive Rate)")
 	plt.legend(loc="lower right")
-	# plt.savefig('./roc_curve/' +name_experiment + "_ROC.png")
+	plt.savefig('./roc_curve/' +name_experiment + "_ROC.png")
 
 	# fpr, tpr, thresholds = roc_curve(y_true = patches_masks_val[:,1], y_score=y_pred[:,1], drop_intermediate=False)
 	# AUC_ROC = roc_auc_score(patches_masks_val[:,1], y_pred[:,1])
@@ -90,6 +91,6 @@ for name_experiment in name_experiment_list:
 	# # roc_curve = plt.figure()
 	# plt.plot(fpr, tpr, '-',label=' (AUC = %0.4f)' %  AUC_ROC)
 	
-plt.savefig('./roc_curve/' + "comparative_ROC.png")
+# plt.savefig('./roc_curve/' + "comparative_ROC.png")
 
 
