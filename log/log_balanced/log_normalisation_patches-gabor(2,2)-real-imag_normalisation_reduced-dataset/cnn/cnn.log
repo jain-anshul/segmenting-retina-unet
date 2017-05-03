@@ -702,3 +702,62 @@ Epoch 00000: val_loss improved from 0.53613 to 0.53504, saving model to ./log/lo
 Epoch 00000: val_loss improved from 0.53613 to 0.53504, saving model to ./log/log_balanced/log_normalisation_patches-gabor(2,2)-real-imag_normalisation_reduced-dataset/cnn/log_normalisation_patches-gabor(2,2)-real-imag_normalisation_reduced-dataset_best_weights.h5
 26s - loss: 0.5533 - acc: 0.7036 - val_loss: 0.5350 - val_acc: 0.7553
 (108000,) (108000,)
+('\n\nTraining images normalised successfully, shape is ', (18, 1, 584, 565))
+
+train images/masks shape:
+(18, 1, 565, 565)
+train images range (min-max): 0.0 - 1.0
+train masks are within 0-1
+
+positive patches per full image: 3000
+negative patches per full image: 3000
+('\n\nTraining patches normalised successfully, shape is ', (108000, 8, 27, 27))
+
+train PATCHES images/masks shape:
+(108000, 8, 27, 27)
+train PATCHES images range (min-max): -8.26642810521 - 7.96616848268
+('\n\nTraining images normalised successfully, shape is ', (2, 1, 584, 565))
+
+train images/masks shape:
+(2, 1, 565, 565)
+train images range (min-max): 0.0 - 1.0
+train masks are within 0-1
+
+patches per full image: 9000
+('\n\nTraining patches normalised successfully, shape is ', (18000, 8, 27, 27))
+
+train PATCHES images/masks shape:
+(18000, 8, 27, 27)
+train PATCHES images range (min-max): -8.09205566756 - 8.15334310174
+Check: final output of the network:
+(None, 2)
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_1 (InputLayer)         (None, 8, 27, 27)         0         
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 32, 27, 27)        2336      
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 32, 27, 27)        0         
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 32, 13, 13)        0         
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 5408)              0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 2)                 10818     
+_________________________________________________________________
+activation_1 (Activation)    (None, 2)                 0         
+=================================================================
+Total params: 13,154
+Trainable params: 13,154
+Non-trainable params: 0
+_________________________________________________________________
+
+
+
+1  iteration
+0.01  learning rate
+
+TRAIN DATA
+Train on 108000 samples, validate on 18000 samples
+Epoch 1/1
