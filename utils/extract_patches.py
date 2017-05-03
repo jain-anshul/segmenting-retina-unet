@@ -137,7 +137,11 @@ def extract_random(full_imgs,full_masks, patch_h,patch_w, N_patches_positive, N_
         exit()
     N_patches = N_patches_positive + N_patches_negative
     assert (len(full_imgs.shape)==4 and len(full_masks.shape)==4)  #4D arrays
-    assert (full_imgs.shape[1]==1 or full_imgs.shape[1]==3)  #check the channel is 1 or 3
+    
+    # image.shape[1] >1 in using gabor wavelet,  so cannot have fixed number of channels
+
+    #assert (full_imgs.shape[1]==1 or full_imgs.shape[1]==3)  #check the channel is 1 or 3
+
     assert (full_masks.shape[1]==1)   #masks only black and white
     assert (full_imgs.shape[2] == full_masks.shape[2] and full_imgs.shape[3] == full_masks.shape[3])
     patches = np.empty((N_patches,full_imgs.shape[1],patch_h,patch_w))
@@ -185,7 +189,8 @@ def extract_random_val(full_imgs,full_masks, patch_h,patch_w, N_patches, inside=
         print "N_patches: plase enter a multiple of ", full_imgs.shape[0]
         exit()
     assert (len(full_imgs.shape)==4 and len(full_masks.shape)==4)  #4D arrays
-    assert (full_imgs.shape[1]==1 or full_imgs.shape[1]==3)  #check the channel is 1 or 3
+    # image.shape[1] >1 in using gabor wavelet,  so cannot have fixed number of channels
+    #assert (full_imgs.shape[1]==1 or full_imgs.shape[1]==3)  #check the channel is 1 or 3
     assert (full_masks.shape[1]==1)   #masks only black and white
     assert (full_imgs.shape[2] == full_masks.shape[2] and full_imgs.shape[3] == full_masks.shape[3])
     patches = np.empty((N_patches,full_imgs.shape[1],patch_h,patch_w))
@@ -245,12 +250,15 @@ def data_consistency_check(imgs,masks):
     assert(imgs.shape[2]==masks.shape[2])
     assert(imgs.shape[3]==masks.shape[3])
     assert(masks.shape[1]==1)
-    assert(imgs.shape[1]==1 or imgs.shape[1]==3)
+    
+    # image.shape[1] >1 in using gabor wavelet,  so cannot have fixed number of channels
+    #assert(imgs.shape[1]==1 or imgs.shape[1]==3)
 
 def data_consistency_check_patches(imgs, masks):
     assert(len(imgs.shape)==4)
     assert(imgs.shape[0]==masks.shape[0])
-    assert(imgs.shape[1]==1 or imgs.shape[1]==3)
+    # image.shape[1] >1 in using gabor wavelet,  so cannot have fixed number of channels
+    #assert(imgs.shape[1]==1 or imgs.shape[1]==3)
 
 def is_patch_inside_FOV(x,y,img_w,img_h,patch_h):
     x_ = x - int(img_w/2) # origin (0,0) shifted to image center

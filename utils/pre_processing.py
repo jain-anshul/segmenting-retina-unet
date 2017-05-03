@@ -9,11 +9,12 @@ from bob.sp import fft
 
 def my_PreProc_patches(data):
     assert(len(data.shape)==4)
-    assert (data.shape[1]==1)
+    # image.shape[1] >1 in using gabor wavelet,  so cannot have fixed number of channels
+    #assert (data.shape[1]==1)
     # data = fourier_transform_real_imag(data)
     # for i in range(data.shape[0]):
     #   data[i] = image_normalize(data[i])
-    
+
     return data
 
 
@@ -24,7 +25,7 @@ def my_PreProc(data):
     train_imgs = rgb2gray(data)
     #my preprocessing:
     train_imgs = dataset_normalized(train_imgs)
-    train_imgs = gabor_DWT(train_imgs)
+    train_imgs = gabor_DWT(imgs = train_imgs, number_of_scales=2, number_of_directions=2)
     #train_imgs = fourier_transform_real(train_imgs)
     train_imgs = dataset_normalized(train_imgs)
     #train_imgs = clahe_equalized(train_imgs)
@@ -41,7 +42,8 @@ def image_normalize(img):
 
 def dataset_normalized(imgs):
     assert (len(imgs.shape)==4)  #4D arrays
-    assert (imgs.shape[1]==1)  #check the channel is 1
+    # image.shape[1] >1 in using gabor wavelet,  so cannot have fixed number of channels
+    #assert (imgs.shape[1]==1)  #check the channel is 1
     imgs_normalized = np.empty(imgs.shape)
     imgs_std = np.std(imgs)
     imgs_mean = np.mean(imgs)
@@ -98,9 +100,9 @@ def fourier_transform_real_imag(imgs):
 def gabor_DWT(imgs, number_of_scales, number_of_directions):
     gwt = gabor.Transform(number_of_scales = number_of_scales, number_of_directions = number_of_directions)
     transformed_img = numpy.empty((imgs.shape[0],imgs.shape[1]*number_of_scales*number_of_directions, imgs.shape[2],imgs.shape[3] ))
-    for index in range(imgs):
-        transformed_img[i] = gwt(img[i])
-        transformed_img[i] = np.real(transformed_img[i])
+    for i in range(imgs):
+        transformed_img[i][0] = gwt(imgs[i])
+        transformed_img[i][0] = np.real(transformed_img[i][0])
 
     return transformed_img
 
