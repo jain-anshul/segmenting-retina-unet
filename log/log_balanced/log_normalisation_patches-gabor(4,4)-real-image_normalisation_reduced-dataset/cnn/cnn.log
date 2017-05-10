@@ -1,0 +1,100 @@
+('\n\nTraining images normalised successfully, shape is ', (18, 1, 584, 565))
+
+train images/masks shape:
+(18, 1, 565, 565)
+train images range (min-max): 0.0 - 1.0
+train masks are within 0-1
+
+positive patches per full image: 1000
+negative patches per full image: 1000
+('\n\nTraining patches normalised successfully, shape is ', (36000, 32, 27, 27))
+
+train PATCHES images/masks shape:
+(36000, 32, 27, 27)
+train PATCHES images range (min-max): -12.4232445319 - 13.034433228
+('\n\nTraining images normalised successfully, shape is ', (2, 1, 584, 565))
+
+train images/masks shape:
+(2, 1, 565, 565)
+train images range (min-max): 0.0 - 1.0
+train masks are within 0-1
+
+patches per full image: 9000
+('\n\nTraining patches normalised successfully, shape is ', (18000, 32, 27, 27))
+
+train PATCHES images/masks shape:
+(18000, 32, 27, 27)
+train PATCHES images range (min-max): -13.5105527837 - 12.8159468831
+Check: final output of the network:
+(None, 2)
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_1 (InputLayer)         (None, 32, 27, 27)        0         
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 32, 27, 27)        9248      
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 32, 27, 27)        0         
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 32, 13, 13)        0         
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 5408)              0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 2)                 10818     
+_________________________________________________________________
+activation_1 (Activation)    (None, 2)                 0         
+=================================================================
+Total params: 20,066
+Trainable params: 20,066
+Non-trainable params: 0
+_________________________________________________________________
+('\n\nTraining images normalised successfully, shape is ', (18, 1, 584, 565))
+
+train images/masks shape:
+(18, 1, 565, 565)
+train images range (min-max): 0.0 - 1.0
+train masks are within 0-1
+
+positive patches per full image: 1000
+negative patches per full image: 1000
+('\n\nTraining patches normalised successfully, shape is ', (36000, 32, 27, 27))
+
+train PATCHES images/masks shape:
+(36000, 32, 27, 27)
+train PATCHES images range (min-max): -12.4232445319 - 13.034433228
+('\n\nTraining images normalised successfully, shape is ', (2, 1, 584, 565))
+
+train images/masks shape:
+(2, 1, 565, 565)
+train images range (min-max): 0.0 - 1.0
+train masks are within 0-1
+
+patches per full image: 9000
+('\n\nTraining patches normalised successfully, shape is ', (18000, 32, 27, 27))
+
+train PATCHES images/masks shape:
+(18000, 32, 27, 27)
+train PATCHES images range (min-max): -13.5105527837 - 12.8159468831
+Check: final output of the network:
+(None, 2)
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_1 (InputLayer)         (None, 32, 27, 27)        0         
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 32, 27, 27)        9248      
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 32, 27, 27)        0         
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 32, 13, 13)        0         
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 5408)              0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 2)                 10818     
+_________________________________________________________________
+activation_1 (Activation)    (None, 2)                 0         
+=================================================================
+Total params: 20,066
+Trainable params: 20,066
+Non-trainable params: 0
+_________________________________________________________________

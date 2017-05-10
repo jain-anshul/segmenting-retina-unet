@@ -9,7 +9,7 @@ val_groundTruth = DRIVE_dataset_groundTruth_validation.hdf5
 
 
 [experiment name]
-name = log_normalisation_patches-fft-real-imag-raw_normalisation
+name = log_normalisation_patches-gabor(4,4)-real-image_normalisation_reduced-dataset(18000)
 
 
 [data attributes]
@@ -20,8 +20,8 @@ patch_width = 27
 
 [training settings]
 #number of total patches:
-N_subimgs_positive = 54000
-N_subimgs_negative = 54000
+N_subimgs_positive = 9000
+N_subimgs_negative = 9000
 #if patches are extracted only inside the field of view:
 inside_FOV = False
 #Number of training epochs
