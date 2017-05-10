@@ -9,7 +9,7 @@ val_groundTruth = DRIVE_dataset_groundTruth_validation.hdf5
 
 
 [experiment name]
-name = log_normalisation_patches-gabor(4,4)-real-image_normalisation_reduced-dataset(18000)
+name = log_normalisation_patches-gabor(2,8)-real-image_normalisation_reduced-dataset(18000)_reduced-val(5000)
 
 
 [data attributes]
@@ -30,7 +30,7 @@ batch_size = 32
 
 
 [validation settings]
-N_subimgs = 18000
+N_subimgs = 5000
 #if patches are extracted only inside the field of view:
 inside_FOV = False
 
